@@ -201,6 +201,15 @@ page = st.sidebar.radio(
     ["Nearest Neighbor Matching", "Rule-Based Matching", "Method Scorecard"])
 
 st.sidebar.markdown("---")
+st.sidebar.subheader("Search Events")
+_events_all = load_events()
+all_event_ids = sorted(_events_all["event_id"].unique())
+search_event = st.sidebar.selectbox(
+    "Filter by event ID",
+    options=["All Events"] + list(all_event_ids),
+    index=0,
+    help="Select an event to view its specific data, or 'All Events' to see all")
+st.sidebar.markdown("---")
 st.sidebar.subheader("Illustrative value assumption")
 value_per_rx = st.sidebar.slider(
     "$ per incremental Rx claim",
@@ -214,7 +223,6 @@ st.sidebar.caption(
 
 # Total programme spend as a primary visible input, not something the reader has
 # to back out of the ROI multiples.
-_events_all = load_events()
 st.sidebar.metric(
     "Total program spend",
     f"${float(load_summary('nnm')['program_spend_full_events']):,.0f}",
@@ -313,6 +321,14 @@ if page == "Nearest Neighbor Matching":
                  .reset_index()
                  .merge(ev, on="event_id", how="left"))
 
+    # Apply event search filter
+    if search_event != "All Events":
+        per_event = per_event[per_event["event_id"] == search_event]
+        if len(per_event) == 0:
+            st.warning(f"No data available for event {search_event}")
+        else:
+            st.info(f"Showing data for event: {search_event}")
+    
     # Spend allocation reproduces did_roi_engine.py exactly: each PAIR carries
     # program_spend / attendee_count, so an event's allocated spend is that
     # per-attendee share times the number of pairs matched at that event.
@@ -509,6 +525,107 @@ elif page == "Rule-Based Matching":
         st.caption("Values come from `treatment_city`, which holds region values "
                    "(see note above). True city is retained separately in "
                    "`treatment_city_actual`.")
+
+    # ---- Spend & ROI by event -------------------------------------------
+    st.markdown("---")
+    st.subheader("Spend & ROI by Event")
+
+    ev = load_events()
+    per_event = (detail.groupby("event_id")
+                 .agg(n_pairs=("incremental_lift", "size"),
+                      total_lift=("incremental_lift", "sum"),
+                      mean_lift_pct=("incremental_lift_pct", "mean"))
+                 .reset_index()
+                 .merge(ev, on="event_id", how="left"))
+
+    # Apply event search filter
+    if search_event != "All Events":
+        per_event = per_event[per_event["event_id"] == search_event]
+        if len(per_event) == 0:
+            st.warning(f"No data available for event {search_event}")
+        else:
+            st.info(f"Showing data for event: {search_event}")
+
+    # Spend allocation reproduces did_roi_engine.py exactly: each PAIR carries
+    # program_spend / attendee_count, so an event's allocated spend is that
+    # per-attendee share times the number of pairs matched at that event.
+    # Charging each event its full cost instead would penalise events where the
+    # method simply matched fewer of the attendees.
+    per_event["spend_allocated"] = (
+        per_event["n_pairs"]
+        * per_event["program_spend"] / per_event["attendee_count"].replace(0, np.nan))
+
+    roi_cols = per_event.apply(
+        lambda r: roi_from_value(r["total_lift"], r["spend_allocated"], value_per_rx),
+        axis=1, result_type="expand")
+    per_event[["est_value", "roi_pct", "roi_multiple"]] = roi_cols
+
+    per_event["rankable"] = per_event["n_pairs"] >= MIN_PAIRS_FOR_RANKING
+    
+    def generate_note(row):
+        """Generate investment recommendation based on ROI multiple and rankability."""
+        if not row["rankable"]:
+            return f"<{MIN_PAIRS_FOR_RANKING} pairs — excluded from ranking"
+        
+        roi_mult = row["roi_multiple"]
+        if pd.isna(roi_mult):
+            return "Insufficient data"
+        
+        if roi_mult >= 50.0:
+            return "Increase Investment ✅"
+        elif roi_mult < 0:
+            return "Reduce Investment ❌"
+        else:
+            return "No changes ⏳"
+    
+    per_event["note"] = per_event.apply(generate_note, axis=1)
+
+    table = (per_event.sort_values("roi_multiple", ascending=False)[
+        ["event_id", "event_date", "target_ndc_category", "n_pairs",
+         "mean_lift_pct", "program_spend", "roi_multiple", "note"]]
+        .rename(columns={"mean_lift_pct": "mean lift %",
+                         "roi_multiple": "ROI multiple"}))
+
+    st.dataframe(
+        table, use_container_width=True, hide_index=True, height=340,
+        column_config={
+            "mean lift %": st.column_config.NumberColumn(format="%.2f"),
+            "program_spend": st.column_config.NumberColumn(format="$%,.0f"),
+            "ROI multiple": st.column_config.NumberColumn(format="%.2fx"),
+        })
+
+    n_excluded = int((~per_event["rankable"]).sum())
+    st.caption(
+        f"Sorted by ROI multiple, best first. {n_excluded} event(s) with fewer "
+        f"than {MIN_PAIRS_FOR_RANKING} matched pairs are shown but flagged and "
+        f"kept out of the ranking chart below — too few pairs to rank meaningfully.")
+
+    rankable = per_event[per_event["rankable"]].dropna(subset=["roi_multiple"])
+    if len(rankable) >= 2:
+        top = rankable.nlargest(5, "roi_multiple")
+        bottom = rankable.nsmallest(5, "roi_multiple")
+        combined = pd.concat([bottom, top]).drop_duplicates("event_id")
+        combined = combined.sort_values("roi_multiple")
+        colors = [C_ACCENT if e in set(top["event_id"]) else C_PLACEBO
+                  for e in combined["event_id"]]
+        labels = [f"{r.event_id} · {r.target_ndc_category}"
+                  for r in combined.itertuples()]
+        fig = go.Figure(go.Bar(
+            y=labels, x=combined["roi_multiple"], orientation="h",
+            marker_color=colors,
+            text=[f"{v:.1f}x" for v in combined["roi_multiple"]],
+            textposition="outside"))
+        fig.update_layout(
+            title=f"Top 5 (teal) and bottom 5 (grey) events by ROI multiple "
+                  f"— @ ${value_per_rx:,.0f}/Rx",
+            height=460, xaxis_title="ROI multiple (allocated spend basis)",
+            margin=dict(t=70, b=40, l=10))
+        st.plotly_chart(fig, use_container_width=True)
+
+    st.caption(
+        "Use this to identify which speaker events are driving the strongest "
+        "prescribing lift per dollar spent, and which underperform relative to "
+        "their cost — the basis for reallocating future program spend.")
 
 
 # ==============================================================================
