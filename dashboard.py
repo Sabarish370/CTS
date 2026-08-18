@@ -695,7 +695,173 @@ else:
         "unconstrained comparison rather than recovering the effect by luck.")
 
     st.markdown("---")
-    st.subheader("Method caveats")
+    st.subheader("Comprehensive Method Comparison")
+
+    # --- Match Rate Comparison ---
+    col1, col2 = st.columns(2)
+    with col1:
+        match_rates = board.sort_values("Match rate", ascending=True)
+        colors_match = [C_PLACEBO if k == "random" else C_TREAT for k in match_rates["_key"]]
+        fig_match = go.Figure(go.Bar(
+            y=match_rates["Method"], 
+            x=match_rates["Match rate"] * 100,
+            orientation="h",
+            marker_color=colors_match,
+            text=[f"{v*100:.1f}%" for v in match_rates["Match rate"]],
+            textposition="outside"))
+        fig_match.update_layout(
+            title="Match Rate by Method",
+            height=380,
+            xaxis_title="Match Rate (%)",
+            margin=dict(t=60, b=40))
+        st.plotly_chart(fig_match, use_container_width=True)
+        st.caption("Percentage of treatment cases successfully matched to controls.")
+
+    # --- DiD Lift Comparison with CI ---
+    with col2:
+        lifts = board.sort_values("DiD lift %", ascending=True)
+        colors_lift = [C_PLACEBO if k == "random" else C_ACCENT for k in lifts["_key"]]
+        
+        # Extract CI bounds from the string format
+        ci_data = []
+        for idx, row in lifts.iterrows():
+            ci_str = row["95% CI"]
+            low, high = ci_str.strip("[]").split(", ")
+            ci_data.append({"low": float(low), "high": float(high)})
+        
+        fig_lift = go.Figure()
+        fig_lift.add_trace(go.Bar(
+            y=lifts["Method"],
+            x=lifts["DiD lift %"],
+            orientation="h",
+            marker_color=colors_lift,
+            name="DiD Lift %",
+            text=[f"{v:.2f}%" for v in lifts["DiD lift %"]],
+            textposition="outside",
+            error_x=dict(
+                type='data',
+                symmetric=False,
+                array=[ci["high"] - lift for ci, lift in zip(ci_data, lifts["DiD lift %"])],
+                arrayminus=[lift - ci["low"] for ci, lift in zip(ci_data, lifts["DiD lift %"])]
+            )
+        ))
+        fig_lift.update_layout(
+            title="DiD Lift % with 95% CI",
+            height=380,
+            xaxis_title="Incremental Lift (%)",
+            margin=dict(t=60, b=40),
+            showlegend=False)
+        st.plotly_chart(fig_lift, use_container_width=True)
+        st.caption("Estimated prescription lift percentage with 95% confidence intervals.")
+
+    # --- ROI Multiple Comparison ---
+    col3, col4 = st.columns(2)
+    with col3:
+        roi_data = board.sort_values("ROI multiple (live)", ascending=True)
+        colors_roi = [C_PLACEBO if k == "random" else C_TREAT for k in roi_data["_key"]]
+        fig_roi = go.Figure(go.Bar(
+            y=roi_data["Method"],
+            x=roi_data["ROI multiple (live)"],
+            orientation="h",
+            marker_color=colors_roi,
+            text=[f"{v:.2f}x" for v in roi_data["ROI multiple (live)"]],
+            textposition="outside"))
+        fig_roi.update_layout(
+            title=f"ROI Multiple by Method @ ${value_per_rx:,.0f}/Rx",
+            height=380,
+            xaxis_title="ROI Multiple",
+            margin=dict(t=60, b=40))
+        st.plotly_chart(fig_roi, use_container_width=True)
+        st.caption("Return on investment multiple: dollars returned per dollar spent.")
+
+    # --- Implied Effect vs Ground Truth ---
+    with col4:
+        implied = board.sort_values("Implied effect %", ascending=True)
+        colors_impl = [C_PLACEBO if k == "random" else C_ACCENT for k in implied["_key"]]
+        fig_impl = go.Figure(go.Bar(
+            y=implied["Method"],
+            x=implied["Implied effect %"],
+            orientation="h",
+            marker_color=colors_impl,
+            text=[f"{v:.2f}%" for v in implied["Implied effect %"]],
+            textposition="outside"))
+        fig_impl.add_vline(x=15.0, line_dash="dash", line_color=C_TARGET, line_width=2,
+                          annotation_text="15% ground truth",
+                          annotation_position="top right")
+        fig_impl.update_layout(
+            title="Implied Effect % vs Ground Truth",
+            height=380,
+            xaxis_title="Implied Effect (%)",
+            margin=dict(t=60, b=40))
+        st.plotly_chart(fig_impl, use_container_width=True)
+        st.caption("Like-for-like implied effect compared to the planted 15% ground truth.")
+
+    # --- Performance Radar Chart ---
+    st.markdown("---")
+    st.subheader("Method Performance Profile")
+    
+    # Normalize metrics for radar chart
+    board_viz = board.copy()
+    board_viz["Match rate (%)"] = board_viz["Match rate"] * 100
+    board_viz["Accuracy (inv gap)"] = 15 - board_viz["Gap vs 15% (pp)"].abs()  # Higher is better
+    
+    methods = board_viz["Method"].values
+    match_rates_norm = (board_viz["Match rate (%)"] / board_viz["Match rate (%)"].max() * 100).values
+    lifts_norm = (board_viz["DiD lift %"] / board_viz["DiD lift %"].max() * 100).values
+    roi_norm = (board_viz["ROI multiple (live)"] / board_viz["ROI multiple (live)"].max() * 100).values
+    accuracy_norm = (board_viz["Accuracy (inv gap)"] / board_viz["Accuracy (inv gap)"].max() * 100).values
+    
+    fig_radar = go.Figure()
+    
+    for i, method in enumerate(methods):
+        color = C_PLACEBO if board_viz.iloc[i]["_key"] == "random" else C_ACCENT
+        fig_radar.add_trace(go.Scatterpolar(
+            r=[match_rates_norm[i], lifts_norm[i], roi_norm[i], accuracy_norm[i]],
+            theta=["Match Rate", "DiD Lift %", "ROI Multiple", "Accuracy vs Truth"],
+            fill='toself',
+            name=method,
+            line_color=color,
+            opacity=0.6
+        ))
+    
+    fig_radar.update_layout(
+        polar=dict(radialaxis=dict(visible=True, range=[0, 100])),
+        title="Method Performance Profile (Normalized 0-100)",
+        height=480,
+        showlegend=True,
+        margin=dict(t=60, b=40))
+    st.plotly_chart(fig_radar, use_container_width=True)
+    st.caption("All metrics normalized to 0-100 scale for comparison. "
+               "Higher values indicate better performance across each dimension.")
+
+    # --- Summary Table with Key Metrics ---
+    st.markdown("---")
+    st.subheader("Performance Summary Statistics")
+    
+    summary_metrics = []
+    for m in ["nnm", "rule_based", "psm", "random"]:
+        s = load_summary(m)
+        rate, n_matched, n_total = match_rate(m)
+        _, roi_pct, roi_mult = roi_from_value(
+            float(s["total_incremental_lift"]),
+            float(s["program_spend_allocated"]), value_per_rx)
+        
+        summary_metrics.append({
+            "Method": METHOD_LABELS[m],
+            "Matched Cases": f"{n_matched:,}",
+            "Total Cases": f"{n_total:,}",
+            "Control Clusters": f"{int(s['n_control_clusters']):,}" if "n_control_clusters" in s else "N/A",
+            "Anchor Pairs": f"{int(s['n_anchor_pairs']):,}" if "n_anchor_pairs" in s else "N/A",
+            "Max Control Reuse": f"{int(s['max_control_reuse'])}x" if "max_control_reuse" in s else "N/A",
+            "Confidence Note": str(s.get("confidence_note", "")).strip() or "None",
+        })
+    
+    summary_df = pd.DataFrame(summary_metrics)
+    st.dataframe(summary_df, use_container_width=True, hide_index=True)
+    st.caption("Detailed statistics for each matching method including case counts, "
+               "clustering information, and implementation notes.")
+
+    st.markdown("---")
     any_note = False
     for m in ["nnm", "rule_based", "psm", "random"]:
         note = load_summary(m).get("confidence_note")
