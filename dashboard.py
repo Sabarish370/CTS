@@ -70,6 +70,29 @@ MIN_PAIRS_FOR_RANKING = 3
 # Matches WEAK_MATCH_PERCENTILE in nnm_matching.py
 WEAK_MATCH_PERCENTILE = 95
 
+# Theme-aware color palettes
+COLOR_PALETTES = {
+    "dark": {
+        "treat": "#2563eb",      # Blue
+        "ctrl": "#94a3b8",       # Gray
+        "accent": "#0d9488",     # Teal
+        "placebo": "#9ca3af",    # Light gray
+        "target": "#dc2626",     # Red
+    },
+    "light": {
+        "treat": "#1e40af",      # Darker blue
+        "ctrl": "#6b7280",       # Darker gray
+        "accent": "#059669",     # Darker teal
+        "placebo": "#9ca3af",    # Medium gray
+        "target": "#b91c1c",     # Darker red
+    }
+}
+
+def get_colors(theme: str = "dark"):
+    """Get color palette based on theme."""
+    return COLOR_PALETTES.get(theme, COLOR_PALETTES["dark"])
+
+# Initialize default colors
 C_TREAT, C_CTRL, C_ACCENT, C_PLACEBO, C_TARGET = (
     "#2563eb", "#94a3b8", "#0d9488", "#9ca3af", "#dc2626")
 
@@ -93,6 +116,14 @@ with col3:
     if theme_button:
         st.session_state.theme = "light" if st.session_state.theme == "dark" else "dark"
         st.rerun()
+
+# Get colors based on current theme
+colors = get_colors(st.session_state.theme)
+C_TREAT = colors["treat"]
+C_CTRL = colors["ctrl"]
+C_ACCENT = colors["accent"]
+C_PLACEBO = colors["placebo"]
+C_TARGET = colors["target"]
 
 # Apply theme CSS
 if st.session_state.theme == "light":
