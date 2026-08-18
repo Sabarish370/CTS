@@ -40,6 +40,7 @@ import argparse
 import csv
 import glob as globmod
 import logging
+import os
 import re
 import subprocess
 import sys
@@ -47,6 +48,34 @@ import time
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
+
+try:
+    import boto3
+    from botocore.exceptions import ClientError
+    HAS_BOTO3 = True
+except ImportError:
+    HAS_BOTO3 = False
+
+# ==============================================================================
+# AWS S3 CONFIGURATION
+# ==============================================================================
+
+S3_ENABLED = os.getenv("S3_ENABLED", "false").lower() == "true"
+S3_BUCKET = os.getenv("S3_BUCKET", "")
+S3_REGION = os.getenv("S3_REGION", "us-east-1")
+S3_RAW_PREFIX = "raw-data"              # Input data prefix
+S3_ANALYTICAL_PREFIX = "analytical-data" # Output data prefix
+
+# Local staging directories for S3 transfers
+TEMP_DIR = Path("/tmp/cts-pipeline") if S3_ENABLED else None
+
+if S3_ENABLED and not HAS_BOTO3:
+    raise ImportError("S3_ENABLED=true but boto3 is not installed. "
+                      "Install with: pip install boto3")
+
+if S3_ENABLED:
+    s3_client = boto3.client("s3", region_name=S3_REGION)
+    TEMP_DIR.mkdir(parents=True, exist_ok=True)
 
 # ==============================================================================
 # CONFIG -- paths verbatim. The misspellings ("neigbour", "randam",
@@ -57,9 +86,16 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent
 LOG_DIR = PROJECT_ROOT / "pipeline_logs"
 
-PREPROCESSED_DIR = PROJECT_ROOT / "preprocessed_data"
-MATCHED_PAIRS_DIR = PROJECT_ROOT / "matched_pairs"
-DID_ROI_DIR = PROJECT_ROOT / "did_roi_output"
+# Use temp directories when S3 is enabled, otherwise use local project directories
+if S3_ENABLED:
+    PREPROCESSED_DIR = TEMP_DIR / "preprocessed_data"
+    MATCHED_PAIRS_DIR = TEMP_DIR / "matched_pairs"
+    DID_ROI_DIR = TEMP_DIR / "did_roi_output"
+else:
+    PREPROCESSED_DIR = PROJECT_ROOT / "preprocessed_data"
+    MATCHED_PAIRS_DIR = PROJECT_ROOT / "matched_pairs"
+    DID_ROI_DIR = PROJECT_ROOT / "did_roi_output"
+
 GROUND_TRUTH_FILE = PROJECT_ROOT / "generated_data" / "ground_truth_config.json"
 
 # The rx output name contains a space and literal parens. Kept as an exact
@@ -159,6 +195,144 @@ DID_ROI_SPEC = ScriptSpec(
     expected_sec=50, exit_policy="crash_only",
     note="processes all 4 methods internally in ONE run; prints [IMPLAUSIBLE] "
          "sanity lines without affecting exit code")
+
+
+# ==============================================================================
+# AWS S3 HELPER FUNCTIONS
+# ==============================================================================
+
+def download_from_s3(s3_prefix: str, local_dir: Path) -> None:
+    """Download all files from S3 prefix to local directory."""
+    if not S3_ENABLED or not S3_BUCKET:
+        return
+    
+    log.info(f"Downloading from s3://{S3_BUCKET}/{s3_prefix}/ to {local_dir}")
+    local_dir.mkdir(parents=True, exist_ok=True)
+    
+    try:
+        paginator = s3_client.get_paginator("list_objects_v2")
+        pages = paginator.paginate(Bucket=S3_BUCKET, Prefix=f"{s3_prefix}/")
+        
+        file_count = 0
+        for page in pages:
+            if "Contents" not in page:
+                continue
+            for obj in page["Contents"]:
+                key = obj["Key"]
+                # Skip if it's just the prefix itself
+                if key.endswith("/"):
+                    continue
+                
+                relative_path = key[len(s3_prefix)+1:]  # Remove prefix
+                local_file = local_dir / relative_path
+                local_file.parent.mkdir(parents=True, exist_ok=True)
+                
+                log.debug(f"  Downloading s3://{S3_BUCKET}/{key} -> {local_file}")
+                s3_client.download_file(S3_BUCKET, key, str(local_file))
+                file_count += 1
+        
+        log.info(f"  Downloaded {file_count} files from S3")
+    except ClientError as e:
+        log.error(f"  S3 download failed: {e}")
+        raise
+
+
+def upload_to_s3(local_dir: Path, s3_prefix: str) -> None:
+    """Upload all files from local directory to S3 prefix."""
+    if not S3_ENABLED or not S3_BUCKET:
+        return
+    
+    log.info(f"Uploading {local_dir} to s3://{S3_BUCKET}/{s3_prefix}/")
+    
+    if not local_dir.exists():
+        log.warning(f"  Local directory does not exist: {local_dir}")
+        return
+    
+    try:
+        file_count = 0
+        for local_file in local_dir.rglob("*"):
+            if local_file.is_file():
+                relative_path = local_file.relative_to(local_dir)
+                s3_key = f"{s3_prefix}/{relative_path}".replace("\\", "/")
+                
+                log.debug(f"  Uploading {local_file} -> s3://{S3_BUCKET}/{s3_key}")
+                s3_client.upload_file(str(local_file), S3_BUCKET, s3_key)
+                file_count += 1
+        
+        log.info(f"  Uploaded {file_count} files to S3")
+    except ClientError as e:
+        log.error(f"  S3 upload failed: {e}")
+        raise
+
+
+# ==============================================================================
+# SYMLINK HELPERS FOR S3 MODE (Path Redirection)
+# ==============================================================================
+
+def create_symlinks_for_s3() -> None:
+    """Create symlinks in PROJECT_ROOT pointing to TEMP_DIR when S3_ENABLED.
+    
+    This allows all subprocess scripts to find their data via PROJECT_ROOT
+    paths while actual data lives in /tmp/cts-pipeline/. Scripts use
+    find_project_root() or PROJECT_ROOT, which resolve through symlinks
+    transparently.
+    """
+    if not S3_ENABLED or not TEMP_DIR:
+        return
+    
+    log.info("Creating symlinks for S3 staging directories...")
+    
+    symlinks = [
+        ("generated_data", TEMP_DIR / "generated_data"),
+        ("preprocessed_data", TEMP_DIR / "preprocessed_data"),
+        ("matched_pairs", TEMP_DIR / "matched_pairs"),
+        ("did_roi_output", TEMP_DIR / "did_roi_output"),
+    ]
+    
+    for name, target in symlinks:
+        link_path = PROJECT_ROOT / name
+        
+        # Remove existing symlink or directory if it exists
+        if link_path.is_symlink():
+            log.debug(f"  Removing existing symlink: {link_path}")
+            link_path.unlink()
+        elif link_path.exists():
+            log.warning(f"  {name}/ already exists (not a symlink) -- skipping")
+            continue
+        
+        # Create the target directory if it doesn't exist
+        target.mkdir(parents=True, exist_ok=True)
+        
+        # Create symlink
+        try:
+            link_path.symlink_to(target, target_is_directory=True)
+            log.debug(f"  Created symlink: {link_path} -> {target}")
+        except OSError as e:
+            log.error(f"  Failed to create symlink {link_path}: {e}")
+            log.warning(f"  On Windows, symlinks require admin or developer mode.")
+            log.warning(f"  Alternative: Enable Developer Mode in Windows Settings")
+            log.warning(f"  or use: fsutil reparsepoint delete {link_path}")
+            raise
+
+
+def cleanup_symlinks_for_s3() -> None:
+    """Remove symlinks created for S3 mode redirection."""
+    if not S3_ENABLED or not TEMP_DIR:
+        return
+    
+    log.info("Cleaning up symlinks...")
+    
+    symlink_names = ["generated_data", "preprocessed_data", "matched_pairs", "did_roi_output"]
+    
+    for name in symlink_names:
+        link_path = PROJECT_ROOT / name
+        
+        if link_path.is_symlink():
+            try:
+                link_path.unlink()
+                log.debug(f"  Removed symlink: {link_path}")
+            except OSError as e:
+                log.warning(f"  Failed to remove symlink {link_path}: {e}")
 
 
 @dataclass
@@ -692,9 +866,34 @@ def main() -> int:
     log.info(f"  log file     : {log_path}")
     log.info(f"  timeout      : {SUBPROCESS_TIMEOUT_SEC}s per subprocess "
              f"(must exceed random_matching's ~390s)")
+    
+    # S3 Configuration
+    if S3_ENABLED:
+        log.info(f"  S3 mode      : ENABLED")
+        log.info(f"  S3 bucket    : {S3_BUCKET}")
+        log.info(f"  S3 region    : {S3_REGION}")
+        log.info(f"  temp dir     : {TEMP_DIR}")
+    else:
+        log.info(f"  S3 mode      : DISABLED (using local paths)")
 
     t0 = time.perf_counter()
     results: list[StageResult] = []
+    
+    # Create symlinks for S3 mode before any stage runs
+    try:
+        create_symlinks_for_s3()
+    except OSError as e:
+        log.error(f"Failed to set up S3 symlinks: {e}")
+        return 1
+    
+    # Download raw data from S3 at the start of preprocessing
+    if args.stage in ("preprocess", "all") and S3_ENABLED:
+        try:
+            download_from_s3(S3_RAW_PREFIX, TEMP_DIR / "generated_data")
+            log.info("S3 raw data downloaded successfully")
+        except Exception as e:
+            log.error(f"Failed to download raw data from S3: {e}")
+            return 1
 
     if args.stage in ("preprocess", "all"):
         results.append(stage_preprocess(args.force))
@@ -733,6 +932,17 @@ def main() -> int:
 
     total = time.perf_counter() - t0
     overall = all(r.ok for r in results) if results else False
+    
+    # Upload analytical results to S3 after all stages complete
+    if overall and S3_ENABLED and args.stage in ("did_roi", "all"):
+        try:
+            log.info("Uploading analytical results to S3...")
+            upload_to_s3(MATCHED_PAIRS_DIR, f"{S3_ANALYTICAL_PREFIX}/matched_pairs")
+            upload_to_s3(DID_ROI_DIR, f"{S3_ANALYTICAL_PREFIX}/did_roi_output")
+            log.info("Analytical results uploaded to S3 successfully")
+        except Exception as e:
+            log.error(f"Failed to upload analytical results to S3: {e}")
+            overall = False
 
     banner("PIPELINE SUMMARY")
     for r in results:
@@ -747,6 +957,10 @@ def main() -> int:
                                log_path, total)
     log.info(f"  log    : {log_path}")
     log.info(f"  report : {report_path}")
+    
+    # Clean up symlinks at the end
+    cleanup_symlinks_for_s3()
+    
     return 0 if overall else 1
 
 

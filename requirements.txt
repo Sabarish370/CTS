@@ -5,3 +5,5 @@ statsmodels>=0.14.0
 streamlit>=1.28.0
 plotly>=5.17.0
 Faker>=19.0.0
+boto3>=1.26.0
+
