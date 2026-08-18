@@ -11,7 +11,7 @@ echo "================================================"
 # Configuration (Modify these)
 S3_BUCKET="${1:-cts-hackathon-data}"
 AWS_REGION="${2:-us-east-1}"
-PROJECT_DIR="/home/ec2-user/cts-pipeline"
+PROJECT_DIR="/home/ubuntu/cts-pipeline"
 
 echo "✓ S3 Bucket: $S3_BUCKET"
 echo "✓ AWS Region: $AWS_REGION"
@@ -20,8 +20,8 @@ echo ""
 
 # Step 1: Update system
 echo "Step 1: Updating system packages..."
-sudo yum update -y
-sudo yum install -y python3 python3-pip git
+sudo apt-get update -y
+sudo apt-get install -y python3 python3-pip git
 
 # Step 2: Install Python dependencies
 echo "Step 2: Installing Python dependencies..."

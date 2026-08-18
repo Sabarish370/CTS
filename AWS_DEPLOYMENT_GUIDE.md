@@ -196,27 +196,44 @@ ls -la cts-deployment-key.pem
 1. Open **EC2** service
 2. Click **"Instances"** → **"Launch instances"**
 3. **Name**: `cts-pipeline-server`
-4. **AMI**: Search for **"Amazon Linux 2"** → Select it
-   - AMI ID should start with `ami-` and say "Amazon Linux 2"
-5. **Instance type**: `t3.large` (2 vCPU, 8 GB RAM)
-   - Good for processing pipeline
+4. **AMI**: Search for **"Ubuntu"** → Select **"Ubuntu Server 22.04 LTS"** (64-bit x86)
+   - AMI ID should start with `ami-` and say "Ubuntu"
+5. **Instance type**: `t2.micro` (1 vCPU, 1 GB RAM)
+   - Free-tier eligible. The dataset here is small (~30 MB across all stages),
+     so this fits -- but 1 GB RAM leaves little headroom, and t2.micro is a
+     burstable-CPU type, so the matching stages (especially Random, ~390s on
+     a t3.large) will run noticeably slower once CPU credits are exhausted.
+     If a stage stalls or gets OOM-killed, resize to `t2.small` or `t3.micro`.
 6. **Key pair**: Select **"cts-deployment-key"**
 7. **Network settings**: Keep defaults (default VPC)
-8. **Storage**: Keep default (8 GB gp2)
+8. **Storage**: Keep default (8 GB gp2/gp3)
 9. **Advanced details** → **IAM instance profile**: Select **"cts-ec2-s3-profile"**
 10. Click **"Launch instance"**
 
 **Via AWS CLI:**
+
+Ubuntu AMI IDs are region- and release-specific and change over time, so look
+up the current one instead of hardcoding it:
 ```bash
+AMI_ID=$(aws ec2 describe-images \
+  --owners 099720109477 \
+  --filters "Name=name,Values=ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*" \
+            "Name=state,Values=available" \
+  --query 'sort_by(Images, &CreationDate)[-1].ImageId' \
+  --region us-east-1 \
+  --output text)
+echo "Using AMI: $AMI_ID"
+
 aws ec2 run-instances \
-  --image-id ami-0c55b159cbfafe1f0 \
-  --instance-type t3.large \
+  --image-id "$AMI_ID" \
+  --instance-type t2.micro \
   --key-name cts-deployment-key \
   --iam-instance-profile Name=cts-ec2-s3-profile \
   --count 1 \
   --region us-east-1 \
   --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=cts-pipeline-server}]'
 ```
+(`099720109477` is Canonical's official AWS account ID that publishes Ubuntu AMIs.)
 
 ### Step 8: Get Instance IP Address
 
@@ -242,29 +259,26 @@ aws ec2 describe-instances \
 ### Step 9: SSH into EC2 Instance
 
 ```bash
-ssh -i cts-deployment-key.pem ec2-user@<PUBLIC_IP>
+ssh -i cts-deployment-key.pem ubuntu@<PUBLIC_IP>
 ```
 
 Replace `<PUBLIC_IP>` with the actual IP address (e.g., `54.123.45.67`)
 
 **First login may take a minute. You should see:**
 ```
-       __|  __|_  )
-       _|  (     /   Amazon Linux 2
-      ___|\___|___|
+Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.15.0-xxx-aws x86_64)
 
-https://aws.amazon.com/amazon-linux-2/
-[ec2-user@ip-172-31-XX-XX ~]$
+ubuntu@ip-172-31-XX-XX:~$
 ```
 
 ### Step 10: Update System and Install Python
 
 ```bash
 # Update system
-sudo yum update -y
+sudo apt-get update -y && sudo apt-get upgrade -y
 
 # Install Python 3 and pip
-sudo yum install -y python3 python3-pip git
+sudo apt-get install -y python3 python3-pip git
 
 # Verify installations
 python3 --version
@@ -447,7 +461,7 @@ AWS Region: us-east-1
 ==========================================
 
 SPEAKER PROGRAM ROI -- PIPELINE
-  project root : /home/ec2-user/cts-pipeline
+  project root : /home/ubuntu/cts-pipeline
   interpreter  : /usr/bin/python3
   stage        : all
   methods      : nnm, rule_based, psm, random
@@ -461,10 +475,10 @@ SPEAKER PROGRAM ROI -- PIPELINE
   temp dir     : /tmp/cts-pipeline
 
 Creating symlinks for S3 staging directories...
-  Created symlink: /home/ec2-user/cts-pipeline/generated_data -> /tmp/cts-pipeline/generated_data
-  Created symlink: /home/ec2-user/cts-pipeline/preprocessed_data -> /tmp/cts-pipeline/preprocessed_data
-  Created symlink: /home/ec2-user/cts-pipeline/matched_pairs -> /tmp/cts-pipeline/matched_pairs
-  Created symlink: /home/ec2-user/cts-pipeline/did_roi_output -> /tmp/cts-pipeline/did_roi_output
+  Created symlink: /home/ubuntu/cts-pipeline/generated_data -> /tmp/cts-pipeline/generated_data
+  Created symlink: /home/ubuntu/cts-pipeline/preprocessed_data -> /tmp/cts-pipeline/preprocessed_data
+  Created symlink: /home/ubuntu/cts-pipeline/matched_pairs -> /tmp/cts-pipeline/matched_pairs
+  Created symlink: /home/ubuntu/cts-pipeline/did_roi_output -> /tmp/cts-pipeline/did_roi_output
 
 Downloading from s3://cts-hackathon-data/raw-data/ to /tmp/cts-pipeline/generated_data
   Downloaded 6 files from S3
@@ -520,7 +534,7 @@ If you need to check progress while pipeline runs:
 **In another SSH terminal:**
 ```bash
 # SSH into instance
-ssh -i cts-deployment-key.pem ec2-user@<PUBLIC_IP>
+ssh -i cts-deployment-key.pem ubuntu@<PUBLIC_IP>
 
 # Watch logs
 tail -f ~/cts-pipeline/pipeline_logs/pipeline_run_*.log
@@ -596,7 +610,7 @@ Browser will open at `http://localhost:8501`
 # Verify security group allows SSH (port 22)
 
 # Try again
-ssh -i cts-deployment-key.pem ec2-user@<PUBLIC_IP>
+ssh -i cts-deployment-key.pem ubuntu@<PUBLIC_IP>
 ```
 
 ### Issue: "Permission denied (publickey)"
@@ -610,7 +624,7 @@ chmod 400 cts-deployment-key.pem
 aws ec2 describe-key-pairs
 
 # Use correct key
-ssh -i cts-deployment-key.pem ec2-user@<PUBLIC_IP>
+ssh -i cts-deployment-key.pem ubuntu@<PUBLIC_IP>
 ```
 
 ### Issue: "NoCredentialsError" or S3 access denied
@@ -666,37 +680,50 @@ rm -rf /tmp/cts-pipeline/
 # If needed, expand volume (AWS Console)
 ```
 
-### Issue: Pipeline runs slowly
+### Issue: Pipeline runs slowly / gets OOM-killed
 
 **Solution:**
 ```bash
-# Check instance type (should be t3.large or larger)
+# Check instance type -- t2.micro is 1 vCPU / 1 GB RAM, the smallest that
+# still fits this pipeline; expect matching stages to be much slower than
+# on a t3.large, especially once CPU credits run out
 aws ec2 describe-instances --query 'Reservations[].Instances[].InstanceType'
 
 # Monitor CPU/Memory during run
 top
 # Press 'q' to quit
 
-# If too slow, stop instance and change type to t3.xlarge
+# Check burst-credit balance specifically (t2/t3 burstable types)
+aws cloudwatch get-metric-statistics \
+  --namespace AWS/EC2 --metric-name CPUCreditBalance \
+  --dimensions Name=InstanceId,Value=<INSTANCE_ID> \
+  --start-time $(date -u -d '-1 hour' +%Y-%m-%dT%H:%M:%S) \
+  --end-time $(date -u +%Y-%m-%dT%H:%M:%S) --period 300 --statistics Average
+
+# If a stage is OOM-killed (dmesg | grep -i kill) or credits are exhausted,
+# stop the instance and resize to t2.small or t3.micro
+aws ec2 stop-instances --instance-ids <INSTANCE_ID>
+aws ec2 modify-instance-attribute --instance-id <INSTANCE_ID> --instance-type t3.micro
+aws ec2 start-instances --instance-ids <INSTANCE_ID>
 ```
 
 ---
 
 ## Cost Estimation
 
-**Monthly costs (approximate):**
+**Monthly costs (approximate, t2.micro, stopped when not in use):**
 
 | Service | Usage | Cost |
 |---------|-------|------|
-| EC2 (t3.large) | 24/7 usage | ~$50-60 |
+| EC2 (t2.micro) | Free-tier: 750 hrs/month free (first 12 months); after that ~$0.0116/hr | $0 (free tier) or ~$8-9/month if run 24/7 post-free-tier |
+| EC2 (t2.micro), per-run usage | ~30-60 min per pipeline run, stopped between runs | pennies/month |
 | S3 Storage | 100 MB data | ~$0.25 |
 | S3 Requests | 1000s reads/writes | ~$0.50 |
 | Data Transfer | Minimal (within AWS) | ~$0 |
-| **Total** | | **~$50-60/month** |
+| **Total** | | **~$0-10/month**, well under free tier if the instance is stopped between runs |
 
-**To reduce costs:**
-- Use t3.micro for testing (free tier eligible)
-- Stop instance when not in use
+**To reduce costs further:**
+- Stop the instance immediately after each pipeline run (`aws ec2 stop-instances`) -- this is already the intended usage pattern here
 - Archive results to Glacier after 30 days
 - Use S3 Lifecycle policies
 
@@ -742,7 +769,7 @@ aws s3 rb s3://cts-hackathon-data
 - [ ] Create S3 bucket with raw-data/ and analytical-data/ folders
 - [ ] Create IAM role and instance profile
 - [ ] Create EC2 key pair
-- [ ] Launch t3.large EC2 instance with IAM role
+- [ ] Launch t2.micro Ubuntu EC2 instance with IAM role
 - [ ] SSH into instance
 - [ ] Install Python 3, pip, git
 - [ ] Clone project repository

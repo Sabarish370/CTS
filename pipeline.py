@@ -42,6 +42,7 @@ import glob as globmod
 import logging
 import os
 import re
+import shutil
 import subprocess
 import sys
 import time
@@ -297,8 +298,20 @@ def create_symlinks_for_s3() -> None:
             log.debug(f"  Removing existing symlink: {link_path}")
             link_path.unlink()
         elif link_path.exists():
-            log.warning(f"  {name}/ already exists (not a symlink) -- skipping")
-            continue
+            # A real directory here (e.g. committed sample data from git)
+            # would otherwise silently block the symlink -- every subprocess
+            # script would then read/write the stale local copy while S3
+            # data sits unused in TEMP_DIR, and this stage's own S3-path
+            # verification would fail against the (correctly) empty TEMP_DIR
+            # location. Move it aside instead of skipping, so S3 data
+            # actually flows through.
+            backup_path = PROJECT_ROOT / f"{name}.local-backup"
+            if backup_path.exists():
+                log.debug(f"  Removing stale backup: {backup_path}")
+                shutil.rmtree(backup_path)
+            log.warning(f"  {name}/ already exists (not a symlink) -- "
+                       f"moving it to {backup_path.name}/ so S3 data can be used")
+            link_path.rename(backup_path)
         
         # Create the target directory if it doesn't exist
         target.mkdir(parents=True, exist_ok=True)
