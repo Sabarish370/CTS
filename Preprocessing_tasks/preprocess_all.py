@@ -156,17 +156,18 @@ def preprocess_hcp(raw_dir: Path, out_dir: Path) -> pd.DataFrame:
 
     print("Missing sub-specialty values:", hcp["sub_specialty"].isna().sum())
 
-    def fill_sub_specialty(group):
-        if group["sub_specialty"].notna().any():
-            mode_values = group["sub_specialty"].mode()
-            if len(mode_values) > 0:
-                group["sub_specialty"] = group["sub_specialty"].fillna(
-                    mode_values.iloc[0])
-        return group
+    # Fill each row's missing sub_specialty with its specialty group's mode.
+    # Uses a groupby-transform rather than groupby().apply() on a function
+    # that reads the grouping column: pandas 2.2+ deprecated (and pandas 3.0
+    # removed) passing the grouping column through to apply()'s func, which
+    # silently dropped "specialty" from the result and broke every column
+    # selection downstream. transform() never has that ambiguity.
+    def group_mode(s: pd.Series):
+        modes = s.mode()
+        return modes.iloc[0] if len(modes) > 0 else pd.NA
 
-    hcp = (hcp.groupby("specialty", group_keys=False)
-              .apply(fill_sub_specialty)
-              .reset_index(drop=True))
+    group_modes = hcp.groupby("specialty")["sub_specialty"].transform(group_mode)
+    hcp["sub_specialty"] = hcp["sub_specialty"].fillna(group_modes)
     print("Missing sub-specialty after filling:", hcp["sub_specialty"].isna().sum())
 
     print("Duplicate HCP IDs:", hcp["hcp_id"].duplicated().sum())
