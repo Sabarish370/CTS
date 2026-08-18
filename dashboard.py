@@ -75,6 +75,60 @@ C_TREAT, C_CTRL, C_ACCENT, C_PLACEBO, C_TARGET = (
 
 st.set_page_config(page_title="Speaker Program ROI Analysis", layout="wide")
 
+# ==============================================================================
+# THEME TOGGLE
+# ==============================================================================
+
+if "theme" not in st.session_state:
+    st.session_state.theme = "dark"
+
+# Create theme toggle at the top
+col1, col2, col3 = st.columns([1, 10, 1])
+with col3:
+    theme_button = st.button(
+        f"🌙 Dark" if st.session_state.theme == "dark" else "☀️ Light",
+        key="theme_toggle",
+        help="Toggle between dark and light theme"
+    )
+    if theme_button:
+        st.session_state.theme = "light" if st.session_state.theme == "dark" else "dark"
+        st.rerun()
+
+# Apply theme CSS
+if st.session_state.theme == "light":
+    st.markdown("""
+        <style>
+        :root {
+            --primary-bg: #ffffff;
+            --secondary-bg: #f5f5f5;
+            --text-primary: #000000;
+            --text-secondary: #666666;
+            --border-color: #cccccc;
+        }
+        [data-testid="stAppViewContainer"] {
+            background-color: white;
+            color: black;
+        }
+        [data-testid="stMetricValue"] {
+            color: black;
+        }
+        [data-testid="stMetricLabel"] {
+            color: #333333;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+else:
+    st.markdown("""
+        <style>
+        :root {
+            --primary-bg: #0e1117;
+            --secondary-bg: #161b22;
+            --text-primary: #ffffff;
+            --text-secondary: #8b949e;
+            --border-color: #30363d;
+        }
+        </style>
+    """, unsafe_allow_html=True)
 
 # ==============================================================================
 # CACHED LOADERS
@@ -192,6 +246,9 @@ def kpi_roi(method_key: str, value_per_rx: float) -> None:
 # ==============================================================================
 # SIDEBAR
 # ==============================================================================
+
+st.markdown("# 📊 Speaker Program ROI Analysis Dashboard")
+st.markdown("---")
 
 default_value_per_rx = float(load_summary("nnm")["value_per_rx_claim"])
 
