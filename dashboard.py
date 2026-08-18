@@ -328,9 +328,24 @@ if page == "Nearest Neighbor Matching":
     per_event[["est_value", "roi_pct", "roi_multiple"]] = roi_cols
 
     per_event["rankable"] = per_event["n_pairs"] >= MIN_PAIRS_FOR_RANKING
-    per_event["note"] = np.where(
-        per_event["rankable"], "",
-        f"<{MIN_PAIRS_FOR_RANKING} pairs — excluded from ranking")
+    
+    def generate_note(row):
+        """Generate investment recommendation based on ROI multiple and rankability."""
+        if not row["rankable"]:
+            return f"<{MIN_PAIRS_FOR_RANKING} pairs — excluded from ranking"
+        
+        roi_mult = row["roi_multiple"]
+        if pd.isna(roi_mult):
+            return "Insufficient data"
+        
+        if roi_mult >= 2.0:
+            return "Increase investment"
+        elif roi_mult >= 1.0:
+            return "Continue same investment"
+        else:
+            return "Reduce investment"
+    
+    per_event["note"] = per_event.apply(generate_note, axis=1)
 
     table = (per_event.sort_values("roi_multiple", ascending=False)[
         ["event_id", "event_date", "target_ndc_category", "n_pairs",
