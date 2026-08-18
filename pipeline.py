@@ -946,10 +946,16 @@ def main() -> int:
     total = time.perf_counter() - t0
     overall = all(r.ok for r in results) if results else False
     
-    # Upload analytical results to S3 after all stages complete
+    # Upload analytical results to S3 after all stages complete.
+    # preprocessed_data/ is included alongside matched_pairs/ and
+    # did_roi_output/ because dashboard.py's S3 mode reads
+    # events_preprocessed_final.csv from it -- without this, an S3-mode
+    # dashboard run would find matches and DiD/ROI results but silently
+    # fail to load the events table.
     if overall and S3_ENABLED and args.stage in ("did_roi", "all"):
         try:
             log.info("Uploading analytical results to S3...")
+            upload_to_s3(PREPROCESSED_DIR, f"{S3_ANALYTICAL_PREFIX}/preprocessed_data")
             upload_to_s3(MATCHED_PAIRS_DIR, f"{S3_ANALYTICAL_PREFIX}/matched_pairs")
             upload_to_s3(DID_ROI_DIR, f"{S3_ANALYTICAL_PREFIX}/did_roi_output")
             log.info("Analytical results uploaded to S3 successfully")

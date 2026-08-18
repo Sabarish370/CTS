@@ -28,6 +28,8 @@ Run
 
 from __future__ import annotations
 
+import io
+import os
 from pathlib import Path
 
 import numpy as np
@@ -35,8 +37,36 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
+try:
+    import boto3
+    from botocore.exceptions import ClientError
+    HAS_BOTO3 = True
+except ImportError:
+    HAS_BOTO3 = False
+
 # ==============================================================================
-# CONFIG -- real paths on disk
+# AWS S3 CONFIGURATION -- same env vars and analytical-data layout as
+# pipeline.py, so pointing this dashboard at S3_ENABLED=true reads exactly
+# what a pipeline.py --stage all run with S3_ENABLED=true just uploaded.
+# Local-disk mode (the default, S3_ENABLED unset/false) is unchanged.
+# ==============================================================================
+
+S3_ENABLED = os.getenv("S3_ENABLED", "false").lower() == "true"
+S3_BUCKET = os.getenv("S3_BUCKET", "")
+S3_REGION = os.getenv("S3_REGION", "us-east-1")
+S3_ANALYTICAL_PREFIX = "analytical-data"
+
+if S3_ENABLED and not HAS_BOTO3:
+    st.error("S3_ENABLED=true but boto3 is not installed. "
+             "Install with: pip install boto3")
+    st.stop()
+
+s3_client = boto3.client("s3", region_name=S3_REGION) if S3_ENABLED else None
+
+# ==============================================================================
+# CONFIG -- real paths on disk (also doubles as the S3 key layout: every path
+# here is PROJECT_ROOT / <subpath>, and in S3 mode <subpath> is read from
+# s3://S3_BUCKET/analytical-data/<subpath> instead -- see read_csv_auto()).
 # ==============================================================================
 
 PROJECT_ROOT = Path(__file__).resolve().parent
@@ -165,34 +195,61 @@ else:
 # CACHED LOADERS
 # ==============================================================================
 
+def _s3_key_for(local_path: Path) -> str:
+    """PROJECT_ROOT/matched_pairs/... -> analytical-data/matched_pairs/...
+    Mirrors pipeline.py's upload_to_s3() layout exactly, so a path that
+    resolves locally resolves in S3 too without a second mapping table."""
+    return f"{S3_ANALYTICAL_PREFIX}/{local_path.relative_to(PROJECT_ROOT).as_posix()}"
+
+
+def csv_exists_auto(local_path: Path) -> bool:
+    if S3_ENABLED:
+        try:
+            s3_client.head_object(Bucket=S3_BUCKET, Key=_s3_key_for(local_path))
+            return True
+        except ClientError:
+            return False
+    return local_path.exists()
+
+
+@st.cache_data(show_spinner=False)
+def read_csv_auto(local_path: Path) -> pd.DataFrame:
+    """Read a CSV from S3 (S3_ENABLED=true) or local disk (default) using the
+    exact same path -- the caller never needs to know which mode is active."""
+    if S3_ENABLED:
+        obj = s3_client.get_object(Bucket=S3_BUCKET, Key=_s3_key_for(local_path))
+        return pd.read_csv(io.BytesIO(obj["Body"].read()))
+    return pd.read_csv(local_path)
+
+
 @st.cache_data(show_spinner=False)
 def load_matched_pairs(method: str) -> pd.DataFrame:
-    return pd.read_csv(MATCHED_PAIRS_FILES[method])
+    return read_csv_auto(MATCHED_PAIRS_FILES[method])
 
 
 @st.cache_data(show_spinner=False)
 def load_detail(method: str) -> pd.DataFrame:
-    return pd.read_csv(DID_DIR / f"did_roi_results_{method}.csv")
+    return read_csv_auto(DID_DIR / f"did_roi_results_{method}.csv")
 
 
 @st.cache_data(show_spinner=False)
 def load_summary(method: str, sample: str = "all_pairs") -> pd.Series:
-    df = pd.read_csv(DID_DIR / f"did_roi_summary_{method}.csv")
+    df = read_csv_auto(DID_DIR / f"did_roi_summary_{method}.csv")
     return df[df["sample"] == sample].iloc[0]
 
 
 @st.cache_data(show_spinner=False)
 def load_funnel() -> pd.DataFrame | None:
-    if not FUNNEL_FILE.exists():
+    if not csv_exists_auto(FUNNEL_FILE):
         return None
-    return pd.read_csv(FUNNEL_FILE).sort_values("stage_order")
+    return read_csv_auto(FUNNEL_FILE).sort_values("stage_order")
 
 
 @st.cache_data(show_spinner=False)
 def load_events() -> pd.DataFrame:
     """Event master -- spend, date and target category, plus attendee_count,
     which the per-event ROI needs to reproduce the engine's spend allocation."""
-    return pd.read_csv(EVENTS_FILE)[
+    return read_csv_auto(EVENTS_FILE)[
         ["event_id", "event_date", "target_ndc_category",
          "program_spend", "attendee_count"]]
 
