@@ -426,17 +426,10 @@ elif page == "Rule-Based Matching":
     rate, n_matched, n_total = match_rate("rule_based")
     matched = mp[mp["is_matched"] == True]
 
-    # The *_city columns hold REGION values (COL_GEO="region" in rbm_matching.py).
-    # Never label these as "City" in the UI.
-    st.info(
-        "**Rule 2 matches on region, not city** — city-level matching left most "
-        "specialty x city cells with only one eligible HCP. The file's "
-        "`treatment_city` / `control_city` columns therefore carry **region** "
-        "values, and are labelled Region throughout this page.")
-
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("Match rate", f"{rate:.2%}", f"{n_matched:,} of {n_total:,} cases")
-    c2.metric("Clean matches", f"{n_matched:,}", f"of {n_total:,} treatment cases")
+    c2.metric("Matched pairs", f"{len(matched):,}",
+              f"max reuse {int(s['max_control_reuse'])}x")
     c3.metric("DiD lift", f"{s['incremental_lift_pct']:.2f}%",
               f"95% CI [{s['lift_ci_low_pct']:.2f}, {s['lift_ci_high_pct']:.2f}]",
               delta_color="off")
@@ -444,52 +437,41 @@ elif page == "Rule-Based Matching":
         kpi_roi("rule_based", value_per_rx)
 
     st.markdown("---")
-    # Same Pre/post Rx-trend comparison Page 1 shows, reusing the shared
-    # prepost_chart() helper so both methods are read on identical axes.
-    st.plotly_chart(prepost_chart(detail, "Pre vs post Rx — treatment vs control"),
-                    use_container_width=True)
-    st.caption(
-        f"Rule-Based matches on the tightest constraints of the four methods, so "
-        f"its treatment and control baselines start far closer together than "
-        f"Page 1's — {len(detail):,} matched pairs, all within 10% on baseline Rx.")
-
-    st.markdown("---")
-    funnel = load_funnel()
-    if funnel is None:
-        st.error(
-            "Funnel stage counts unavailable — `did_roi_output/rbm_funnel_stages.csv` "
-            "is missing. Stages 2 and 3 cannot be derived from "
-            "rule_based_matching_output.csv alone (unmatched rows carry no control "
-            "columns). Run `python build_funnel_artifact.py` to generate it.")
-    else:
-        fig = go.Figure(go.Funnel(
-            y=funnel["stage"], x=funnel["n_cases"],
-            textinfo="value+percent initial",
-            marker_color=[C_TREAT, C_TREAT, C_ACCENT, C_ACCENT]))
-        fig.update_layout(title="Rule funnel — where treatment cases drop out",
-                          height=430, margin=dict(t=60, b=40, l=10))
-        st.plotly_chart(fig, use_container_width=True)
-        geo = funnel["geo_rule_column"].iloc[0]
-        st.caption(
-            f"Every case has a same-specialty + same-{geo} peer, so geography is "
-            f"not the binding constraint. The drop happens at the rule stage: "
-            f"|experience diff| <= {int(funnel['max_experience_diff_years'].iloc[0])}y "
-            f"AND |Rx diff| <= {funnel['max_rx_pct_diff'].iloc[0]:.0f}%. "
-            f"The final step is within-event contention, not a relaxed rule.")
-
     left, right = st.columns(2)
+
     with left:
-        rk = matched["match_rank"].value_counts().sort_index()
-        fig = go.Figure(go.Bar(x=rk.index.astype(int).astype(str), y=rk.values,
-                               marker_color=C_TREAT,
-                               text=rk.values, textposition="outside"))
-        fig.update_layout(title="Match rank distribution", height=380,
-                          xaxis_title="match_rank", yaxis_title="Matched pairs",
-                          margin=dict(t=60, b=40))
-        st.plotly_chart(fig, use_container_width=True)
-        st.caption("Rank 1 = closest eligible control was free; higher ranks "
-                   "reflect same-event contention, never a relaxed rule.")
+        st.plotly_chart(prepost_chart(detail, "Pre vs post Rx — treatment vs control"),
+                        use_container_width=True)
     with right:
+        # Match rank distribution for rule-based
+        if "match_rank" in matched.columns:
+            rk = matched["match_rank"].value_counts().sort_index()
+            fig = go.Figure(go.Histogram(x=rk.index.astype(int), nbinsx=20, 
+                                        marker_color=C_TREAT))
+            fig.update_layout(title="Match rank distribution", height=380,
+                              xaxis_title="Match rank",
+                              yaxis_title="Matched pairs",
+                              margin=dict(t=60, b=40))
+            st.plotly_chart(fig, use_container_width=True)
+            st.caption(
+                "Rank 1 = best eligible control available; higher ranks reflect "
+                "same-event contention, never a relaxed rule constraint.")
+        else:
+            st.info("Match rank data not available")
+
+    left2, right2 = st.columns(2)
+    with left2:
+        st.plotly_chart(
+            ground_truth_chart(s, "Like-for-like effect vs ground truth"),
+            use_container_width=True)
+        st.caption(
+            f"Anchor pairs are the subset carrying the planted ground-truth effect "
+            f"({int(s['n_anchor_pairs']):,} of {int(s['n_pairs']):,} matched pairs). "
+            f"Anchor lift {s['anchor_lift_pct']:.2f}% minus non-anchor residual bias "
+            f"{s['nonanchor_lift_pct_is_bias']:.2f}% = implied "
+            f"{s['implied_true_effect_pct']:.2f}%.")
+    with right2:
+        # Rx difference distribution (Rule 4 constraint)
         if "rx_pct_diff" in matched.columns:
             v = matched["rx_pct_diff"].dropna()
             fig = go.Figure(go.Histogram(x=v, nbinsx=40, marker_color=C_ACCENT))
@@ -500,33 +482,9 @@ elif page == "Rule-Based Matching":
                               height=380, xaxis_title="rx_pct_diff (%)",
                               yaxis_title="Matched pairs", margin=dict(t=60, b=40))
             st.plotly_chart(fig, use_container_width=True)
-            st.caption(f"All {len(v):,} matched pairs fall at or below the 10% "
-                       f"cutoff (max {v.max():.2f}%) — the rule is enforced, not approximated.")
+            st.caption(f"All {len(v):,} matched pairs enforce the 10% baseline Rx "
+                       f"constraint (max {v.max():.2f}%) — rules are strictly enforced.")
 
-    st.plotly_chart(
-        ground_truth_chart(s, "Like-for-like effect vs ground truth"),
-        use_container_width=True)
-    st.caption(
-        f"Anchor pairs are the subset carrying the planted ground-truth effect "
-        f"({int(s['n_anchor_pairs']):,} of {int(s['n_pairs']):,} matched pairs). "
-        f"Anchor lift {s['anchor_lift_pct']:.2f}% minus non-anchor residual bias "
-        f"{s['nonanchor_lift_pct_is_bias']:.2f}% = implied "
-        f"{s['implied_true_effect_pct']:.2f}% — currently the closest of the four "
-        f"methods to the {s['true_effect_pct']:.0f}% ground truth.")
-
-    with st.expander("Region distribution of matched pairs"):
-        geo_counts = matched["treatment_city"].value_counts()
-        fig = go.Figure(go.Bar(x=geo_counts.index, y=geo_counts.values,
-                               marker_color=C_TREAT))
-        fig.update_layout(title="Matched pairs by Region", height=330,
-                          xaxis_title="Region", yaxis_title="Matched pairs",
-                          margin=dict(t=50, b=40))
-        st.plotly_chart(fig, use_container_width=True)
-        st.caption("Values come from `treatment_city`, which holds region values "
-                   "(see note above). True city is retained separately in "
-                   "`treatment_city_actual`.")
-
-    # ---- Spend & ROI by event -------------------------------------------
     st.markdown("---")
     st.subheader("Spend & ROI by Event")
 
