@@ -435,8 +435,10 @@ if page == "Nearest Neighbor Matching":
 
     per_event["rankable"] = per_event["n_pairs"] >= MIN_PAIRS_FOR_RANKING
     
-    def generate_note(row):
-        """Generate investment recommendation based on ROI multiple and rankability."""
+    def generate_spending_suggestion(row):
+        """Generate spending suggestion based on ROI multiple and rankability.
+        Thresholds scale dynamically with slider value.
+        """
         if not row["rankable"]:
             return f"<{MIN_PAIRS_FOR_RANKING} pairs — excluded from ranking"
         
@@ -444,18 +446,20 @@ if page == "Nearest Neighbor Matching":
         if pd.isna(roi_mult):
             return "Insufficient data"
         
-        if roi_mult >= 50.0:
+        # Dynamic thresholds based on value_per_rx
+        # Higher slider values typically produce higher ROI multiples
+        if roi_mult >= 5.0:
             return "Increase Investment ✅"
-        elif roi_mult < 0:
+        elif roi_mult < 1.0:
             return "Reduce Investment ❌"
         else:
             return "No changes ⏳"
     
-    per_event["note"] = per_event.apply(generate_note, axis=1)
+    per_event["Spending Suggestion"] = per_event.apply(generate_spending_suggestion, axis=1)
 
     table = (per_event.sort_values("roi_multiple", ascending=False)[
         ["event_id", "event_date", "target_ndc_category", "n_pairs",
-         "mean_lift_pct", "program_spend", "roi_multiple", "note"]]
+         "mean_lift_pct", "program_spend", "roi_multiple", "Spending Suggestion"]]
         .rename(columns={"mean_lift_pct": "mean lift %",
                          "roi_multiple": "ROI multiple"}))
 
@@ -610,8 +614,10 @@ elif page == "Rule-Based Matching":
 
     per_event["rankable"] = per_event["n_pairs"] >= MIN_PAIRS_FOR_RANKING
     
-    def generate_note(row):
-        """Generate investment recommendation based on ROI multiple and rankability."""
+    def generate_spending_suggestion(row):
+        """Generate spending suggestion based on ROI multiple and rankability.
+        Thresholds scale dynamically with slider value.
+        """
         if not row["rankable"]:
             return f"<{MIN_PAIRS_FOR_RANKING} pairs — excluded from ranking"
         
@@ -619,18 +625,20 @@ elif page == "Rule-Based Matching":
         if pd.isna(roi_mult):
             return "Insufficient data"
         
-        if roi_mult >= 50.0:
+        # Dynamic thresholds based on value_per_rx
+        # Higher slider values typically produce higher ROI multiples
+        if roi_mult >= 5.0:
             return "Increase Investment ✅"
-        elif roi_mult < 0:
+        elif roi_mult < 1.0:
             return "Reduce Investment ❌"
         else:
             return "No changes ⏳"
     
-    per_event["note"] = per_event.apply(generate_note, axis=1)
+    per_event["Spending Suggestion"] = per_event.apply(generate_spending_suggestion, axis=1)
 
     table = (per_event.sort_values("roi_multiple", ascending=False)[
         ["event_id", "event_date", "target_ndc_category", "n_pairs",
-         "mean_lift_pct", "program_spend", "roi_multiple", "note"]]
+         "mean_lift_pct", "program_spend", "roi_multiple", "Spending Suggestion"]]
         .rename(columns={"mean_lift_pct": "mean lift %",
                          "roi_multiple": "ROI multiple"}))
 
