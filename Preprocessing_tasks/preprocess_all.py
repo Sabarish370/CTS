@@ -241,12 +241,23 @@ def preprocess_events(raw_dir: Path, out_dir: Path) -> pd.DataFrame:
     print(event_log["issue_type"].value_counts())
 
     # Row-by-row restoration of the values the injector overwrote.
+    # ENVIRONMENT ADAPTATION: original_value is always text from a CSV read of
+    # the DQ log, regardless of which column it is restoring into. Pandas
+    # <3.0 silently upcast a numeric column to object on a mismatched .loc
+    # assignment; pandas 3.0 raises TypeError instead. Coerce to the target
+    # column's own dtype family before assigning, matching what the original
+    # (Excel-read, already-typed) environment got for free.
     for _, row in event_log.iterrows():
         event_id = str(row["row_key"]).replace("event_id=", "")
         column = row["column"]
         original_value = row["original_value"]
         mask = events["event_id"].astype(str) == event_id
         if mask.any():
+            target_dtype = events[column].dtype
+            if pd.api.types.is_numeric_dtype(target_dtype):
+                original_value = pd.to_numeric(original_value, errors="coerce")
+            elif pd.api.types.is_datetime64_any_dtype(target_dtype):
+                original_value = pd.to_datetime(original_value, errors="coerce")
             events.loc[mask, column] = original_value
     print("Original values restored successfully.")
 
