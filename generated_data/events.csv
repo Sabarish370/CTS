@@ -1,0 +1,201 @@
+event_id,event_name,event_date,speaker_hcp_id,specialty_focus,region,program_spend,target_ndc_category,venue_type,max_capacity,attendee_count
+EVT-0001,Oral JAK Inhibition in Inflammatory Arthritis - Lansing Regional Dinner Program,2023-07-06,1546587092,rheumatology,Midwest,6700,RHEUM_JAK_ORAL,virtual,122,11
+EVT-0002,Anticoagulation Across Comorbid Populations - Peoria Case-Based Forum,2023-07-09,1942374996,oncology,Midwest,34020,CV_ANTICOAG_ORAL,in-person,64,24
+EVT-0003,Inhaled Maintenance Therapy in COPD & Asthma - Chattanooga Case-Based Forum,2023-07-10,1707268052,pulmonology,Southeast,23680,PULM_ICS_LABA_INH,in-person,35,13
+EVT-0004,Basal Insulin Optimization - Portland Case-Based Forum,2023-07-14,1693072195,endocrinology,Northeast,15250,ENDO_BASAL_INSULIN,in-person,48,15
+EVT-0005,Incretin-Based Therapy: Cardiometabolic Evidence - Colorado Springs Speaker Program,2023-07-17,1600833937,oncology,West,31940,METABOLIC_GLP1_INJ,in-person,37,20
+EVT-0006,Targeted Oral Therapy in Advanced Disease - New Haven Advisory Roundtable,2023-07-18,1043802820,oncology,Northeast,10880,ONC_TARGETED_ORAL,virtual,92,5
+EVT-0007,Guideline-Directed Therapy in Heart Failure - Portland Clinical Update Series,2023-07-28,1693013389,cardiology,Northeast,21490,CARD_HF_ARNI,in-person,31,16
+EVT-0008,CGRP Pathway Inhibition in Migraine - Grand Rapids Speaker Program,2023-07-30,1872102060,neurology,Midwest,28620,NEURO_MIGRAINE_CGRP,in-person,46,9
+EVT-0009,Incretin-Based Therapy: Cardiometabolic Evidence - Portland Peer-to-Peer Exchange,2023-08-01,1788800922,primary care,Northeast,24380,METABOLIC_GLP1_INJ,in-person,33,33
+EVT-0010,Anticoagulation Across Comorbid Populations - Stamford Speaker Program,2023-08-06,1182422455,cardiology,Northeast,20040,CV_ANTICOAG_ORAL,in-person,25,21
+EVT-0011,Anticoagulation Across Comorbid Populations - Portland Clinical Update Series,2023-08-08,1134195944,cardiology,Northeast,54410,CV_ANTICOAG_ORAL,in-person,63,28
+EVT-0012,Guideline-Directed Therapy in Heart Failure - Norfolk Case-Based Forum,2023-08-10,1611741350,cardiology,Southeast,36540,CARD_HF_ARNI,in-person,41,16
+EVT-0013,Resistant Hypertension in Primary Care - Detroit Clinical Update Series,2023-08-11,1909167417,primary care,Midwest,12420,PC_ANTIHYPERTENSIVE,in-person,26,21
+EVT-0014,Guideline-Directed Therapy in Heart Failure - New Haven Peer-to-Peer Exchange,2023-09-01,1968340152,cardiology,Northeast,4750,CARD_HF_ARNI,virtual,125,16
+EVT-0015,Resistant Hypertension in Primary Care - Jacksonville Peer-to-Peer Exchange,2023-09-02,1753387863,primary care,Southeast,25810,PC_ANTIHYPERTENSIVE,in-person,58,34
+EVT-0016,Resistant Hypertension in Primary Care - Eugene Speaker Program,2023-09-02,1120344282,primary care,West,15800,PC_ANTIHYPERTENSIVE,in-person,63,24
+EVT-0017,Incretin-Based Therapy: Cardiometabolic Evidence - Eugene Advisory Roundtable,2023-09-09,1114926011,cardiology,West,3990,METABOLIC_GLP1_INJ,virtual,95,44
+EVT-0018,Basal Insulin Optimization - Winston-Salem Speaker Program,2023-09-11,1912301342,endocrinology,Southeast,18840,ENDO_BASAL_INSULIN,in-person,41,14
+EVT-0019,Resistant Hypertension in Primary Care - Portland Advisory Roundtable,2023-09-11,1788800922,primary care,Northeast,23380,PC_ANTIHYPERTENSIVE,in-person,39,33
+EVT-0020,Resistant Hypertension in Primary Care - Minneapolis Peer-to-Peer Exchange,2023-09-12,1479680351,primary care,Midwest,16850,PC_ANTIHYPERTENSIVE,in-person,26,26
+EVT-0021,Incretin-Based Therapy: Cardiometabolic Evidence - Boulder Clinical Update Series,2023-09-13,1405644208,neurology,West,32300,METABOLIC_GLP1_INJ,in-person,29,17
+EVT-0022,Anticoagulation Across Comorbid Populations - Albany Case-Based Forum,2023-09-19,1231312657,neurology,Northeast,74200,CV_ANTICOAG_ORAL,in-person,44,26
+EVT-0023,Basal Insulin Optimization - Chattanooga Case-Based Forum,2023-09-20,1491649715,endocrinology,Southeast,13190,ENDO_BASAL_INSULIN,in-person,62,12
+EVT-0024,Basal Insulin Optimization - Albuquerque Advisory Roundtable,2023-09-27,1956217115,endocrinology,Southwest,23700,ENDO_BASAL_INSULIN,in-person,65,14
+EVT-0025,Resistant Hypertension in Primary Care - Rockford Peer-to-Peer Exchange,2023-10-08,1869092142,primary care,Midwest,14480,PC_ANTIHYPERTENSIVE,in-person,29,29
+EVT-0026,Resistant Hypertension in Primary Care - Salt Lake City Advisory Roundtable,2023-10-08,1329851996,primary care,West,18160,PC_ANTIHYPERTENSIVE,in-person,57,29
+EVT-0027,CGRP Pathway Inhibition in Migraine - Toledo Regional Dinner Program,2023-10-08,1555316755,neurology,Midwest,11970,NEURO_MIGRAINE_CGRP,in-person,28,6
+EVT-0028,CGRP Pathway Inhibition in Migraine - Detroit Peer-to-Peer Exchange,2023-10-08,1028772501,neurology,Midwest,9670,NEURO_MIGRAINE_CGRP,virtual,53,9
+EVT-0029,Anticoagulation Across Comorbid Populations - Santa Fe Peer-to-Peer Exchange,2023-10-09,1572650665,endocrinology,Southwest,58900,CV_ANTICOAG_ORAL,in-person,51,35
+EVT-0030,Basal Insulin Optimization - Stamford Case-Based Forum,2023-10-10,1160652685,endocrinology,Northeast,1460,ENDO_BASAL_INSULIN,virtual,74,20
+EVT-0031,Anticoagulation Across Comorbid Populations - Hartford Speaker Program,2023-10-16,1397150222,cardiology,Northeast,18450,CV_ANTICOAG_ORAL,in-person,31,31
+EVT-0032,Inhaled Maintenance Therapy in COPD & Asthma - Boston Peer-to-Peer Exchange,2023-10-16,1138794031,pulmonology,Northeast,6910,PULM_ICS_LABA_INH,virtual,59,11
+EVT-0033,Incretin-Based Therapy: Cardiometabolic Evidence - Cambridge Advisory Roundtable,2023-10-20,1907128700,rheumatology,Northeast,17900,METABOLIC_GLP1_INJ,in-person,35,31
+EVT-0034,Resistant Hypertension in Primary Care - San Francisco Advisory Roundtable,2023-10-23,1954580399,primary care,West,0,PC_ANTIHYPERTENSIVE,in-person,48,31
+EVT-0035,Resistant Hypertension in Primary Care - Indianapolis Clinical Update Series,2023-10-26,1367956301,primary care,Midwest,2650,PC_ANTIHYPERTENSIVE,virtual,74,39
+EVT-0036,Resistant Hypertension in Primary Care - Greenville Advisory Roundtable,2023-10-28,1749263335,primary care,Southeast,18500,PC_ANTIHYPERTENSIVE,in-person,45,30
+EVT-0037,Inhaled Maintenance Therapy in COPD & Asthma - Eugene Case-Based Forum,2023-10-30,1983357579,pulmonology,West,3960,PULM_ICS_LABA_INH,virtual,135,13
+EVT-0038,Targeted Oral Therapy in Advanced Disease - Santa Fe Clinical Update Series,2023-11-02,1218757361,oncology,Southwest,5600,ONC_TARGETED_ORAL,virtual,92,5
+EVT-0039,Incretin-Based Therapy: Cardiometabolic Evidence - Denver Clinical Update Series,2023-11-03,1616066910,rheumatology,West,50910,METABOLIC_GLP1_INJ,in-person,65,35
+EVT-0040,Resistant Hypertension in Primary Care - Denver Advisory Roundtable,2023-11-05,1346135829,primary care,West,11740,PC_ANTIHYPERTENSIVE,in-person,52,27
+EVT-0041,Basal Insulin Optimization - Reno Regional Dinner Program,2023-11-10,1421582168,endocrinology,Southwest,12690,ENDO_BASAL_INSULIN,virtual,135,20
+EVT-0042,Incretin-Based Therapy: Cardiometabolic Evidence - Columbia Regional Dinner Program,2023-11-12,1713480105,cardiology,Midwest,12770,METABOLIC_GLP1_INJ,in-person,44,42
+EVT-0043,Basal Insulin Optimization - Los Angeles Clinical Update Series,2023-11-12,1947002428,endocrinology,West,17350,ENDO_BASAL_INSULIN,in-person,29,13
+EVT-0044,Targeted Oral Therapy in Advanced Disease - Spokane Regional Dinner Program,2023-11-13,1889545335,oncology,West,10780,ONC_TARGETED_ORAL,in-person,48,6
+EVT-0045,CGRP Pathway Inhibition in Migraine - Jacksonville Case-Based Forum,2023-11-14,1875587127,neurology,Southeast,35320,NEURO_MIGRAINE_CGRP,in-person,36,11
+EVT-0046,Incretin-Based Therapy: Cardiometabolic Evidence - Indianapolis Regional Dinner Program,2023-11-15,1367956301,primary care,Midwest,8320,METABOLIC_GLP1_INJ,virtual,90,53
+EVT-0047,Anticoagulation Across Comorbid Populations - Green Bay Case-Based Forum,2023-11-23,1254492527,oncology,Midwest,19410,CV_ANTICOAG_ORAL,in-person,49,25
+EVT-0048,Anticoagulation Across Comorbid Populations - Madison Speaker Program,2023-11-23,1366051187,pulmonology,Midwest,18320,CV_ANTICOAG_ORAL,in-person,34,23
+EVT-0049,CGRP Pathway Inhibition in Migraine - Philadelphia Clinical Update Series,2023-11-27,1917761615,neurology,Northeast,14660,NEURO_MIGRAINE_CGRP,in-person,30,9
+EVT-0050,Incretin-Based Therapy: Cardiometabolic Evidence - Provo Advisory Roundtable,2023-11-27,1475353029,pulmonology,West,24510,METABOLIC_GLP1_INJ,in-person,53,24
+EVT-0051,Guideline-Directed Therapy in Heart Failure - Tampa Regional Dinner Program,2023-11-28,1062661164,cardiology,Southeast,12620,CARD_HF_ARNI,in-person,56,7
+EVT-0052,Guideline-Directed Therapy in Heart Failure - Reno Speaker Program,2023-12-06,1465875601,cardiology,Southwest,14360,CARD_HF_ARNI,in-person,39,9
+EVT-0053,Resistant Hypertension in Primary Care - Richmond Case-Based Forum,2023-12-06,1406384093,primary care,Southeast,0,PC_ANTIHYPERTENSIVE,in-person,63,28
+EVT-0054,Basal Insulin Optimization - Cleveland Regional Dinner Program,2023-12-08,1042455315,endocrinology,Midwest,6430,ENDO_BASAL_INSULIN,virtual,88,17
+EVT-0055,Inhaled Maintenance Therapy in COPD & Asthma - Birmingham Peer-to-Peer Exchange,2023-12-18,1734447604,pulmonology,Southeast,2690,PULM_ICS_LABA_INH,virtual,102,20
+EVT-0056,Guideline-Directed Therapy in Heart Failure - Albany Clinical Update Series,2023-12-26,1727100020,cardiology,Northeast,15190,CARD_HF_ARNI,in-person,61,16
+EVT-0057,Anticoagulation Across Comorbid Populations - San Diego Clinical Update Series,2023-12-28,1262170503,primary care,West,11210,CV_ANTICOAG_ORAL,in-person,28,28
+EVT-0058,CGRP Pathway Inhibition in Migraine - Toledo Regional Dinner Program,2023-12-30,1555316755,neurology,Midwest,19550,NEURO_MIGRAINE_CGRP,in-person,62,9
+EVT-0059,Oral JAK Inhibition in Inflammatory Arthritis - Mobile Peer-to-Peer Exchange,2024-01-02,1488840616,rheumatology,Southeast,9390,RHEUM_JAK_ORAL,virtual,85,10
+EVT-0060,Basal Insulin Optimization - Tampa Regional Dinner Program,2024-01-04,1757379494,endocrinology,Southeast,7190,ENDO_BASAL_INSULIN,virtual,105,14
+EVT-0061,Resistant Hypertension in Primary Care - Rochester Peer-to-Peer Exchange,2024-01-04,1245726108,primary care,Midwest,10540,PC_ANTIHYPERTENSIVE,in-person,41,29
+EVT-0062,Incretin-Based Therapy: Cardiometabolic Evidence - Durham Advisory Roundtable,2024-01-05,1719722377,endocrinology,Southeast,35430,METABOLIC_GLP1_INJ,in-person,30,22
+EVT-0063,Anticoagulation Across Comorbid Populations - Macon Speaker Program,2024-01-08,1767320793,primary care,Southeast,10480,CV_ANTICOAG_ORAL,in-person,52,42
+EVT-0064,Guideline-Directed Therapy in Heart Failure - Chicago Regional Dinner Program,2024-01-09,1646792071,cardiology,Midwest,62230,CARD_HF_ARNI,in-person,33,15
+EVT-0065,Anticoagulation Across Comorbid Populations - South Bend Peer-to-Peer Exchange,2024-01-09,1883526315,primary care,Midwest,38850,CV_ANTICOAG_ORAL,in-person,41,34
+EVT-0066,Oral JAK Inhibition in Inflammatory Arthritis - Hershey Case-Based Forum,2024-01-11,1835339551,rheumatology,Northeast,50660,RHEUM_JAK_ORAL,in-person,50,12
+EVT-0067,Anticoagulation Across Comorbid Populations - Los Angeles Regional Dinner Program,2024-01-20,1147656700,pulmonology,West,52150,CV_ANTICOAG_ORAL,in-person,33,29
+EVT-0068,Incretin-Based Therapy: Cardiometabolic Evidence - Columbia Advisory Roundtable,2024-01-26,1820307894,pulmonology,Southeast,17160,METABOLIC_GLP1_INJ,in-person,50,32
+EVT-0069,Anticoagulation Across Comorbid Populations - Columbia Clinical Update Series,2024-01-28,1929302226,primary care,Midwest,69100,CV_ANTICOAG_ORAL,in-person,63,49
+EVT-0070,Oral JAK Inhibition in Inflammatory Arthritis - Salt Lake City Speaker Program,2024-02-03,1162375699,rheumatology,West,48280,RHEUM_JAK_ORAL,in-person,55,8
+EVT-0071,Incretin-Based Therapy: Cardiometabolic Evidence - Tacoma Case-Based Forum,2024-02-05,1134966757,primary care,West,7680,METABOLIC_GLP1_INJ,virtual,63,46
+EVT-0072,Oral JAK Inhibition in Inflammatory Arthritis - Cambridge Peer-to-Peer Exchange,2024-02-08,1907128700,rheumatology,Northeast,34220,RHEUM_JAK_ORAL,in-person,27,13
+EVT-0073,Resistant Hypertension in Primary Care - Bangor Speaker Program,2024-02-10,1619471448,primary care,Northeast,4790,PC_ANTIHYPERTENSIVE,virtual,114,42
+EVT-0074,Anticoagulation Across Comorbid Populations - Denver Speaker Program,2024-02-13,1646133078,endocrinology,West,51580,CV_ANTICOAG_ORAL,in-person,38,27
+EVT-0075,Resistant Hypertension in Primary Care - Rockford Case-Based Forum,2024-02-13,1869092142,primary care,Midwest,17390,PC_ANTIHYPERTENSIVE,in-person,42,27
+EVT-0076,CGRP Pathway Inhibition in Migraine - Stamford Advisory Roundtable,2024-02-23,1085394942,neurology,Northeast,5540,NEURO_MIGRAINE_CGRP,in-person,58,12
+EVT-0077,Guideline-Directed Therapy in Heart Failure - Portland Clinical Update Series,2024-02-26,1211781301,cardiology,Northeast,10780,CARD_HF_ARNI,in-person,46,10
+EVT-0078,CGRP Pathway Inhibition in Migraine - Charlotte Advisory Roundtable,2024-03-05,1415915762,neurology,Southeast,25980,NEURO_MIGRAINE_CGRP,in-person,35,5
+EVT-0079,Targeted Oral Therapy in Advanced Disease - Provo Peer-to-Peer Exchange,2024-03-11,1725198265,oncology,West,22990,ONC_TARGETED_ORAL,in-person,59,6
+EVT-0080,Targeted Oral Therapy in Advanced Disease - Lansing Peer-to-Peer Exchange,2024-03-11,1484037258,oncology,Midwest,6030,ONC_TARGETED_ORAL,virtual,129,10
+EVT-0081,Guideline-Directed Therapy in Heart Failure - Arlington Case-Based Forum,2024-03-12,1822345694,cardiology,Southeast,11180,CARD_HF_ARNI,virtual,88,17
+EVT-0082,Oral JAK Inhibition in Inflammatory Arthritis - San Diego Regional Dinner Program,2024-03-21,1972351286,rheumatology,West,64690,RHEUM_JAK_ORAL,in-person,30,5
+EVT-0083,Incretin-Based Therapy: Cardiometabolic Evidence - New York Clinical Update Series,2024-03-26,1570328496,rheumatology,Northeast,10780,METABOLIC_GLP1_INJ,in-person,45,35
+EVT-0084,Guideline-Directed Therapy in Heart Failure - Tulsa Peer-to-Peer Exchange,2024-03-27,1604279475,cardiology,Southwest,25610,CARD_HF_ARNI,in-person,55,12
+EVT-0085,Inhaled Maintenance Therapy in COPD & Asthma - Springfield Case-Based Forum,2024-04-10,1246428209,pulmonology,Midwest,4650,PULM_ICS_LABA_INH,virtual,67,13
+EVT-0086,Anticoagulation Across Comorbid Populations - Charleston Advisory Roundtable,2024-04-17,1083964134,endocrinology,Southeast,2610,CV_ANTICOAG_ORAL,virtual,96,36
+EVT-0087,Basal Insulin Optimization - Eugene Speaker Program,2024-04-18,1834127445,endocrinology,West,17520,ENDO_BASAL_INSULIN,in-person,29,15
+EVT-0088,Oral JAK Inhibition in Inflammatory Arthritis - Raleigh Clinical Update Series,2024-04-18,1480866635,rheumatology,Southeast,18550,RHEUM_JAK_ORAL,in-person,36,8
+EVT-0089,Targeted Oral Therapy in Advanced Disease - Allentown Clinical Update Series,2024-04-19,1854727892,oncology,Northeast,29350,ONC_TARGETED_ORAL,in-person,59,7
+EVT-0090,Targeted Oral Therapy in Advanced Disease - Santa Fe Peer-to-Peer Exchange,2024-04-21,1553755327,oncology,Southwest,12370,ONC_TARGETED_ORAL,virtual,117,7
+EVT-0091,Oral JAK Inhibition in Inflammatory Arthritis - Lansing Advisory Roundtable,2024-04-24,1949931087,rheumatology,Midwest,19950,RHEUM_JAK_ORAL,in-person,64,11
+EVT-0092,Incretin-Based Therapy: Cardiometabolic Evidence - Scottsdale Clinical Update Series,2024-04-28,1148541752,endocrinology,Southwest,33880,METABOLIC_GLP1_INJ,in-person,59,33
+EVT-0093,Resistant Hypertension in Primary Care - Oklahoma City Clinical Update Series,2024-04-28,1042285084,primary care,Southwest,14820,PC_ANTIHYPERTENSIVE,in-person,62,32
+EVT-0094,Inhaled Maintenance Therapy in COPD & Asthma - New Haven Case-Based Forum,2024-04-28,1964558476,pulmonology,Northeast,32660,PULM_ICS_LABA_INH,in-person,37,9
+EVT-0095,Resistant Hypertension in Primary Care - Princeton Case-Based Forum,2024-04-30,1984924732,primary care,Northeast,4510,PC_ANTIHYPERTENSIVE,virtual,122,42
+EVT-0096,Guideline-Directed Therapy in Heart Failure - Tulsa Clinical Update Series,2024-05-02,1079997809,cardiology,Southwest,7270,CARD_HF_ARNI,virtual,51,16
+EVT-0097,Inhaled Maintenance Therapy in COPD & Asthma - Rockford Advisory Roundtable,2024-05-03,1676011079,pulmonology,Midwest,13600,PULM_ICS_LABA_INH,in-person,46,9
+EVT-0098,Anticoagulation Across Comorbid Populations - Philadelphia Speaker Program,2024-05-07,1829206543,oncology,Northeast,16930,CV_ANTICOAG_ORAL,in-person,45,35
+EVT-0099,Inhaled Maintenance Therapy in COPD & Asthma - Hartford Regional Dinner Program,2024-05-10,1608203554,pulmonology,Northeast,2390,PULM_ICS_LABA_INH,virtual,87,10
+EVT-0100,Targeted Oral Therapy in Advanced Disease - Peoria Case-Based Forum,2024-05-11,1942292768,oncology,Midwest,5810,ONC_TARGETED_ORAL,virtual,116,8
+EVT-0101,Incretin-Based Therapy: Cardiometabolic Evidence - Birmingham Regional Dinner Program,2024-05-15,1266109689,primary care,Southeast,8780,METABOLIC_GLP1_INJ,virtual,70,50
+EVT-0102,Inhaled Maintenance Therapy in COPD & Asthma - Eugene Advisory Roundtable,2024-05-16,1531018426,pulmonology,West,13860,PULM_ICS_LABA_INH,in-person,27,9
+EVT-0103,Basal Insulin Optimization - Princeton Regional Dinner Program,2024-05-18,1900401815,endocrinology,Northeast,4820,ENDO_BASAL_INSULIN,virtual,79,19
+EVT-0104,Anticoagulation Across Comorbid Populations - Jacksonville Clinical Update Series,2024-05-18,1411293156,neurology,Southeast,12150,CV_ANTICOAG_ORAL,in-person,44,28
+EVT-0105,Guideline-Directed Therapy in Heart Failure - Albuquerque Regional Dinner Program,2024-05-20,1220405058,cardiology,Southwest,6160,CARD_HF_ARNI,in-person,61,15
+EVT-0106,Guideline-Directed Therapy in Heart Failure - Milwaukee Peer-to-Peer Exchange,2024-05-24,1884150503,cardiology,Midwest,25060,CARD_HF_ARNI,in-person,40,18
+EVT-0107,Guideline-Directed Therapy in Heart Failure - Pittsburgh Clinical Update Series,2024-05-30,1334515891,cardiology,Northeast,35850,CARD_HF_ARNI,in-person,50,12
+EVT-0108,Resistant Hypertension in Primary Care - Raleigh Regional Dinner Program,2024-06-03,1742245693,primary care,Southeast,22850,PC_ANTIHYPERTENSIVE,in-person,61,35
+EVT-0109,Incretin-Based Therapy: Cardiometabolic Evidence - Bangor Peer-to-Peer Exchange,2024-06-07,1206870192,oncology,Northeast,13320,METABOLIC_GLP1_INJ,virtual,123,41
+EVT-0110,Resistant Hypertension in Primary Care - Milwaukee Peer-to-Peer Exchange,2024-06-07,1168681900,primary care,Midwest,31480,PC_ANTIHYPERTENSIVE,in-person,26,23
+EVT-0111,Incretin-Based Therapy: Cardiometabolic Evidence - Las Vegas Case-Based Forum,2024-06-10,1237956572,endocrinology,Southwest,5250,METABOLIC_GLP1_INJ,in-person,62,37
+EVT-0112,Targeted Oral Therapy in Advanced Disease - Toledo Speaker Program,2024-06-11,1455591119,oncology,Midwest,8790,ONC_TARGETED_ORAL,virtual,80,5
+EVT-0113,Anticoagulation Across Comorbid Populations - Mesa Case-Based Forum,2024-06-12,1332821143,oncology,Southwest,15270,CV_ANTICOAG_ORAL,in-person,30,24
+EVT-0114,Oral JAK Inhibition in Inflammatory Arthritis - Albuquerque Clinical Update Series,2024-06-14,1724088210,rheumatology,Southwest,15140,RHEUM_JAK_ORAL,in-person,45,6
+EVT-0115,Targeted Oral Therapy in Advanced Disease - Toledo Peer-to-Peer Exchange,2024-06-17,1455591119,oncology,Midwest,22940,ONC_TARGETED_ORAL,in-person,37,4
+EVT-0116,Resistant Hypertension in Primary Care - Greenville Clinical Update Series,2024-06-18,1516379264,primary care,Southeast,12390,PC_ANTIHYPERTENSIVE,in-person,56,36
+EVT-0117,Targeted Oral Therapy in Advanced Disease - Winston-Salem Regional Dinner Program,2024-06-20,1345219731,oncology,Southeast,4580,ONC_TARGETED_ORAL,virtual,51,10
+EVT-0118,Guideline-Directed Therapy in Heart Failure - Reno Regional Dinner Program,2024-06-20,1465875601,cardiology,Southwest,15730,CARD_HF_ARNI,virtual,114,18
+EVT-0119,Anticoagulation Across Comorbid Populations - Bangor Advisory Roundtable,2024-06-21,1720146327,neurology,Northeast,13120,CV_ANTICOAG_ORAL,in-person,41,30
+EVT-0120,Oral JAK Inhibition in Inflammatory Arthritis - Eugene Case-Based Forum,2024-06-26,1801296579,rheumatology,West,3800,RHEUM_JAK_ORAL,virtual,47,9
+EVT-0121,Incretin-Based Therapy: Cardiometabolic Evidence - Houston Speaker Program,2024-06-27,1656529157,endocrinology,Southwest,33600,METABOLIC_GLP1_INJ,in-person,27,27
+EVT-0122,Anticoagulation Across Comorbid Populations - Rochester Regional Dinner Program,2024-07-03,1681526517,oncology,Midwest,31640,CV_ANTICOAG_ORAL,in-person,46,29
+EVT-0123,Resistant Hypertension in Primary Care - Bangor Regional Dinner Program,2024-07-04,1219831884,primary care,Northeast,16030,PC_ANTIHYPERTENSIVE,virtual,87,37
+EVT-0124,Anticoagulation Across Comorbid Populations - Bangor Speaker Program,2024-07-04,1619471448,primary care,Northeast,18170,CV_ANTICOAG_ORAL,in-person,35,35
+EVT-0125,Guideline-Directed Therapy in Heart Failure - Tucson Speaker Program,2024-07-05,1799582725,cardiology,Southwest,3750,CARD_HF_ARNI,virtual,81,19
+EVT-0126,Inhaled Maintenance Therapy in COPD & Asthma - Rockford Clinical Update Series,2024-07-10,1676011079,pulmonology,Midwest,7340,PULM_ICS_LABA_INH,virtual,128,13
+EVT-0127,CGRP Pathway Inhibition in Migraine - Milwaukee Case-Based Forum,2024-07-21,1737156715,neurology,Midwest,4070,NEURO_MIGRAINE_CGRP,virtual,55,8
+EVT-0128,Resistant Hypertension in Primary Care - Charleston Peer-to-Peer Exchange,2024-08-14,1101338055,primary care,Southeast,15920,PC_ANTIHYPERTENSIVE,in-person,58,33
+EVT-0129,Oral JAK Inhibition in Inflammatory Arthritis - New York Speaker Program,2024-08-25,1570328496,rheumatology,Northeast,16720,RHEUM_JAK_ORAL,in-person,40,13
+EVT-0130,Incretin-Based Therapy: Cardiometabolic Evidence - Richmond Regional Dinner Program,2024-09-05,1645750203,cardiology,Southeast,18660,METABOLIC_GLP1_INJ,in-person,54,40
+EVT-0131,Resistant Hypertension in Primary Care - New Haven Speaker Program,2024-09-08,1250670316,primary care,Northeast,15520,PC_ANTIHYPERTENSIVE,virtual,113,51
+EVT-0132,Guideline-Directed Therapy in Heart Failure - Milwaukee Speaker Program,2024-09-14,1884150503,cardiology,Midwest,39670,CARD_HF_ARNI,in-person,35,11
+EVT-0133,Guideline-Directed Therapy in Heart Failure - Mobile Speaker Program,2024-09-19,1607660754,cardiology,Southeast,10530,CARD_HF_ARNI,in-person,46,18
+EVT-0134,CGRP Pathway Inhibition in Migraine - Colorado Springs Speaker Program,2024-09-22,1075693709,neurology,West,9950,NEURO_MIGRAINE_CGRP,in-person,45,4
+EVT-0135,Oral JAK Inhibition in Inflammatory Arthritis - Minneapolis Peer-to-Peer Exchange,2024-09-24,1285907337,rheumatology,Midwest,20230,RHEUM_JAK_ORAL,virtual,96,10
+EVT-0136,Guideline-Directed Therapy in Heart Failure - Columbia Advisory Roundtable,2024-09-25,1713480105,cardiology,Midwest,13600,CARD_HF_ARNI,in-person,64,21
+EVT-0137,Guideline-Directed Therapy in Heart Failure - Portland Case-Based Forum,2024-09-25,1211781301,cardiology,Northeast,15880,CARD_HF_ARNI,virtual,106,20
+EVT-0138,Targeted Oral Therapy in Advanced Disease - Dallas Case-Based Forum,2024-09-29,1026804116,oncology,Southwest,29540,ONC_TARGETED_ORAL,in-person,44,6
+EVT-0139,Targeted Oral Therapy in Advanced Disease - Hartford Speaker Program,2024-10-04,1360698140,oncology,Northeast,26650,ONC_TARGETED_ORAL,in-person,43,6
+EVT-0140,Resistant Hypertension in Primary Care - Princeton Peer-to-Peer Exchange,2024-10-06,1338119237,primary care,Northeast,23060,PC_ANTIHYPERTENSIVE,in-person,44,27
+EVT-0141,CGRP Pathway Inhibition in Migraine - Bangor Peer-to-Peer Exchange,2024-10-08,1720146327,neurology,Northeast,19050,NEURO_MIGRAINE_CGRP,in-person,63,10
+EVT-0142,Incretin-Based Therapy: Cardiometabolic Evidence - Columbia Clinical Update Series,2024-10-08,1221582384,pulmonology,Midwest,14110,METABOLIC_GLP1_INJ,in-person,58,25
+EVT-0143,Anticoagulation Across Comorbid Populations - Salt Lake City Regional Dinner Program,2024-10-09,1513803142,primary care,West,34140,CV_ANTICOAG_ORAL,in-person,33,32
+EVT-0144,Anticoagulation Across Comorbid Populations - Denver Case-Based Forum,2024-10-18,1589965130,pulmonology,West,21590,CV_ANTICOAG_ORAL,in-person,32,26
+EVT-0145,CGRP Pathway Inhibition in Migraine - Albany Speaker Program,2024-10-20,1410724201,neurology,Northeast,4570,NEURO_MIGRAINE_CGRP,virtual,101,11
+EVT-0146,Anticoagulation Across Comorbid Populations - Winston-Salem Advisory Roundtable,2024-10-22,1163769114,oncology,Southeast,28060,CV_ANTICOAG_ORAL,in-person,40,20
+EVT-0147,Anticoagulation Across Comorbid Populations - Atlanta Case-Based Forum,2024-10-31,1890080918,cardiology,Southeast,39800,CV_ANTICOAG_ORAL,in-person,46,38
+EVT-0148,Oral JAK Inhibition in Inflammatory Arthritis - Jersey City Regional Dinner Program,2024-11-06,1142840812,rheumatology,Northeast,13130,RHEUM_JAK_ORAL,virtual,121,12
+EVT-0149,Anticoagulation Across Comorbid Populations - Albany Advisory Roundtable,2024-11-07,1581992355,cardiology,Northeast,6950,CV_ANTICOAG_ORAL,in-person,60,41
+EVT-0150,Targeted Oral Therapy in Advanced Disease - Allentown Advisory Roundtable,2024-11-08,1775788783,oncology,Northeast,14530,ONC_TARGETED_ORAL,in-person,57,6
+EVT-0151,Oral JAK Inhibition in Inflammatory Arthritis - Pittsburgh Peer-to-Peer Exchange,2024-11-14,1094061177,rheumatology,Northeast,7770,RHEUM_JAK_ORAL,virtual,123,11
+EVT-0152,Anticoagulation Across Comorbid Populations - Jersey City Speaker Program,2024-11-20,1188598183,neurology,Northeast,22900,CV_ANTICOAG_ORAL,in-person,62,38
+EVT-0153,Anticoagulation Across Comorbid Populations - Jersey City Clinical Update Series,2024-11-21,1188598183,neurology,Northeast,30400,CV_ANTICOAG_ORAL,in-person,39,30
+EVT-0154,Incretin-Based Therapy: Cardiometabolic Evidence - Salt Lake City Regional Dinner Program,2024-11-22,1329851996,primary care,West,11670,METABOLIC_GLP1_INJ,in-person,42,40
+EVT-0155,Inhaled Maintenance Therapy in COPD & Asthma - Provo Peer-to-Peer Exchange,2024-11-23,1475353029,pulmonology,West,2910,PULM_ICS_LABA_INH,virtual,95,11
+EVT-0156,Incretin-Based Therapy: Cardiometabolic Evidence - Arlington Advisory Roundtable,2024-11-24,1188411270,endocrinology,Southeast,30050,METABOLIC_GLP1_INJ,in-person,65,35
+EVT-0157,Inhaled Maintenance Therapy in COPD & Asthma - Augusta Advisory Roundtable,2024-11-29,1101495749,pulmonology,Southeast,19440,PULM_ICS_LABA_INH,in-person,28,12
+EVT-0158,Resistant Hypertension in Primary Care - Oklahoma City Peer-to-Peer Exchange,2024-11-30,1614682395,primary care,Southwest,7740,PC_ANTIHYPERTENSIVE,in-person,50,32
+EVT-0159,Basal Insulin Optimization - San Diego Clinical Update Series,2024-12-03,1600621852,endocrinology,West,7750,ENDO_BASAL_INSULIN,virtual,117,20
+EVT-0160,Basal Insulin Optimization - Stamford Clinical Update Series,2024-12-07,1338689064,endocrinology,Northeast,14170,ENDO_BASAL_INSULIN,in-person,39,13
+EVT-0161,Resistant Hypertension in Primary Care - Las Vegas Speaker Program,2024-12-07,1154262954,primary care,Southwest,6190,PC_ANTIHYPERTENSIVE,virtual,103,37
+EVT-0162,Inhaled Maintenance Therapy in COPD & Asthma - Mobile Speaker Program,2024-12-10,1394700250,pulmonology,Southeast,12330,PULM_ICS_LABA_INH,in-person,27,6
+EVT-0163,Anticoagulation Across Comorbid Populations - Birmingham Peer-to-Peer Exchange,2024-12-13,1692444494,pulmonology,Southeast,16610,CV_ANTICOAG_ORAL,in-person,52,33
+EVT-0164,Basal Insulin Optimization - Portland Advisory Roundtable,2024-12-15,1693072195,endocrinology,Northeast,46130,ENDO_BASAL_INSULIN,in-person,55,15
+EVT-0165,Anticoagulation Across Comorbid Populations - Charleston Advisory Roundtable,2024-12-19,1083964134,endocrinology,Southeast,25630,CV_ANTICOAG_ORAL,virtual,101,46
+EVT-0166,Targeted Oral Therapy in Advanced Disease - Lansing Advisory Roundtable,2024-12-31,1484037258,oncology,Midwest,7820,ONC_TARGETED_ORAL,virtual,96,6
+EVT-0167,Anticoagulation Across Comorbid Populations - Green Bay Peer-to-Peer Exchange,2024-12-31,1080136264,primary care,Midwest,3980,CV_ANTICOAG_ORAL,virtual,101,53
+EVT-0168,Incretin-Based Therapy: Cardiometabolic Evidence - Atlanta Regional Dinner Program,2025-01-01,1890080918,cardiology,Southeast,28800,METABOLIC_GLP1_INJ,in-person,59,39
+EVT-0169,CGRP Pathway Inhibition in Migraine - Salt Lake City Advisory Roundtable,2025-01-06,1475314641,neurology,West,39290,NEURO_MIGRAINE_CGRP,in-person,31,10
+EVT-0170,Oral JAK Inhibition in Inflammatory Arthritis - Lansing Advisory Roundtable,2025-01-07,1546587092,rheumatology,Midwest,6200,RHEUM_JAK_ORAL,virtual,135,15
+EVT-0171,Inhaled Maintenance Therapy in COPD & Asthma - San Jose Advisory Roundtable,2025-01-10,1484162957,pulmonology,West,13790,PULM_ICS_LABA_INH,in-person,49,8
+EVT-0172,Incretin-Based Therapy: Cardiometabolic Evidence - Indianapolis Speaker Program,2025-01-14,1897724641,primary care,Midwest,45440,METABOLIC_GLP1_INJ,in-person,38,34
+EVT-0173,Incretin-Based Therapy: Cardiometabolic Evidence - Tacoma Speaker Program,2025-01-14,1518550110,neurology,West,9560,METABOLIC_GLP1_INJ,virtual,64,26
+EVT-0174,Basal Insulin Optimization - Albany Speaker Program,2025-01-15,1436772218,endocrinology,Northeast,,ENDO_BASAL_INSULIN,in-person,39,13
+EVT-0175,Anticoagulation Across Comorbid Populations - Springfield Regional Dinner Program,2025-01-20,1194241117,primary care,Northeast,3890,CV_ANTICOAG_ORAL,virtual,113,64
+EVT-0176,Anticoagulation Across Comorbid Populations - Santa Fe Clinical Update Series,2025-01-23,1094685637,pulmonology,Southwest,17160,CV_ANTICOAG_ORAL,virtual,102,35
+EVT-0177,Anticoagulation Across Comorbid Populations - Albuquerque Regional Dinner Program,2025-01-31,1078164070,oncology,Southwest,17030,CV_ANTICOAG_ORAL,in-person,61,34
+EVT-0178,Incretin-Based Therapy: Cardiometabolic Evidence - Richmond Regional Dinner Program,2025-01-31,1362616959,neurology,Southeast,35150,METABOLIC_GLP1_INJ,in-person,55,31
+EVT-0179,Resistant Hypertension in Primary Care - Minneapolis Clinical Update Series,2025-02-05,1590602128,primary care,Midwest,11760,PC_ANTIHYPERTENSIVE,in-person,46,27
+EVT-0180,Targeted Oral Therapy in Advanced Disease - Tacoma Speaker Program,2025-02-06,1903865289,oncology,West,7220,ONC_TARGETED_ORAL,virtual,128,6
+EVT-0181,Targeted Oral Therapy in Advanced Disease - Grand Rapids Regional Dinner Program,2025-02-07,1009335344,oncology,Midwest,5740,ONC_TARGETED_ORAL,virtual,81,9
+EVT-0182,Anticoagulation Across Comorbid Populations - San Diego Advisory Roundtable,2025-02-14,1480117328,neurology,West,5570,CV_ANTICOAG_ORAL,virtual,103,43
+EVT-0183,CGRP Pathway Inhibition in Migraine - Richmond Advisory Roundtable,2025-02-17,1468766963,neurology,Southeast,10100,NEURO_MIGRAINE_CGRP,in-person,65,11
+EVT-0184,Oral JAK Inhibition in Inflammatory Arthritis - Detroit Advisory Roundtable,2025-02-17,1299294599,rheumatology,Midwest,3440,RHEUM_JAK_ORAL,virtual,104,13
+EVT-0185,Guideline-Directed Therapy in Heart Failure - Colorado Springs Clinical Update Series,2025-02-20,1164091765,cardiology,West,22290,CARD_HF_ARNI,in-person,52,18
+EVT-0186,Incretin-Based Therapy: Cardiometabolic Evidence - Seattle Case-Based Forum,2025-02-22,1712092349,oncology,West,26420,METABOLIC_GLP1_INJ,in-person,38,16
+EVT-0187,Incretin-Based Therapy: Cardiometabolic Evidence - Greenville Peer-to-Peer Exchange,2025-02-24,1686810049,endocrinology,Southeast,13120,METABOLIC_GLP1_INJ,in-person,53,36
+EVT-0188,Targeted Oral Therapy in Advanced Disease - Greenville Regional Dinner Program,2025-02-26,1693809661,oncology,Southeast,24980,ONC_TARGETED_ORAL,in-person,33,5
+EVT-0189,Inhaled Maintenance Therapy in COPD & Asthma - Savannah Case-Based Forum,2025-02-27,1175085277,pulmonology,Southeast,25910,PULM_ICS_LABA_INH,in-person,50,15
+EVT-0190,Basal Insulin Optimization - Newark Regional Dinner Program,2025-03-01,1630483653,endocrinology,Northeast,20530,ENDO_BASAL_INSULIN,in-person,36,14
+EVT-0191,Resistant Hypertension in Primary Care - Cambridge Advisory Roundtable,2025-03-03,1481179806,primary care,Northeast,13610,PC_ANTIHYPERTENSIVE,in-person,51,34
+EVT-0192,Guideline-Directed Therapy in Heart Failure - Albuquerque Regional Dinner Program,2025-03-04,1220405058,cardiology,Southwest,13120,CARD_HF_ARNI,in-person,44,17
+EVT-0193,Incretin-Based Therapy: Cardiometabolic Evidence - Mobile Case-Based Forum,2025-03-07,1361512639,neurology,Southeast,15650,METABOLIC_GLP1_INJ,in-person,51,26
+EVT-0194,CGRP Pathway Inhibition in Migraine - Madison Speaker Program,2025-03-13,1735062055,neurology,Midwest,,NEURO_MIGRAINE_CGRP,virtual,125,15
+EVT-0195,Anticoagulation Across Comorbid Populations - Bangor Clinical Update Series,2025-03-19,1206870192,oncology,Northeast,5970,CV_ANTICOAG_ORAL,virtual,52,22
+EVT-0196,Incretin-Based Therapy: Cardiometabolic Evidence - Albany Clinical Update Series,2025-03-22,1436772218,endocrinology,Northeast,21330,METABOLIC_GLP1_INJ,in-person,28,26
+EVT-0197,Oral JAK Inhibition in Inflammatory Arthritis - Hershey Speaker Program,2025-03-23,1835339551,rheumatology,Northeast,23290,RHEUM_JAK_ORAL,in-person,60,10
+EVT-0198,Anticoagulation Across Comorbid Populations - Salt Lake City Speaker Program,2025-03-24,1329851996,primary care,West,22360,CV_ANTICOAG_ORAL,in-person,26,26
+EVT-0199,Guideline-Directed Therapy in Heart Failure - Pittsburgh Regional Dinner Program,2025-03-25,1291534000,cardiology,Northeast,31360,CARD_HF_ARNI,in-person,34,8
+EVT-0200,Basal Insulin Optimization - Salt Lake City Peer-to-Peer Exchange,2025-03-29,1236438192,endocrinology,West,13770,ENDO_BASAL_INSULIN,in-person,37,11

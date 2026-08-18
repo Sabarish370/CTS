@@ -1,0 +1,1213 @@
+hcp_id,first_name,last_name,specialty,sub_specialty,region,state,city,years_in_practice,practice_setting,patient_volume_monthly,baseline_rx_volume_monthly,speaker_eligible_flag,npi_taxonomy_code
+1000748156,James,Sharp,primary care,geriatrics,Western,CO,Boulder,26,private,532,972,True,207Q00000X
+1001056401,Linda,Morrison,oncology,breast,Midwest,IL,Peoria,10,hospital,234,757,False,207RX0202X
+1001999733,Rachel,James,neurology,movement disorders,West,CO,Colorado Springs,4,private,122,178,False,2084N0400X
+1002145427,Shannon,Wilson,primary care,geriatrics,Northeast,NJ,Jersey City,13,hospital,297,737,False,207Q00000X
+1004478891,Lisa,Fuentes,rheumatology,vasculitis,Southwest,TX,Austin,8,private,138,218,False,207RR0500X
+1004543439,Melissa,Roberts,endocrinology,diabetes,Southwest,TX,Fort Worth,11,private,156,426,False,207RE0101X
+1005067453,Phyllis,Lane,endocrinology,thyroid,West,UT,Salt Lake City,8,private,238,366,False,207RE0101X
+1009179924,William,Parker,cardiology,electrophysiology,West,CA,Los Angeles,10,private,345,578,False,207RC0000X
+1009335344,Frank,Morris,oncology,genitourinary,Midwest,MI,Grand Rapids,24,academic,123,635,True,207RX0202X
+1010852790,Kevin,Mullen,rheumatology,rheumatoid arthritis,Southwest,OK,Tulsa,14,private,160,558,False,207RR0500X
+1010957193,Brandon,Gutierrez,neurology,stroke,Northeast,MA,Springfield,15,private,100,622,False,2084N0400X
+1011940271,Robert,Hester,endocrinology,bone & mineral,Northeast,NJ,Princeton,7,private,143,423,False,207RE0101X
+1012264374,Shelby,Reed,endocrinology,bone & mineral,Southwest,NV,Reno,16,academic,175,898,False,207R-E0101-X
+1012597443,William,Gordon,neurology,headache,West,WA,Tacoma,14,private,117,277,False,2084N0400X
+1013443506,Laurie,Carr,rheumatology,osteoarthritis,West,WA,Spokane,6,private,176,192,False,207RR0500X
+1015191335,Tanya,Fox,cardiology,interventional,Northeast,NJ,Camden,17,academic,109,412,False,207RC0000X
+1015632783,Leslie,Wright,oncology,melanoma/skin,West,OR,Portland,26,hospital,159,263,False,207RX0202X
+1016162897,Martin,Green,cardiology,heart failure,West,WA,Spokane,24,academic,167,281,False,207RC0000X
+1018018261,Christopher,Stokes,primary care,adolescent medicine,Northeast,NJ,Newark,13,private,360,679,False,207Q00000X
+1018861793,Michelle,Turner,oncology,melanoma/skin,Northeast,MA,Springfield,11,private,136,266,False,207RX0202X
+1019230758,Paul,Norton,neurology,movement disorders,Southwest,NV,Reno,25,private,185,372,True,2084N0400X
+1020829465,Jeffrey,Briggs,oncology,thoracic,West,CO,Colorado Springs,31,academic,125,374,True,207RX0202X
+1020833996,Heather,James,neurology,headache,Midwest,IN,South Bend,7,hospital,155,299,False,2084N0400X
+1021834936,Susan,Mejia,oncology,breast,West,CO,Colorado Springs,13,hospital,91,284,False,207RX0202X
+1022312734,James,Evans,primary care,adolescent medicine,Midwest,MO,Columbia,7,private,231,310,False,207Q00000X
+1025231352,Donald,Myers,rheumatology,psoriatic arthritis,Northeast,NY,Syracuse,6,hospital,268,589,False,207RR0500X
+1025978341,Courtney,Landry,endocrinology,obesity medicine,Northeast,CT,Hartford,12,private,189,832,False,207RE0101X
+1026722938,Adam,Washington,endocrinology,thyroid,Midwest,OH,Toledo,11,academic,256,1071,False,207RE0101X
+1026804116,Kristen,Johnson,oncology,gi malignancies,Southwest,TX,Dallas,16,private,157,805,True,207RX0202X
+1026926489,Benjamin,Hart,neurology,,Southeast,FL,Tampa,9,hospital,216,630,False,2084N0400X
+1028050239,Yolanda,Robertson,cardiology,preventive,West,UT,Provo,14,private,217,425,False,207RC0000X
+1028436479,Diana,Shaw,endocrinology,diabetes,Southwest,NV,Las Vegas,15,hospital,180,502,False,207RE0101X
+1028772501,Eric,Porter,neurology,neuromuscular,Midwest,MI,Detroit,21,private,218,503,True,2084N0400X
+1030235620,Kristin,Miller,pulmonology,sleep medicine,West,CA,Los Angeles,22,hospital,211,394,False,207RP1001X
+1031568581,Tamara,Wright,pulmonology,copd,Southeast,TN,Chattanooga,5,private,301,554,False,207RP1001X
+1031907094,Megan,Sandoval,rheumatology,osteoarthritis,West,UT,Salt Lake City,7,hospital,223,435,False,207RR0500X
+1033490735,Timothy,Wheeler,pulmonology,sleep medicine,West,WA,Spokane,17,private,210,732,True,207RP1001X
+1033808027,Molly,Anderson,neurology,stroke,Southeast,TN,Knoxville,23,hospital,243,510,True,2084N0400X
+1036176265,Jennifer,Miller,cardiology,structural heart,Southwest,NV,Las Vegas,8,private,183,650,False,207RC0000X
+1036327983,Jennifer,Harper,primary care,geriatrics,West,OR,Portland,8,hospital,411,287,False,207Q00000X
+1036718538,Christina,Singleton,endocrinology,diabetes,Southwest,AZ,Phoenix,15,private,106,339,False,207RE0101X
+1038444141,Brian,Martin,oncology,breast,Southeast,NC,Durham,11,hospital,185,445,False,207RX0202X
+1038582841,Christopher,Gonzales,rheumatology,psoriatic arthritis,West,UT,Salt Lake City,13,private,173,447,False,207RR0500X
+1040239976,Joanne,Schwartz,rheumatology,lupus,Northeast,NY,New York,24,private,185,602,False,207RR0500X
+1041494554,William,Snyder,pulmonology,copd,Midwest,OH,Columbus,13,private,185,318,False,207RP1001X
+1041585906,Shawn,Cox,oncology,melanoma/skin,West,OR,Eugene,8,academic,108,331,False,207RX0202X
+1041640354,Mary,Thomas,cardiology,electrophysiology,Midwest,MI,Detroit,5,academic,202,542,False,207RC0000X
+1042224778,Sarah,Dominguez,cardiology,preventive,Northeast,NY,Albany,6,private,236,643,False,207RC0000X
+1042285084,Susan,Dudley,primary care,geriatrics,Southwest,OK,Oklahoma City,14,private,330,1251,True,207Q00000X
+1042455315,Karen,Ray,endocrinology,reproductive endocrinology,Midwest,OH,Cleveland,18,academic,217,905,True,207RE0101X
+1043802820,Kyle,Lamb,oncology,genitourinary,Northeast,CT,New Haven,30,academic,89,410,True,207RX0202X
+1044303869,Reginald,Cummings,oncology,thoracic,Northeast,PA,Allentown,16,hospital,172,554,True,207RX0202X
+1044379984,Kelly,Hunt,neurology,headache,Midwest,MI,Grand Rapids,9,private,230,447,False,2084N0400X
+1044666919,Scott,Pena,neurology,multiple sclerosis,Southeast,SC,Greenville,17,hospital,265,441,False,2084N0400X
+1045376799,Andrea,Garrett,neurology,headache,Northeast,PA,Philadelphia,7,hospital,233,497,False,2084N0400X
+1046736322,Jennifer,Taylor,primary care,adolescent medicine,Southwest,NV,Reno,24,private,353,567,False,207Q00000X
+1047406420,Karen,Mccormick,rheumatology,osteoarthritis,Midwest,WI,Milwaukee,15,private,162,260,False,207RR0500X
+1048976678,Joshua,Matthews,primary care,adolescent medicine,Southeast,FL,Orlando,18,hospital,394,527,False,207Q00000X
+1050506165,Gina,Rodriguez,pulmonology,critical care,Southeast,NC,Raleigh,6,academic,333,501,False,207RP1001X
+1050705288,William,Grimes,endocrinology,reproductive endocrinology,Southeast,GA,Atlanta,21,hospital,220,1064,True,207RE0101X
+1051073538,Rachael,Mitchell,oncology,genitourinary,West,UT,Provo,8,private,133,234,False,207RX0202X
+1056679651,John,Brown,cardiology,preventive,Northeast,PA,Philadelphia,6,hospital,282,458,False,207RC0000X
+1057623450,Jennifer,Cain,cardiology,structural heart,Midwest,OH,Toledo,13,private,179,344,False,207RC0000X
+1057676243,Mary,Palmer,primary care,geriatrics,Southeast,FL,Tampa,11,private,194,505,False,207Q00000X
+1058325303,Robert,Medina,primary care,adolescent medicine,Northeast,NJ,Princeton,13,private,249,568,False,207Q00000X
+1058613039,John,Johnson,pulmonology,copd,West,UT,Salt Lake City,10,private,164,413,False,207R-P1001-X
+1058647219,Brian,Santana,pulmonology,copd,Northeast,NY,Albany,11,academic,306,576,False,207RP1001X
+1060922949,Vanessa,Valdez,primary care,urgent care,Northeast,NJ,Jersey City,3,hospital,331,249,False,207Q00000X
+1061035188,Cynthia,Johnson,endocrinology,thyroid,Southeast,FL,Miami,22,private,217,354,False,207RE0101X
+1061387373,Anthony,Dixon,oncology,thoracic,Southwest,OK,Tulsa,6,private,90,221,False,207RX0202X
+1062661164,Christine,Li,cardiology,heart failure,Southeast,FL,Tampa,35,academic,202,877,True,207RC0000X
+1064190048,William,Flores,neurology,movement disorders,Midwest,WI,Green Bay,6,private,138,376,False,2084N0400X
+1065091666,Thomas,Hopkins,endocrinology,reproductive endocrinology,West,CA,Los Angeles,9,hospital,210,520,False,207RE0101X
+1065455036,Mitchell,Perry,rheumatology,osteoarthritis,Northeast,NY,Syracuse,13,private,121,424,False,207RR0500X
+1065674784,David,Cole,oncology,breast,Midwest,MO,St. Louis,20,hospital,133,386,False,207RX0202X
+1065870788,Terri,Mitchell,primary care,family medicine,Southwest,AZ,Tucson,7,hospital,255,572,False,207Q00000X
+1069143851,Spencer,Patterson,cardiology,,West,CA,San Francisco,20,hospital,218,517,False,207RC0000X
+1071299832,Catherine,Kirby,neurology,movement disorders,Northeast,CT,Hartford,17,hospital,170,323,False,2084N0400X
+1072999711,Scott,Mack,pulmonology,asthma/allergy,West,CA,Palo Alto,19,hospital,249,424,False,207RP1001X
+1073902250,Tanya,Mendoza,rheumatology,osteoarthritis,West,CO,Boulder,10,hospital,165,617,False,207RR0500X
+1074076039,Randy,Parsons,cardiology,electrophysiology,Southeast,VA,Charlottesville,12,hospital,215,600,False,207RC0000X
+1075036339,Sonia,Brown,pulmonology,,West,WA,Tacoma,5,hospital,166,329,False,207RP1001X
+1075683551,Adam,Stone,rheumatology,rheumatoid arthritis,Southeast,TN,Chattanooga,12,private,217,535,False,207RR0500X
+1075689749,Christine,Matthews,rheumatology,psoriatic arthritis,Southwest,OK,Oklahoma City,12,private,163,735,False,207RR0500X
+1075693709,Christian,Wood,neurology,headache,West,CO,Colorado Springs,27,hospital,308,1082,True,2084N0400X
+1076376403,Karen,Hays,endocrinology,obesity medicine,Northeast,MA,Boston,18,private,194,710,True,207RE0101X
+1078096579,Charles,Daniels,cardiology,,Midwest,MN,Rochester,13,private,253,774,False,207RC0000X
+1078164070,Matthew,Wright,oncology,hematologic,SOUTHWEST,NM,Albuquerque,17,hospital,229,581,True,207RX0202X
+1079997809,Christopher,Kramer,cardiology,,Southwest,OK,Tulsa,15,private,238,1000,True,207RC0000X
+1080136264,Daniel,Walker,primary care,geriatrics,Midwest,WI,Green Bay,22,private,488,886,True,207Q00000X
+1080672524,Joshua,Bird,primary care,urgent care,Southeast,TN,Memphis,10,hospital,311,656,False,207Q00000X
+1081031506,Corey,Harris,neurology,movement disorders,Southwest,NV,Reno,11,private,119,570,False,2084N0400X
+1081051991,Emily,Hodge,pulmonology,asthma/allergy,Southwest,TX,Fort Worth,15,hospital,188,317,False,207RP1001X
+1081238747,Melissa,Novak,pulmonology,interstitial lung disease,Southeast,FL,Tampa,13,hospital,190,494,False,207RP1001X
+1081498101,Omar,Gordon,endocrinology,reproductive endocrinology,West,OR,Portland,15,private,161,277,False,207RE0101X
+1082909627,Jason,Ryan,primary care,geriatrics,Southeast,GA,Atlanta,16,private,332,519,False,207Q00000X
+1083149777,Laura,Diaz,cardiology,structural heart,Midwest,OH,Columbus,11,private,218,519,False,207RC0000X
+1083964134,Laura,Jacobs,endocrinology,bone & mineral,Southeast,SC,Charleston,27,private,183,795,True,207RE0101X
+1084471394,Anthony,Scott,primary care,geriatrics,Northeast,MA,Springfield,12,private,191,590,False,207Q00000X
+1084919582,Teresa,Reed,primary care,family medicine,Southeast,TN,Nashville,12,private,316,652,False,207Q00000X
+1085047243,Steven,Donovan,neurology,neuromuscular,West,CA,Los Angeles,8,hospital,140,199,False,2084N0400X
+1085110611,Brandon,Howard,neurology,multiple sclerosis,West,WA,Spokane,18,hospital,215,334,False,2084-N0400-X
+1085394942,Dustin,Garcia,neurology,movement disorders,Northeast,CT,Stamford,26,academic,179,556,True,2084N0400X
+1087671156,Stephanie,Friedman,pulmonology,interstitial lung disease,West,CO,Colorado Springs,10,private,185,150,False,207RP1001X
+1088938448,Lindsey,Brown,oncology,genitourinary,West,CA,San Diego,6,academic,98,315,False,207RX0202X
+1094061177,Maria,Goodwin,rheumatology,rheumatoid arthritis,Northeast,PA,Pittsburgh,18,hospital,185,761,True,207RR0500X
+1094274762,Barbara,Bryant,primary care,urgent care,West,UT,Salt Lake City,4,hospital,434,378,False,207Q00000X
+1094685637,Daniel,Turner,pulmonology,copd,Southwest,NM,Santa Fe,16,hospital,248,714,True,207RP1001X
+1095200048,Erica,Everett,endocrinology,thyroid,MW,IN,Indianapolis,25,private,226,432,False,207RE0101X
+1095874958,Bethany,Li,neurology,movement disorders,Southeast,FL,Tampa,8,academic,169,474,False,2084N0400X
+1095874958,Bethany ,li  ,neurology,movement disorders,Southeast,FL,Tampa,8,academic,169,474,False,2084N0400X
+1098995024,Tami,Vaughn,primary care,adolescent medicine,Northeast,PA,Pittsburgh,6,private,286,437,False,207Q00000X
+1099946885,Christopher,Schmidt,primary care,urgent care,Northeast,CT,Hartford,18,private,241,564,False,207Q00000X
+1100495849,Carrie,Morgan,endocrinology,thyroid,Southeast,AL,Mobile,8,academic,189,779,False,207RE0101X
+1101142523,Cynthia,Evans,primary care,urgent care,West,CA,San Francisco,11,private,271,292,False,207Q00000X
+1101185407,David,Zuniga,primary care,urgent care,Midwest,MI,Lansing,17,hospital,364,713,False,207Q00000X
+1101338055,John,Andrews,primary care,adolescent medicine,Southeast,SC,Charleston,23,private,234,705,True,207Q00000X
+1101495749,Paige,Martin,pulmonology,copd,Southeast,GA,Augusta,18,academic,163,540,True,207RP1001X
+1102089657,Andrea,Reyes,primary care,adolescent medicine,Northeast,CT,New Haven,10,private,173,362,False,207Q00000X
+1103232447,Dominique,Johnson,neurology,headache,SOUTHWEST,AZ,Phoenix,11,private,150,474,False,2084N0400X
+1105435741,Loretta,Holland,rheumatology,psoriatic arthritis,Northeast,NY,Rochester,8,private,197,394,False,207RR0500X
+1107038659,Heather,Evans,endocrinology,diabetes,Northeast,NY,New York,10,hospital,402,583,False,207RE0101X
+1107378550,Emily,Combs,cardiology,electrophysiology,Southeast,SC,Charleston,14,private,254,473,False,207R-C0000-X
+1109634414,Ronald,Vargas,rheumatology,vasculitis,Northeast,NY,Buffalo,11,private,233,694,False,207RR0500X
+1111217703,Eric,Wise,oncology,thoracic,Southwest,OK,Oklahoma City,17,private,88,397,False,207RX0202X
+1113023042,Ricky,Brown,pulmonology,critical care,West,WA,Tacoma,4,private,362,299,False,207RP1001X
+1113190601,Robert,Ramsey,pulmonology,sleep medicine,West,UT,Salt Lake City,6,private,174,294,False,207RP1001X
+1113953065,Donald,Garrison,pulmonology,copd,Southeast,AL,Birmingham,11,private,266,615,False,207RP1001X
+1114926011,Brian,Carlson,cardiology,heart failure,West,OR,Eugene,19,academic,213,907,True,207RC0000X
+1117854327,George,Rocha,neurology,headache,West,CA,San Francisco,8,hospital,164,219,False,2084N0400X
+1120080837,Charles,Cox,cardiology,heart failure,Northeast,CT,Hartford,16,private,360,505,False,207RC0000X
+1120302413,Kathryn,Conley,oncology,hematologic,Southeast,GA,Atlanta,11,academic,113,441,False,207RX0202X
+1120344282,Catherine,Rodriguez,primary care,geriatrics,West,OR,Eugene,16,hospital,535,1029,True,207Q00000X
+1120914548,Rodney,Brooks,cardiology,structural heart,West,UT,Salt Lake City,8,hospital,268,596,False,207RC0000X
+1121962926,Jane,Vargas,rheumatology,rheumatoid arthritis,Northeast,NJ,Jersey City,11,private,159,551,False,207RR0500X
+1123148250,Steven,Miller,cardiology,preventive,Southwest,TX,Austin,19,hospital,205,632,False,207RC0000X
+1123562633,Matthew,Rios,oncology,thoracic,Southeast,SC,Charleston,8,private,79,342,False,207RX0202X
+1124315999,Andrew,Bennett,oncology,hematologic,Northeast,ME,Portland,15,academic,123,281,False,207RX0202X
+1124726435,Timothy,Martinez,primary care,internal medicine,Northeast,PA,Allentown,14,private,526,914,False,207Q00000X
+1124890801,Kathy,Lopez,primary care,internal medicine,Northeast,PA,Hershey,15,private,251,748,False,207Q00000X
+1124905880,Mark,Davidson,rheumatology,psoriatic arthritis,West,CA,Los Angeles,24,hospital,267,1186,True,207RR0500X
+1126098163,Mario,Hughes,pulmonology,critical care,Southeast,SC,Greenville,24,private,263,563,True,207RP1001X
+1128902750,Tanya,Nunez,neurology,neuromuscular,West,CA,Sacramento,14,hospital,141,334,False,2084N0400X
+1129206672,Carla,Yates,pulmonology,interstitial lung disease,Northeast,NJ,Jersey City,27,hospital,184,686,True,207RP1001X
+1131525051,Nicole,Owen,cardiology,heart failure,West,WA,Spokane,16,private,246,419,False,207RC0000X
+1132120993,Angela,Miller,cardiology,electrophysiology,Northeast,NJ,Princeton,10,hospital,157,315,False,207RC0000X
+1132792726,Jacqueline,Oconnell,pulmonology,interstitial lung disease,Southeast,TN,Knoxville,16,hospital,170,383,False,207RP1001X
+1133042691,Leah,Griffin,cardiology,heart failure,Northeast,MA,Worcester,6,hospital,167,482,False,207RC0000X
+1133130363,Kevin,Sharp,primary care,geriatrics,N.E.,CT,Hartford,13,hospital,459,614,False,207Q00000X
+1133616429,Victoria,Weaver,neurology,movement disorders,Midwest,MI,Grand Rapids,10,academic,169,424,False,2084N0400X
+1134089733,Kristin,Perry,primary care,internal medicine,Northeast,NY,Syracuse,5,private,233,305,False,207Q00000X
+1134195944,Stephen,Mahoney,cardiology,electrophysiology,Northeast,ME,Portland,14,private,250,772,True,207RC0000X
+1134509243,Michele,Cole,pulmonology,asthma/allergy,Northeast,CT,Hartford,8,private,297,382,False,207RP1001X
+1134632102,Richard,Bradley,primary care,family medicine,Southwest,NM,Santa Fe,22,hospital,257,649,False,207Q00000X
+1134966757,Katherine,Gutierrez,primary care,geriatrics,West,WA,Tacoma,26,private,339,1116,True,207Q00000X
+1135650855,Andrea,Pacheco,primary care,geriatrics,Midwest,IN,Fort Wayne,17,private,342,530,False,207Q00000X
+1135771313,Kyle,Madden,neurology,epilepsy,Southeast,TN,Knoxville,14,hospital,260,281,False,2084N0400X
+1136500869,Chris,Levy,endocrinology,reproductive endocrinology,Southeast,VA,Arlington,18,academic,176,551,False,207RE0101X
+1137408567,Anthony,Martin,endocrinology,obesity medicine,Northeast,PA,Allentown,10,hospital,433,886,False,207RE0101X
+1138208594,Brooke,Quinn,cardiology,structural heart,West,WA,Tacoma,4,hospital,198,541,False,207R-C0000-X
+1138281740,Keith,Brown,primary care,geriatrics,West,UT,Provo,10,academic,337,595,False,207Q00000X
+1138662428,Grant,Miller,pulmonology,copd,Southeast,VA,Norfolk,21,hospital,257,665,True,207RP1001X
+1138794031,Melissa,Sanders,pulmonology,sleep medicine,Northeast,MA,Boston,26,academic,238,707,True,207RP1001X
+1139166684,Kayla,Neal,pulmonology,interstitial lung disease,Midwest,WI,Green Bay,5,hospital,187,413,False,207RP1001X
+1140492483,Jonathan,Butler,neurology,movement disorders,West,CO,Denver,13,private,135,165,False,2084N0400X
+1142840812,Robert,Huffman,rheumatology,psoriatic arthritis,Northeast,NJ,Jersey City,42,hospital,225,401,True,207RR0500X
+1143739674,Jose,Lewis,oncology,thoracic,Midwest,IL,Chicago,13,hospital,157,289,False,207RX0202X
+1144669185,Thomas,Woods,primary care,internal medicine,Northeast,PA,Allentown,16,private,399,1071,False,207Q00000X
+1145899849,Joseph,Davis,primary care,family medicine,West,OR,Portland,17,academic,395,640,False,207Q00000X
+1147656700,Emily,Davis,pulmonology,interstitial lung disease,West,CA,Los Angeles,21,hospital,236,597,True,207RP1001X
+1148541752,Robert,Webb,endocrinology,diabetes,Southwest,AZ,Scottsdale,9,hospital,312,928,True,207RE0101X
+1149018644,Stephen,Harper,oncology,thoracic,Southeast,VA,Richmond,15,academic,110,491,False,207RX0202X
+1149209672,Lisa,Thomas,oncology,gi malignancies,Midwest,WI,Green Bay,8,private,153,352,False,207RX0202X
+1149313383,Sonya,Rivera,pulmonology,interstitial lung disease,Southeast,GA,Savannah,18,private,192,339,False,207RP1001X
+1150502551,Marie,Erickson,rheumatology,lupus,Northeast,MA,Springfield,15,hospital,263,622,False,207RR0500X
+1152018085,Kimberly,James,pulmonology,asthma/allergy,Southeast,AL,Huntsville,6,private,171,498,False,207RP1001X
+1154262954,Amy,Robinson,primary care,adolescent medicine,Southwest,NV,Las Vegas,28,private,440,911,True,207Q00000X
+1154629764,Scott,Harris,neurology,multiple sclerosis,Midwest,MN,Rochester,15,hospital,122,258,False,2084N0400X
+1156551297,Jenna,Baker,rheumatology,osteoarthritis,Northeast,NJ,Newark,12,private,160,303,False,207RR0500X
+1156754057,Melinda,Hoffman,endocrinology,obesity medicine,West,CA,Sacramento,12,private,189,344,False,207RE0101X
+1158498141,Audrey,Miller,rheumatology,vasculitis,West,CO,Boulder,4,private,115,223,False,207RR0500X
+1159301823,Joseph,Mccormick,oncology,melanoma/skin,West,OR,Eugene,6,hospital,111,268,False,207RX0202X
+1159833825,Christopher,Barnes,primary care,family medicine,West,CA,Palo Alto,26,hospital,404,579,False,207Q00000X
+1159841240,Elizabeth,Turner,neurology,multiple sclerosis,Southeast,NC,Charlotte,17,private,209,838,True,2084N0400X
+1160075531,Michael,Henry,pulmonology,asthma/allergy,Midwest,IN,Fort Wayne,13,private,169,296,False,207RP1001X
+1160652685,Nicholas,Clayton,endocrinology,reproductive endocrinology,Northeast,CT,Stamford,29,hospital,297,588,True,207R-E0101-X
+1162375699,Cody,Elliott,rheumatology,lupus,West,UT,Salt Lake City,33,private,333,699,True,207RR0500X
+1163199601,Ashley,Floyd,neurology,movement disorders,Southwest,OK,Oklahoma City,17,hospital,169,458,False,2084N0400X
+1163769114,Christopher,Cook,oncology,gi malignancies,Southeast,NC,Winston-Salem,17,academic,110,572,True,207RX0202X
+1163769114,Christopher ,cook  ,oncology,gi malignancies,Southeast,NC,Winston-Salem,17,academic,110,572,True,207RX0202X
+1164091765,Dennis,Stone,cardiology,heart failure,West,CO,Colorado Springs,22,hospital,286,606,True,207RC0000X
+1166368237,Kevin,Donovan,primary care,urgent care,Southwest,OK,Tulsa,10,private,407,543,False,207Q00000X
+1166978878,Melissa,Thompson,primary care,geriatrics,Midwest,MO,St. Louis,11,private,396,217,False,207Q00000X
+1167711153,John,Williams,cardiology,electrophysiology,Northeast,NJ,Princeton,8,hospital,146,575,False,207RC0000X
+1168657405,Elizabeth,Miller,pulmonology,interstitial lung disease,Southeast,TN,Nashville,12,hospital,166,334,False,207RP1001X
+1168681900,Shelley,Lopez,primary care,family medicine,Midwest,WI,Milwaukee,34,private,323,710,True,207Q00000X
+1169149543,Michelle,Reyes,cardiology,electrophysiology,Southeast,SC,Charleston,19,hospital,163,254,False,207RC0000X
+1169238601,Julie,Spencer,cardiology,,Midwest,MN,St. Paul,16,private,192,598,False,207RC0000X
+1169614082,Curtis,Fox,primary care,geriatrics,Midwest,WI,Madison,19,private,205,455,False,207Q00000X
+1170846871,Jacqueline,Gilbert,primary care,family medicine,Southeast,SC,Columbia,19,hospital,622,606,False,207Q00000X
+1172835138,Caleb,Boone,endocrinology,reproductive endocrinology,Southwest,OK,Oklahoma City,18,private,250,731,False,207RE0101X
+1174145494,Amy,Murphy,endocrinology,bone & mineral,Northeast,CT,Hartford,7,academic,155,621,False,207RE0101X
+1174238463,Lindsey,Pope,primary care,adolescent medicine,Southeast,NC,Raleigh,14,private,285,474,False,207Q00000X
+1174785596,Phillip,Murphy,endocrinology,diabetes,Northeast,PA,Philadelphia,18,private,134,676,False,207RE0101X
+1175085277,Robert,Campos,pulmonology,asthma/allergy,Southeast,GA,Savannah,27,private,142,570,True,207RP1001X
+1176034100,Kevin,Carter,cardiology,preventive,West,UT,Provo,21,hospital,203,425,False,207RC0000X
+1176062549,Anthony,Hicks,endocrinology,reproductive endocrinology,Southwest,TX,Houston,21,hospital,218,1117,True,207RE0101X
+1178533166,Jeffrey,Wang,endocrinology,reproductive endocrinology,Southeast,TN,Memphis,9,private,181,350,False,207RE0101X
+1179994367,Richard,Gonzalez,pulmonology,copd,Southeast,NC,Durham,21,private,121,540,False,207RP1001X
+1180932224,Scott,Molina,primary care,family medicine,Southeast,GA,Savannah,19,hospital,290,666,False,207Q00000X
+1181360912,Christopher,Pierce,primary care,adolescent medicine,Midwest,MN,Rochester,15,private,511,371,False,207Q00000X
+1181599923,Erika,Byrd,rheumatology,vasculitis,Southeast,TN,Nashville,14,private,149,239,False,207RR0500X
+1181854898,Helen,Morrow,primary care,adolescent medicine,Southeast,FL,Tampa,14,private,377,656,False,207Q00000X
+1182422455,Susan,Smith,cardiology,electrophysiology,Northeast,CT,Stamford,19,hospital,243,996,True,207RC0000X
+1184426066,Jennifer,Little,primary care,geriatrics,West,CA,San Francisco,26,private,256,292,False,207Q00000X
+1185877283,Mary,Roberts,cardiology,heart failure,West,OR,Portland,10,hospital,265,555,False,207RC0000X
+1187084813,Henry,Jordan,rheumatology,vasculitis,Midwest,WI,Milwaukee,21,private,133,702,False,207RR0500X
+1188411270,Russell,Turner,endocrinology,thyroid,Southeast,VA,Arlington,17,hospital,260,1012,True,207RE0101X
+1188509891,Stanley,Simpson,neurology,multiple sclerosis,West,OR,Eugene,3,hospital,128,209,False,2084N0400X
+1188598183,Jesus,Flores,neurology,movement disorders,Northeast,NJ,Jersey City,9,hospital,198,857,True,2084N0400X
+1189244753,Melissa,Ramsey,neurology,epilepsy,NE,ME,Portland,12,academic,123,564,False,2084N0400X
+1189769080,Michelle,Finley,primary care,internal medicine,Northeast,CT,Stamford,11,private,436,618,False,207Q00000X
+1190411649,Christine,Hart,neurology,,Midwest,IN,South Bend,17,private,144,140,False,2084N0400X
+1190842652,Mary,Yang,primary care,adolescent medicine,Southwest,NV,Las Vegas,10,private,461,410,False,207Q00000X
+1191540602,Maria,Jones,oncology,melanoma/skin,Midwest,MI,Lansing,20,hospital,85,296,False,207RX0202X
+1191545544,Billy,Foster,primary care,urgent care,Midwest,MN,Rochester,22,hospital,282,696,False,207Q00000X
+1194203331,Nicholas,Maldonado,rheumatology,rheumatoid arthritis,Southeast,SC,Columbia,5,private,271,723,False,207RR0500X
+1194241117,Amanda,Hill,primary care,family medicine,Northeast,MA,Springfield,20,private,413,633,True,207Q00000X
+1195381896,Joseph,Stokes,oncology,thoracic,Northeast,MA,Cambridge,8,hospital,130,623,False,207RX0202X
+1196385359,Teresa,Fox,neurology,movement disorders,Southwest,TX,San Antonio,12,academic,201,457,False,2084N0400X
+1196400158,Omar,Gonzalez,rheumatology,lupus,Southeast,SC,Greenville,18,academic,211,389,False,207RR0500X
+1198262952,Charles,Cook,pulmonology,asthma/allergy,Northeast,CT,Hartford,5,private,256,697,False,207R-P1001-X
+1199423090,Matthew,Mitchell,cardiology,heart failure,Southwest,NV,Reno,3,academic,102,257,False,207RC0000X
+1199976907,Colin,Carter,rheumatology,rheumatoid arthritis,Northeast,NY,Albany,15,private,145,553,False,207RR0500X
+1200096471,Xavier,Ryan,primary care,geriatrics,Southeast,AL,Mobile,10,private,449,397,False,207Q00000X
+1200346587,Mike,Glenn,cardiology,interventional,Midwest,IL,Chicago,8,private,241,511,False,207RC0000X
+1200437733,John,Robertson,endocrinology,bone & mineral,West,OR,Eugene,11,private,161,400,False,207RE0101X
+1200480071,Jasmine,Robinson,primary care,adolescent medicine,Northeast,ME,Portland,20,private,392,860,True,207Q00000X
+1202669523,Sydney,Johnson,cardiology,electrophysiology,Midwest,IN,Fort Wayne,15,academic,220,655,False,207RC0000X
+1202777359,Brent,Rogers,endocrinology,reproductive endocrinology,West,UT,Salt Lake City,20,private,128,341,False,207RE0101X
+1204261733,Christine,Jensen,neurology,multiple sclerosis,Southeast,TN,Chattanooga,7,private,135,590,False,2084N0400X
+1204787067,Roberta,Thomas,neurology,neuromuscular,Northeast,NY,Buffalo,13,hospital,156,283,False,2084N0400X
+1204959187,Bradley,Hamilton,pulmonology,interstitial lung disease,Southeast,GA,Macon,11,hospital,240,447,False,207RP1001X
+1205159704,Raymond,Kelly,pulmonology,critical care,West,OR,Portland,12,academic,177,243,False,207RP1001X
+1205576824,Chelsea,Garcia,oncology,hematologic,West,WA,Spokane,13,hospital,170,275,False,207RX0202X
+1206870192,William,Marks,oncology,melanoma/skin,Northeast,ME,Bangor,11,hospital,164,541,True,207RX0202X
+1208634919,Michael,Hopkins,rheumatology,rheumatoid arthritis,Midwest,IN,South Bend,9,private,121,148,False,207RR0500X
+1209464480,Andrea,Hernandez,oncology,breast,Southeast,NC,Durham,16,hospital,162,615,True,207RX0202X
+1209566128,Marcus,Davis,primary care,family medicine,Northeast,CT,Stamford,15,private,393,838,False,207Q00000X
+1209829039,Michael,Luna,primary care,family medicine,Southwest,TX,Dallas,12,private,450,750,False,207Q00000X
+1210642439,Debra,Rose,oncology,thoracic,Southwest,NV,Reno,8,hospital,170,537,False,207RX0202X
+1210894345,Sheila,Glass,cardiology,heart failure,West,CO,Denver,13,private,135,369,False,207RC0000X
+1211781301,Rachel,Bradley,cardiology,structural heart,Northeast,ME,Portland,17,hospital,223,1180,True,207RC0000X
+1213108081,Michelle,Stokes,rheumatology,psoriatic arthritis,Southwest,NV,Reno,14,private,159,418,False,207RR0500X
+1213511599,Tyrone,Johnson,primary care,adolescent medicine,Northeast,ME,Bangor,30,private,409,1491,True,207Q00000X
+1214210316,Jason,Gonzales,oncology,genitourinary,Southeast,NC,Charlotte,15,private,109,195,False,207RX0202X
+1216532808,Samuel,Burch,oncology,genitourinary,Southeast,AL,Mobile,12,academic,77,355,False,207RX0202X
+1216575070,Kaitlyn,Miller,primary care,,Midwest,MO,Columbia,11,private,360,724,False,207Q00000X
+1218757361,Kenneth,Jones,oncology,melanoma/skin,Southwest,NM,Santa Fe,15,hospital,222,917,True,207R-X0202-X
+1219172859,Patrick,Shields,primary care,adolescent medicine,Southwest,TX,Austin,13,hospital,399,436,False,207Q00000X
+1219516501,Anne,Austin,endocrinology,obesity medicine,Midwest,WI,Madison,7,academic,212,781,False,207RE0101X
+1219591108,Joseph,Guerrero,cardiology,preventive,Midwest,IN,Fort Wayne,11,private,237,267,False,207RC0000X
+1219831884,Andrea,Rodriguez,primary care,urgent care,Northeast,ME,Bangor,28,hospital,283,989,True,207Q00000X
+1220405058,Brian,Myers,cardiology,interventional,Southwest,NM,Albuquerque,26,hospital,259,981,True,207RC0000X
+1221260676,Ronald,Higgins,endocrinology,bone & mineral,Midwest,IL,Peoria,26,academic,179,636,True,207RE0101X
+1221582384,Krista,Fisher,pulmonology,critical care,Midwest,MO,Columbia,13,hospital,259,832,True,207RP1001X
+1222151080,Joseph,Sheppard,rheumatology,vasculitis,Northeast,CT,New Haven,9,hospital,208,460,False,207R-R0500-X
+1223523766,Gabriel,Griffin,primary care,adolescent medicine,West,WA,Seattle,18,private,405,370,False,207Q00000X
+1223528765,Kathy,Jones,endocrinology,obesity medicine,Midwest,WI,Madison,10,private,214,375,False,207RE0101X
+1224230882,Audrey,Lee,primary care,family medicine,Southwest,NV,Reno,13,private,296,386,False,207Q00000X
+1225504491,Brandy,Hudson,endocrinology,reproductive endocrinology,Midwest,WI,Madison,14,hospital,252,376,False,207RE0101X
+1227780172,Ross,Schneider,primary care,internal medicine,Southwest,AZ,Scottsdale,11,hospital,467,914,False,207Q00000X
+1228081653,Amanda,Zavala,neurology,neuromuscular,Southeast,NC,Durham,8,academic,121,210,False,2084N0400X
+1229022169,Sydney,Valdez,pulmonology,sleep medicine,West,CO,Denver,13,academic,204,480,False,207RP1001X
+1231312657,Jonathan,Riley,neurology,headache,Northeast,NY,Albany,17,academic,119,530,True,2084N0400X
+1231453428,Amanda,Compton,endocrinology,reproductive endocrinology,Southeast,SC,Greenville,3,private,140,466,False,207RE0101X
+1231453428,amanda,COMPTON,endocrinology,reproductive endocrinology,Southeast,SC,Greenville,3,private,140,466,False,207RE0101X
+1232787030,Jeffrey,Gibbs,rheumatology,,Southeast,AL,Huntsville,11,private,196,299,False,207RR0500X
+1233281843,Troy,Meyer,primary care,urgent care,West,OR,Eugene,8,private,494,351,False,207Q00000X
+1234567687,Joseph,Morrison,cardiology,structural heart,Southwest,NM,Albuquerque,21,private,270,494,False,207RC0000X
+1234985764,Mark,Erickson,endocrinology,thyroid,Midwest,MO,St. Louis,14,private,173,684,False,207RE0101X
+1236438192,Melissa,Becker,endocrinology,bone & mineral,West,UT,Salt Lake City,24,academic,170,755,True,207RE0101X
+1237205202,Chad,Humphrey,endocrinology,,Northeast,NY,Buffalo,13,academic,141,376,False,207RE0101X
+1237849298,Christopher,Webster,oncology,melanoma/skin,Northeast,CT,Hartford,8,academic,101,283,False,207RX0202X
+1237956572,Robert,Fletcher,endocrinology,,Southwest,NV,Las Vegas,31,private,123,635,True,207RE0101X
+1238983617,Alicia,Spence,pulmonology,copd,Southeast,TN,Memphis,13,hospital,229,740,False,207RP1001X
+1240190284,Daniel,Lucas,oncology,gi malignancies,Southwest,NM,Santa Fe,17,hospital,201,479,False,207RX0202X
+1240393805,Aaron,Collins,primary care,internal medicine,Southeast,FL,Jacksonville,10,hospital,421,321,False,207Q00000X
+1241711534,David,Kelley,primary care,internal medicine,Southeast,SC,Columbia,13,private,472,389,False,207Q00000X
+1242598583,George,Pacheco,oncology,breast,Northeast,MA,Worcester,14,academic,131,515,False,207RX0202X
+1243754490,Monica,Gutierrez,neurology,headache,Northeast,MA,Springfield,6,private,167,508,False,2084N0400X
+1244876920,James,Jackson,neurology,movement disorders,West,OR,Eugene,6,private,166,229,False,2084N0400X
+1245433184,Christopher,Brown,oncology,genitourinary,Southeast,SC,Columbia,13,hospital,125,442,False,207RX0202X
+1245726108,Andrea,Robinson,primary care,adolescent medicine,Midwest,MN,Rochester,35,academic,329,511,True,207Q00000X
+1246066447,Mark,Harper,rheumatology,psoriatic arthritis,Southwest,AZ,Mesa,28,hospital,198,843,True,207RR0500X
+1246428209,Adrienne,Jones,pulmonology,copd,Midwest,IL,Springfield,27,hospital,234,542,True,207RP1001X
+1246448348,Lisa,Mitchell,cardiology,interventional,Southeast,FL,Orlando,11,hospital,285,615,False,207RC0000X
+1246818524,Ashley,Elliott,primary care,family medicine,West,UT,Provo,4,private,265,232,False,207Q00000X
+1249126917,Brent,Anderson,endocrinology,reproductive endocrinology,West,OR,Eugene,10,hospital,299,736,False,207RE0101X
+1249657408,Amy,Reid,endocrinology,,Northeast,NJ,Princeton,8,private,244,537,False,207RE0101X
+1250017203,Anne,Walters,pulmonology,critical care,Southeast,NC,Durham,22,hospital,195,482,False,207RP1001X
+1250113473,Shawn,Davenport,pulmonology,asthma/allergy,Midwest,MO,St. Louis,14,private,166,308,False,207RP1001X
+1250474354,Sophia,Goodwin,pulmonology,critical care,Southeast,GA,Augusta,16,hospital,156,348,False,207RP1001X
+1250524505,Scott,Rowe,neurology,epilepsy,West,WA,Spokane,12,hospital,167,148,False,2084N0400X
+1250670316,Rebekah,Fischer,primary care,internal medicine,Northeast,CT,New Haven,20,private,309,1144,True,207Q00000X
+1251154013,Debbie,Hill,neurology,movement disorders,West,UT,Salt Lake City,12,hospital,112,161,False,2084N0400X
+1251202242,Danny,Edwards,primary care,geriatrics,Northeast,MA,Boston,25,private,289,633,False,207Q00000X
+1251411553,Diana,Hardy,neurology,stroke,Southwest,NV,Reno,11,private,125,270,False,2084N0400X
+1251567115,Keith,Brewer,primary care,urgent care,Midwest,IL,Rockford,8,private,271,466,False,207Q-00000-X
+1254492527,Stephanie,Cox,oncology,breast,Midwest,WI,Green Bay,29,hospital,109,691,True,207RX0202X
+1254891769,Natasha,Norman,cardiology,preventive,Midwest,IL,Rockford,8,private,169,236,False,207RC0000X
+1255569448,Elizabeth,Gardner,rheumatology,rheumatoid arthritis,Northeast,MA,Cambridge,10,private,180,281,False,207RR0500X
+1256419643,Matthew,Garcia,rheumatology,vasculitis,Midwest,IL,Chicago,14,hospital,301,1369,True,207RR0500X
+1257723886,Kathleen,Evans,endocrinology,diabetes,Southwest,AZ,Phoenix,11,private,264,659,False,207RE0101X
+1257768279,Jasmine,Herrera,endocrinology,diabetes,West,WA,Tacoma,11,private,237,515,False,207RE0101X
+1259584955,Robert,Hale,oncology,genitourinary,Northeast,MA,Boston,12,hospital,163,326,False,207RX0202X
+1260279835,Jill,Hoffman,cardiology,interventional,Midwest,MN,St. Paul,8,hospital,118,269,False,207RC0000X
+1260690478,Carol,Moore,rheumatology,psoriatic arthritis,Northeast,CT,Hartford,17,private,133,317,False,207RR0500X
+1261377760,Jesse,Mendez,primary care,family medicine,Northeast,CT,Stamford,14,private,219,550,False,207Q00000X
+1262170503,Stacy,Santiago,primary care,adolescent medicine,West,CA,San Diego,20,private,472,1082,True,207Q00000X
+1262874856,Anthony,George,pulmonology,sleep medicine,Midwest,WI,Milwaukee,3,academic,194,316,False,207RP1001X
+1263807582,Mark,Cannon,primary care,family medicine,Northeast,NY,Syracuse,7,hospital,297,978,False,207Q00000X
+1264333323,David,Wright,primary care,family medicine,Northeast,NY,New York,12,private,398,657,False,207Q00000X
+1265952337,Susan,Allen,cardiology,structural heart,Northeast,NY,Syracuse,22,hospital,254,533,True,207RC0000X
+1266109689,Richard,Stanley,primary care,adolescent medicine,Southeast,AL,Birmingham,19,hospital,332,894,True,207Q00000X
+1266945785,Tina,Morales,primary care,internal medicine,West,CA,San Diego,19,private,387,733,False,207Q00000X
+1267903205,Michael,Cooper,endocrinology,obesity medicine,Midwest,IL,Chicago,23,hospital,183,337,False,207RE0101X
+1268222167,Mark,Brewer,primary care,adolescent medicine,Midwest,IN,Fort Wayne,19,academic,229,643,False,207Q00000X
+1268222167,  MARK , Brewer  ,primary care,adolescent medicine,Midwest,IN,Fort Wayne,19,academic,229,643,False,207Q00000X
+1268421124,Jonathan,Fox,endocrinology,diabetes,West,UT,Salt Lake City,21,private,135,703,False,207RE0101X
+1271463741,Monique,Mcdonald,primary care,internal medicine,West,OR,Portland,9,hospital,253,324,False,207Q00000X
+1271711891,Jeremy,Collins,oncology,thoracic,Southwest,OK,Oklahoma City,5,academic,108,176,False,207RX0202X
+1271768685,Colleen,Smith,primary care,geriatrics,Midwest,MN,St. Paul,8,hospital,603,564,False,207Q00000X
+1273912869,Jonathan,Lopez,rheumatology,vasculitis,NORTHEAST,CT,Stamford,16,private,203,545,False,207RR0500X
+1274985831,Diane,Stephens,rheumatology,vasculitis,Southwest,AZ,Tucson,5,private,186,496,False,207RR0500X
+1275177768,Catherine,Miller,cardiology,heart failure,Southeast,VA,Arlington,11,private,127,260,False,207RC0000X
+1275443434,Anthony,Hampton,primary care,internal medicine,Midwest,IN,South Bend,8,hospital,301,338,False,207Q00000X
+1275723975,Bridget,Young,oncology,thoracic,West,OR,Eugene,18,academic,104,326,False,207RX0202X
+1278315217,Robin,Morgan,oncology,melanoma/skin,Midwest,IL,Rockford,11,hospital,170,289,False,207RX0202X
+1279255164,Melissa,Zavala,cardiology,heart failure,Midwest,MN,St. Paul,14,hospital,212,473,False,207RC0000X
+1279507085,Sandra,Benton,rheumatology,psoriatic arthritis,Southwest,TX,San Antonio,17,academic,160,553,False,207RR0500X
+1279684447,Samuel,Patel,primary care,internal medicine,West,CA,San Francisco,28,private,218,332,False,207Q00000X
+1280087226,Jeremy,Mcdowell,primary care,geriatrics,Northeast,NY,Rochester,10,private,425,1225,False,207Q00000X
+1282327174,David,Allen,rheumatology,vasculitis,Northeast,NJ,Newark,18,private,163,788,False,207RR0500X
+1282914906,Paul,Key,cardiology,heart failure,Southeast,SC,Columbia,6,private,217,286,False,207RC0000X
+1282948292,Christopher,Thomas,rheumatology,osteoarthritis,Midwest,WI,Madison,5,hospital,106,253,False,207RR0500X
+1284061300,Maria,Roberts,primary care,internal medicine,West,WA,Spokane,21,hospital,476,626,True,207Q00000X
+1285330571,Steven,Jackson,endocrinology,reproductive endocrinology,Southeast,GA,Savannah,18,private,379,773,False,207RE0101X
+1285347583,Wayne,Faulkner,neurology,headache,Southwest,NV,Reno,10,hospital,180,270,False,2084N0400X
+1285520676,Sandra,Scott,cardiology,structural heart,Southwest,OK,Oklahoma City,10,private,229,320,False,207RC0000X
+1285907337,Vincent,Price,rheumatology,vasculitis,Midwest,MN,Minneapolis,17,private,246,984,True,207RR0500X
+1286477181,Jeffrey,Roach,cardiology,heart failure,Midwest,WI,Green Bay,10,academic,241,555,False,207RC0000X
+1287287258,Holly,Becker,primary care,adolescent medicine,Midwest,OH,Columbus,9,private,413,679,False,207Q00000X
+1289174306,Angela,Hays,primary care,adolescent medicine,Southwest,AZ,Mesa,17,private,254,506,False,207Q00000X
+1291534000,Darlene,Ho,cardiology,,Northeast,PA,Pittsburgh,18,private,287,706,True,207RC0000X
+1292975558,Amanda,Weber,oncology,thoracic,Northeast,CT,Stamford,2,academic,122,1069,True,207RX0202X
+1293528836,David,Reynolds,pulmonology,sleep medicine,Southeast,VA,Richmond,17,private,125,547,False,207RP1001X
+1293643247,Adam,Berg,cardiology,heart failure,Midwest,MO,St. Louis,4,hospital,232,455,False,207RC0000X
+1294882026,Erin,Calderon,oncology,breast,Northeast,MA,Springfield,14,private,149,412,False,207RX0202X
+1295389203,Ricky,Martinez,endocrinology,diabetes,West,WA,Tacoma,18,private,153,560,False,207RE0101X
+1295857761,Lauren,Fitzpatrick,primary care,family medicine,Southeast,GA,Savannah,4,private,240,295,False,207Q00000X
+1296552940,Jenny,Osborn,primary care,urgent care,Northeast,NY,Rochester,8,hospital,298,415,False,207Q00000X
+1296624285,Tammy,Bailey,primary care,internal medicine,West,CA,Sacramento,11,private,240,438,False,207Q00000X
+1297280590,Brittney,Hendricks,primary care,urgent care,Midwest,IL,Springfield,14,private,455,512,False,207Q00000X
+1297391371,Patricia,Cruz,endocrinology,bone & mineral,Northeast,MA,Boston,15,private,192,342,False,207RE0101X
+1299294599,Tommy,Martin,rheumatology,osteoarthritis,Midwest,MI,Detroit,37,private,182,427,True,207RR0500X
+1299418347,Alexandra,Marshall,cardiology,preventive,Northeast,MA,Springfield,18,hospital,231,461,False,207RC0000X
+1299689400,John,Whitehead,oncology,thoracic,Southeast,FL,Tampa,20,hospital,90,294,False,207RX0202X
+1299832539,April,Hester,endocrinology,reproductive endocrinology,Northeast,NJ,Newark,19,private,167,542,False,207RE0101X
+1300654963,James,Howe,primary care,adolescent medicine,Northeast,NY,Albany,9,academic,234,635,False,207Q00000X
+1300832031,Scott,Conley,cardiology,interventional,W,WA,Spokane,11,hospital,185,524,False,207RC0000X
+1302899475,Martha,Martinez,cardiology,interventional,Midwest,MI,Ann Arbor,7,hospital,199,323,False,207RC0000X
+1304105269,Richard,Taylor,cardiology,interventional,Midwest,WI,Green Bay,11,hospital,184,451,False,207RC0000X
+1305686507,Sara,Jones,endocrinology,bone & mineral,Southwest,TX,Austin,8,academic,168,583,False,207RE0101X
+1305714580,Kimberly,Coffey,endocrinology,thyroid,West,WA,Spokane,13,private,209,830,False,207RE0101X
+1306006622,Brent,Rose,cardiology,,West,OR,Eugene,23,hospital,174,387,False,207RC0000X
+1308498975,Tiffany,Riddle,pulmonology,sleep medicine,Southwest,NV,Las Vegas,15,private,236,495,False,207RP1001X
+1309185530,Kimberly,Johnson,oncology,hematologic,Southeast,VA,Norfolk,19,private,162,409,False,207RX0202X
+1309371148,Timothy,Jackson,neurology,multiple sclerosis,Northeast,NY,Syracuse,12,private,163,479,False,2084N0400X
+1309748980,Diana,Campbell,oncology,melanoma/skin,Southeast,FL,Orlando,11,private,119,190,False,207RX0202X
+1310164813,Ryan,Aguilar,primary care,family medicine,Southeast,FL,Miami,5,private,197,423,False,207Q00000X
+1311764207,Nicole,Roberts,primary care,internal medicine,Midwest,OH,Cincinnati,6,private,250,432,False,207Q00000X
+1312630019,Keith,Hayes,oncology,gi malignancies,Midwest,MI,Grand Rapids,3,private,132,248,False,207RX0202X
+1315385710,John,Dixon,primary care,family medicine,Northeast,MA,Worcester,20,private,516,1205,True,207Q00000X
+1316743925,John,Roberts,primary care,geriatrics,Northeast,MA,Cambridge,16,private,385,872,False,207Q00000X
+1320611266,James,Pugh,pulmonology,sleep medicine,Northeast,MA,Springfield,7,hospital,179,381,False,207RP1001X
+1321405205,Debbie,Garcia,primary care,,West,CA,San Jose,10,hospital,296,300,False,207Q00000X
+1323611925,Andrea,Acosta,cardiology,heart failure,Southwest,NM,Albuquerque,19,private,178,484,False,207RC0000X
+1324237324,Derek,Stevenson,endocrinology,diabetes,West,CA,Sacramento,9,private,176,678,False,207RE0101X
+1324722952,Robert,Diaz,endocrinology,obesity medicine,Northeast,CT,Stamford,12,academic,168,395,False,207RE0101X
+1325850802,Joshua,Bradford,neurology,epilepsy,West,CO,Colorado Springs,27,private,196,394,False,2084N0400X
+1326516303,Danielle,Fox,oncology,thoracic,Southwest,AZ,Phoenix,12,hospital,159,694,False,207RX0202X
+1326905712,Jennifer,Santiago,oncology,gi malignancies,West,CO,Denver,24,academic,141,395,False,207RX0202X
+1327009084,Michele,Hansen,neurology,epilepsy,Southwest,AZ,Scottsdale,13,hospital,163,392,False,2084N0400X
+1327009084,Michele ,hansen  ,neurology,epilepsy,Southwest,AZ,Scottsdale,13,hospital,163,392,False,2084N0400X
+1328056928,Brandon,Aguilar,oncology,thoracic,Northeast,ME,Bangor,7,academic,97,376,False,207RX0202X
+1329851996,Julie,Morris,primary care,urgent care,West,UT,Salt Lake City,40,private,316,627,True,207Q00000X
+1330017819,John,Walker,neurology,headache,Southwest,NM,Santa Fe,18,hospital,211,929,True,2084N0400X
+1330067194,Shawn,Guerrero,pulmonology,sleep medicine,West,WA,Seattle,13,hospital,269,560,False,207RP1001X
+1330156328,Luis,Williams,endocrinology,thyroid,Southwest,NM,Santa Fe,6,private,256,392,False,207RE0101X
+1331020234,Richard,Stein,cardiology,preventive,Northeast,NY,Syracuse,19,private,168,566,False,207RC0000X
+1332369119,Jason,Jacobs,cardiology,,Southeast,NC,Raleigh,9,hospital,263,455,False,207RC0000X
+1332504376,Dana,Jimenez,endocrinology,thyroid,West,CA,Los Angeles,11,private,146,328,False,207RE0101X
+1332815285,Michael,Cohen,neurology,multiple sclerosis,West,CA,San Francisco,9,private,241,356,False,2084N0400X
+1332821143,Mitchell,Hunter,oncology,thoracic,Southwest,AZ,Mesa,15,hospital,202,1111,True,207RX0202X
+1333043895,John,Brown,endocrinology,thyroid,Northeast,NY,Albany,12,private,183,456,False,207RE0101X
+1333393084,Mia,Mack,primary care,internal medicine,Midwest,WI,Madison,9,private,373,377,False,207Q00000X
+1333896094,Robin,Adams,neurology,epilepsy,Northeast,MA,Springfield,19,hospital,140,278,False,2084N0400X
+1334266016,Joshua,Williams,primary care,internal medicine,Southwest,AZ,Phoenix,20,private,408,624,False,207Q00000X
+1334266743,Katherine,Krueger,neurology,multiple sclerosis,Southeast,SC,Greenville,11,hospital,180,462,False,2084N0400X
+1334515891,Earl,Harrington,cardiology,heart failure,Northeast,PA,Pittsburgh,36,private,191,486,True,207RC0000X
+1334793308,Brenda,Walker,neurology,,Northeast,ME,Portland,7,hospital,226,308,False,2084N0400X
+1335601583,Vanessa,Wright,endocrinology,reproductive endocrinology,West,WA,Spokane,9,private,143,385,False,207RE0101X
+1335670091,Christopher,Ballard,primary care,internal medicine,Midwest,IN,Indianapolis,11,private,448,477,False,207Q00000X
+1335912683,Tina,Shaffer,neurology,epilepsy,Midwest,MN,St. Paul,11,hospital,231,385,False,2084N0400X
+1337606333,Ashley,Shepard,rheumatology,osteoarthritis,Midwest,MO,Columbia,16,private,197,385,False,207RR0500X
+1337789832,Ebony,Kim,rheumatology,vasculitis,Southeast,GA,Savannah,15,academic,146,433,False,207RR0500X
+1338119237,Michael,Peck,primary care,internal medicine,Northeast,NJ,Princeton,38,hospital,736,568,True,207Q00000X
+1338304433,Ashley,Hayes,oncology,thoracic,Southeast,SC,Columbia,14,hospital,171,605,False,207RX0202X
+1338689064,Kayla,Lawson,endocrinology,bone & mineral,Northeast,CT,Stamford,28,hospital,198,950,True,207RE0101X
+1340345143,Jeffrey,Taylor,oncology,breast,Southeast,SC,Columbia,12,academic,106,468,False,207RX0202X
+1340455504,Amy,Nelson,pulmonology,asthma/allergy,West,WA,Spokane,11,academic,172,290,False,207RP1001X
+1341556789,Cheryl,Preston,cardiology,electrophysiology,West,WA,Seattle,17,hospital,341,1286,True,207RC0000X
+1341720393,Michelle,Davis,pulmonology,asthma/allergy,Midwest,MN,St. Paul,21,private,249,447,False,207RP1001X
+1342938887,Jacob,David,neurology,stroke,Southeast,SC,Greenville,7,hospital,114,166,False,2084N0400X
+1345219731,Kimberly,Klein,oncology,gi malignancies,Southeast,NC,Winston-Salem,21,hospital,150,970,True,207RX0202X
+1346135829,Julie,Smith,primary care,family medicine,West,CO,Denver,20,private,417,1243,True,207Q00000X
+1348428750,Anna,Porter,rheumatology,vasculitis,West,CO,Denver,6,hospital,173,256,False,207R-R0500-X
+1349076541,Jeffrey,Spencer,oncology,thoracic,Midwest,OH,Cincinnati,12,hospital,87,198,False,207RX0202X
+1349686455,Alyssa,Flores,pulmonology,interstitial lung disease,Southeast,GA,Savannah,10,private,210,500,False,207RP1001X
+1350739367,Kristin,Henry,cardiology,interventional,Northeast,PA,Hershey,16,hospital,143,552,False,207RC0000X
+1352216182,Heidi,Daniels,primary care,family medicine,Southwest,AZ,Scottsdale,7,private,379,512,False,207Q00000X
+1352333250,Danielle,Richard,oncology,breast,Northeast,NY,Rochester,4,academic,97,165,False,207RX0202X
+1352578078,Daniel,Parrish,pulmonology,copd,Southeast,AL,Huntsville,14,private,282,588,False,207RP1001X
+1352702876,Jason,Cooper,rheumatology,osteoarthritis,Northeast,MA,Boston,5,hospital,116,312,False,207RR0500X
+1354344503,Cassandra,Glass,oncology,hematologic,Southeast,SC,Columbia,12,private,91,269,False,207RX0202X
+1355374483,Michael,Le,primary care,adolescent medicine,West,OR,Eugene,3,private,277,737,False,207Q00000X
+1356707665,John,Holland,oncology,hematologic,West,CO,Colorado Springs,11,academic,82,407,False,207RX0202X
+1356982086,Shawn,Hernandez,primary care,family medicine,Midwest,OH,Cincinnati,16,private,319,545,False,207Q00000X
+1357524945,Kimberly,Wilson,rheumatology,vasculitis,Midwest,MI,Detroit,8,hospital,258,891,False,207RR0500X
+1358245029,Brandon,Romero,oncology,breast,Midwest,IN,South Bend,17,academic,176,420,False,207RX0202X
+1358340028,Janet,Brown,oncology,gi malignancies,Southeast,FL,Miami,21,hospital,141,336,False,207RX0202X
+1360698140,Anna,Jones,oncology,thoracic,Northeast,CT,Hartford,21,academic,93,520,True,207RX0202X
+1361512639,Tyler,Hall,neurology,movement disorders,Southeast,AL,Mobile,15,hospital,285,676,True,2084N0400X
+1361521440,Kevin,King,endocrinology,reproductive endocrinology,Midwest,WI,Green Bay,17,academic,160,672,False,207RE0101X
+1361620622,Collin,Young,cardiology,,West,CO,Boulder,20,private,278,513,False,207RC0000X
+1362560363,Shane,Thornton,cardiology,preventive,West,WA,Spokane,13,private,246,640,False,207RC0000X
+1362616959,Eric,Lee,neurology,multiple sclerosis,Southeast,VA,Richmond,33,academic,175,304,True,2084N0400X
+1362648127,James,Murray,oncology,melanoma/skin,Northeast,NY,Albany,4,private,159,333,False,207RX0202X
+1363342464,Margaret,Marks,primary care,urgent care,Southeast,VA,Arlington,10,hospital,622,885,False,207Q00000X
+1364458855,Aaron,Pierce,endocrinology,reproductive endocrinology,Southeast,SC,Columbia,14,hospital,150,574,False,207RE0101X
+1364592786,Tanner,Wells,endocrinology,thyroid,Southeast,VA,Charlottesville,9,hospital,162,261,False,207RE0101X
+1364720148,Howard,Cooper,primary care,adolescent medicine,Southeast,FL,Miami,6,hospital,384,562,False,207Q00000X
+1365873573,Justin,Lewis,endocrinology,reproductive endocrinology,Southwest,OK,Tulsa,25,private,155,539,True,207RE0101X
+1366051187,Tina,Tran,pulmonology,copd,Midwest,WI,Madison,13,hospital,231,611,True,207RP1001X
+1367956301,Nicole,Taylor,primary care,family medicine,Midwest,IN,Indianapolis,40,private,493,406,True,207Q00000X
+1368009035,Kevin,Fleming,cardiology,electrophysiology,Northeast,PA,Philadelphia,7,private,216,432,False,207RC0000X
+1369172659,Madison,Johnson,pulmonology,copd,Southeast,VA,Charlottesville,7,hospital,160,291,False,207RP1001X
+1369949932,Jason,King,cardiology,interventional,Southwest,TX,Dallas,11,hospital,203,581,False,207R-C0000-X
+1370361275,Richard,Griffin,rheumatology,lupus,Southwest,TX,Houston,15,private,179,294,False,207RR0500X
+1370467684,Linda,Smith,pulmonology,sleep medicine,Midwest,IN,South Bend,8,private,182,241,False,207RP1001X
+1371002787,Molly,Carpenter,rheumatology,rheumatoid arthritis,Southeast,FL,Gainesville,18,private,169,475,False,207RR0500X
+1371759725,Sarah,Lee,cardiology,electrophysiology,West,OR,Portland,15,private,108,398,False,207RC0000X
+1372196661,Jeffery,Wilson,oncology,gi malignancies,West,WA,Seattle,14,private,118,230,False,207RX0202X
+1374281198,Casey,Singh,pulmonology,interstitial lung disease,Southeast,GA,Augusta,6,academic,127,305,False,207RP1001X
+1374898744,Troy,Jones,endocrinology,obesity medicine,West,OR,Eugene,16,private,78,333,False,207RE0101X
+1375349903,Michael,Johnson,endocrinology,obesity medicine,West,CO,Boulder,18,private,174,520,False,207RE0101X
+1375799982,Natalie,Kim,oncology,genitourinary,Southeast,SC,Columbia,10,hospital,131,441,False,207RX0202X
+1376656900,Leslie,Williams,cardiology,preventive,Southwest,AZ,Tucson,6,hospital,164,445,False,207RC0000X
+1377426493,Elizabeth,Harvey,primary care,geriatrics,West,OR,Portland,13,private,337,692,False,207Q00000X
+1377516020,Susan,Fitzgerald,primary care,family medicine,Midwest,WI,Green Bay,11,private,239,330,False,207Q00000X
+1377956168,Kevin,Marquez,pulmonology,,Southeast,TN,Chattanooga,5,hospital,201,366,False,207RP1001X
+1381314644,Kelly,Phillips,primary care,geriatrics,Southeast,VA,Richmond,42,private,362,626,True,207Q00000X
+1381937048,Edward,Prince,primary care,urgent care,Midwest,WI,Milwaukee,11,hospital,323,344,False,207Q00000X
+1383406257,Eric,King,cardiology,electrophysiology,West,WA,Seattle,28,private,203,360,False,207RC0000X
+1384158410,Aaron,Miranda,oncology,genitourinary,Southeast,TN,Nashville,11,hospital,233,483,False,207RX0202X
+1385532449,Kathleen,Thompson,primary care,adolescent medicine,Southeast,GA,Atlanta,6,hospital,369,626,False,207Q00000X
+1386514024,Michelle,Wright,cardiology,electrophysiology,West,CA,Sacramento,10,hospital,276,509,False,207RC0000X
+1386832996,Caroline,Morales,rheumatology,osteoarthritis,West,WA,Spokane,21,hospital,188,568,True,207RR0500X
+1386832996,Caroline ,morales  ,rheumatology,osteoarthritis,West,WA,Spokane,21,hospital,188,568,True,207RR0500X
+1388802401,Jonathan,Watson,neurology,multiple sclerosis,Southwest,NV,Las Vegas,12,hospital,181,716,False,2084N0400X
+1389159553,Holly,Armstrong,primary care,geriatrics,Southeast,GA,Macon,11,private,377,501,False,207Q00000X
+1389574017,Cameron,Rivera,pulmonology,interstitial lung disease,Southwest,AZ,Scottsdale,8,academic,140,540,False,207RP1001X
+1390158669,Ellen,Price,pulmonology,interstitial lung disease,West,UT,Provo,13,hospital,181,248,False,207RP1001X
+1390939977,Eric,Gibson,rheumatology,rheumatoid arthritis,Midwest,MN,St. Paul,12,hospital,295,582,False,207RR0500X
+1393729789,Melissa,Cardenas,primary care,internal medicine,Southeast,FL,Miami,13,private,503,810,False,207Q00000X
+1393791409,Michelle,Lopez,rheumatology,osteoarthritis,Midwest,IL,Rockford,25,private,224,624,True,207RR0500X
+1394609428,Thomas,Burton,endocrinology,bone & mineral,Southwest,NV,Reno,4,hospital,222,923,False,207RE0101X
+1394700250,Regina,Mcfarland,pulmonology,asthma/allergy,Southeast,AL,Mobile,18,hospital,196,696,True,207R-P1001-X
+1394982015,Guy,Tucker,oncology,melanoma/skin,Southeast,AL,Birmingham,7,academic,131,263,False,207RX0202X
+1397150222,Rodney,Bell,cardiology,electrophysiology,Northeast,CT,Hartford,12,hospital,292,995,True,207RC0000X
+1397955463,David,Peterson,primary care,adolescent medicine,Southeast,TN,Chattanooga,14,hospital,391,827,False,207Q00000X
+1398789739,Rebecca,Mann,neurology,headache,Northeast,PA,Philadelphia,26,hospital,228,410,False,2084N0400X
+1400951004,John,Jimenez,endocrinology,reproductive endocrinology,Northeast,CT,Stamford,14,private,122,700,False,207RE0101X
+1401670058,John,Miller,cardiology,interventional,Midwest,IN,South Bend,32,academic,143,420,True,207RC0000X
+1401677194,Alexis,Nguyen,pulmonology,copd,West,OR,Eugene,14,private,252,479,False,207RP1001X
+1402934529,Emily,Curtis,endocrinology,obesity medicine,Southwest,TX,Dallas,23,private,172,299,False,207RE0101X
+1402958817,Matthew,Dixon,rheumatology,psoriatic arthritis,West,WA,Tacoma,11,private,153,663,False,207RR0500X
+1403127461,Rebecca,Moreno,neurology,stroke,West,CO,Denver,16,hospital,106,299,False,2084N0400X
+1403453024,Joshua,Williams,cardiology,interventional,Southwest,AZ,Mesa,6,hospital,251,535,False,207RC0000X
+1404995171,Katie,Goodman,oncology,genitourinary,West,UT,Salt Lake City,8,private,119,181,False,207RX0202X
+1405577143,Destiny,Kline,cardiology,preventive,West,CO,Colorado Springs,9,hospital,203,729,False,207RC0000X
+1405644208,Casey,Hayden,neurology,neuromuscular,West,CO,Boulder,31,private,175,422,True,2084N0400X
+1406384093,Gary,Vaughan,primary care,adolescent medicine,Southeast,VA,Richmond,32,academic,267,553,True,207Q00000X
+1407459696,Andrew,Marquez,pulmonology,sleep medicine,Southwest,NM,Santa Fe,4,private,163,272,False,207RP1001X
+1407902521,Jeremy,Wagner,oncology,gi malignancies,West,WA,Tacoma,8,hospital,98,248,False,207RX0202X
+1407931751,Monique,Harrison,oncology,,Midwest,OH,Cincinnati,8,hospital,154,315,False,207RX0202X
+1408074957,Gina,Johnson,pulmonology,copd,Southwest,TX,Austin,35,academic,241,726,True,207RP1001X
+1408782450,Kevin,Crawford,cardiology,preventive,West,UT,Provo,30,academic,162,481,True,207R-C0000-X
+1409867656,Michael,Williamson,neurology,neuromuscular,Northeast,NJ,Princeton,11,academic,172,399,False,2084N0400X
+1409960642,Michelle,Dunn,cardiology,preventive,Midwest,OH,Toledo,9,academic,179,445,False,207RC0000X
+1410468163,Yolanda,Turner,neurology,multiple sclerosis,Northeast,NY,Syracuse,7,hospital,92,279,False,2084N0400X
+1410724201,Janet,Webster,neurology,epilepsy,Northeast,NY,Albany,20,private,229,530,True,2084N0400X
+1411293156,Levi,Booth,neurology,movement disorders,Southeast,FL,Jacksonville,10,private,266,847,True,2084N0400X
+1411375466,Helen,Wolf,oncology,breast,Southeast,VA,Charlottesville,7,academic,110,302,False,207RX0202X
+1412773438,Sherri,Hernandez,primary care,adolescent medicine,Southwest,AZ,Tucson,12,hospital,541,902,False,207Q00000X
+1413202163,Amber,Swanson,endocrinology,thyroid,MIDWEST,WI,Milwaukee,27,academic,148,434,False,207RE0101X
+1413495239,Amanda,Hobbs,neurology,neuromuscular,Southeast,NC,Charlotte,16,hospital,178,597,False,2084N0400X
+1413519731,Deborah,Wright,primary care,adolescent medicine,Southwest,TX,Austin,13,hospital,310,852,False,207Q00000X
+1415915762,Kimberly,Butler,neurology,stroke,Southeast,NC,Charlotte,26,hospital,197,1368,True,2084N0400X
+1416644254,Amanda,Mueller,pulmonology,sleep medicine,Northeast,NY,New York,10,private,198,334,False,207RP1001X
+1416978082,Joshua,Lin,oncology,gi malignancies,West,OR,Eugene,13,hospital,145,399,False,207RX0202X
+1417682113,Alexander,Hamilton,pulmonology,interstitial lung disease,Northeast,CT,Hartford,16,academic,117,219,False,207RP1001X
+1418295824,Jason,Holt,rheumatology,vasculitis,Southeast,GA,Augusta,21,academic,125,387,False,207RR0500X
+1418704015,Jason,Hall,rheumatology,lupus,Northeast,MA,Springfield,11,hospital,136,394,False,207RR0500X
+1418997171,Laura,Smith,primary care,urgent care,Northeast,NJ,Jersey City,18,private,246,812,False,207Q00000X
+1420113783,Beth,Romero,cardiology,electrophysiology,Southwest,NV,Reno,8,private,129,211,False,207RC0000X
+1421582168,Jennifer,Reynolds,endocrinology,obesity medicine,Southwest,NV,Reno,20,private,245,651,True,207RE0101X
+1422258099,Kathy,Stewart,pulmonology,sleep medicine,Southeast,SC,Charleston,20,academic,125,489,False,207RP1001X
+1423152481,Suzanne,Chavez,primary care,geriatrics,Southeast,TN,Chattanooga,11,academic,265,812,False,207Q00000X
+1423753536,Katie,Parker,endocrinology,bone & mineral,Northeast,PA,Allentown,19,private,199,611,False,207RE0101X
+1423946593,Lindsay,Branch,pulmonology,sleep medicine,West,WA,Seattle,15,private,134,559,False,207RP1001X
+1424541534,Chad,Garcia,oncology,gi malignancies,West,UT,Provo,10,private,124,278,False,207RX0202X
+1425171802,Patrick,Larson,oncology,melanoma/skin,Midwest,MI,Lansing,5,academic,108,249,False,207RX0202X
+1425340662,Catherine,Taylor,primary care,urgent care,Southwest,TX,Austin,17,private,339,723,False,207Q00000X
+1425610817,Brenda,Brown,primary care,family medicine,Southeast,AL,Huntsville,3,private,237,310,False,207Q00000X
+1425845660,Todd,Young,oncology,melanoma/skin,Northeast,NY,New York,8,private,85,156,False,207RX0202X
+1426157339,Monica,Farrell,cardiology,heart failure,West,CA,San Francisco,14,private,192,404,False,207RC0000X
+1428222503,Katelyn,Velasquez,primary care,geriatrics,Midwest,WI,Milwaukee,5,private,292,248,False,207Q00000X
+1428792083,Shawn,Long,rheumatology,lupus,West,OR,Eugene,18,private,237,253,False,207RR0500X
+1429255973,Hannah,Nguyen,primary care,family medicine,Midwest,IN,Indianapolis,16,hospital,300,350,False,207Q00000X
+1429777182,Christopher,Drake,neurology,headache,Southeast,NC,Raleigh,10,private,317,731,False,2084N0400X
+1431285356,Amber,Lee,neurology,epilepsy,Midwest,MI,Lansing,34,private,206,351,True,2084N0400X
+1432188427,Jennifer,Day,endocrinology,bone & mineral,West,UT,Salt Lake City,9,hospital,217,706,False,207RE0101X
+1433980129,Michael,Jackson,pulmonology,interstitial lung disease,Northeast,PA,Hershey,4,academic,111,450,False,207RP1001X
+1434523506,Ronald,Beck,primary care,adolescent medicine,West,CA,San Diego,6,hospital,199,544,False,207Q00000X
+1435662964,Johnny,Whitney,endocrinology,diabetes,West,WA,Seattle,5,hospital,131,480,False,207RE0101X
+1435949049,Adrian,Castro,rheumatology,osteoarthritis,Northeast,ME,Bangor,4,private,177,656,False,207RR0500X
+1436505063,Charles,Padilla,primary care,internal medicine,Midwest,WI,Milwaukee,12,private,399,648,False,207Q00000X
+1436772218,Joshua,Wagner,endocrinology,diabetes,Northeast,NY,Albany,22,private,271,793,True,207RE0101X
+1438452850,Thomas,Jackson,pulmonology,critical care,West,CO,Colorado Springs,6,private,174,234,False,207RP1001X
+1440538092,Emily,Ellis,cardiology,preventive,Northeast,PA,Allentown,12,private,188,382,False,207RC0000X
+1440623548,Cynthia,Miller,cardiology,interventional,Southwest,OK,Oklahoma City,4,private,216,461,False,207RC0000X
+1442686543,Alyssa,Ochoa,neurology,movement disorders,Southeast,NC,Raleigh,16,private,97,216,False,2084N0400X
+1443260538,Wendy,Hurley,oncology,thoracic,Northeast,PA,Hershey,18,private,104,324,False,207RX0202X
+1443520683,John,Horton,cardiology,electrophysiology,Midwest,IL,Chicago,9,private,212,482,False,207RC0000X
+1443551811,Justin,Smith,neurology,headache,Southwest,NM,Albuquerque,10,academic,113,322,False,2084N0400X
+1443907526,Kyle,Jones,cardiology,interventional,Southeast,TN,Memphis,4,hospital,303,427,False,207RC0000X
+1444774099,Joshua,Smith,cardiology,interventional,West,UT,Salt Lake City,27,private,181,424,False,207RC0000X
+1448589550,Vincent,Meza,oncology,hematologic,S.E.,VA,Charlottesville,10,academic,116,337,False,207RX0202X
+1448713440,Gina,Barnett,neurology,movement disorders,Midwest,IL,Chicago,18,private,190,402,False,2084N0400X
+1449048093,Cheyenne,Gilbert,endocrinology,diabetes,Northeast,NY,Rochester,8,academic,110,320,False,207RE0101X
+1449331358,Timothy,Cunningham,pulmonology,interstitial lung disease,Midwest,MI,Lansing,9,academic,190,345,False,207RP1001X
+1449657976,Jeremy,Rosales,oncology,genitourinary,West,WA,Tacoma,4,academic,83,99,False,207RX0202X
+1450226943,Nancy,Moore,oncology,gi malignancies,Midwest,MI,Grand Rapids,11,academic,142,556,False,207RX0202X
+1451721462,Amy,Mcneil,cardiology,interventional,Southeast,VA,Charlottesville,7,academic,193,627,False,207RC0000X
+1451968915,Colleen,Dunn,primary care,internal medicine,Midwest,MI,Lansing,12,hospital,286,392,False,207Q00000X
+1453128708,Stephen,Flores,endocrinology,obesity medicine,Northeast,MA,Cambridge,22,private,258,451,False,207RE0101X
+1455101661,Jeffrey,Mcmillan,endocrinology,bone & mineral,SOUTHEAST,TN,Nashville,19,private,236,702,False,207RE0101X
+1455529317,Lee,Salazar,cardiology,interventional,Southeast,NC,Winston-Salem,15,private,273,188,False,207RC0000X
+1455591119,Andrea,Collins,oncology,breast,Midwest,OH,Toledo,36,academic,104,463,True,207RX0202X
+1455779946,Jack,Stevens,primary care,family medicine,Southwest,OK,Tulsa,33,private,394,772,True,207Q00000X
+1456207657,Heather,Good,primary care,adolescent medicine,Midwest,MN,Minneapolis,10,private,472,788,False,207Q-00000-X
+1456299035,Alicia,Simpson,primary care,urgent care,Southeast,AL,Mobile,15,academic,290,595,False,207Q00000X
+1456937691,Joseph,Gomez,endocrinology,reproductive endocrinology,Southeast,GA,Augusta,6,private,115,377,False,207RE0101X
+1457999534,Anthony,Chapman,rheumatology,vasculitis,Midwest,MI,Grand Rapids,21,academic,137,386,False,207RR0500X
+1458345984,Joshua,Joseph,cardiology,structural heart,West,UT,Provo,12,private,168,479,False,207RC0000X
+1460081361,Andrew,Reed,cardiology,heart failure,Northeast,ME,Bangor,7,academic,254,457,False,207RC0000X
+1463019459,Robin,Stephenson,primary care,adolescent medicine,West,WA,Seattle,9,private,297,365,False,207Q00000X
+1464676570,Lori,Zimmerman,neurology,stroke,Southeast,FL,Gainesville,19,academic,116,427,False,2084N0400X
+1464805419,Gregory,Tyler,cardiology,interventional,Northeast,NY,Syracuse,18,private,156,410,False,207RC0000X
+1465875601,Brooke,Payne,cardiology,structural heart,Southwest,NV,Reno,23,hospital,245,731,True,207RC0000X
+1467704312,Catherine,Brooks,neurology,epilepsy,Northeast,MA,Worcester,13,hospital,224,502,False,2084N0400X
+1468190701,Rebecca,Morrison,cardiology,preventive,West,CA,San Francisco,12,hospital,129,260,False,207RC0000X
+1468766963,Donna,Smith,neurology,neuromuscular,Southeast,VA,Richmond,17,hospital,168,533,True,2084N0400X
+1468815406,Michelle,Conner,oncology,melanoma/skin,Northeast,ME,Bangor,14,private,94,510,False,207RX0202X
+1473057747,Gene,Kirby,endocrinology,thyroid,West,CO,Denver,9,hospital,213,568,False,207RE0101X
+1473494189,Charles,Clark,primary care,family medicine,Northeast,ME,Bangor,13,private,247,402,False,207Q00000X
+1474100561,Jesus,Clay,pulmonology,interstitial lung disease,Midwest,MO,Kansas City,11,private,229,324,False,207RP1001X
+1475115246,Sara,Williams,cardiology,electrophysiology,Southeast,GA,Macon,17,hospital,202,674,True,207RC0000X
+1475314641,Robert,Davis,neurology,multiple sclerosis,West,UT,Salt Lake City,41,hospital,198,390,True,2084N0400X
+1475353029,Jeffrey,Lam,pulmonology,copd,West,UT,Provo,18,hospital,167,549,True,207RP1001X
+1477499267,Tara,Taylor,cardiology,preventive,West,OR,Portland,5,hospital,259,218,False,207RC0000X
+1478412079,Lisa,Fitzgerald,cardiology,preventive,Midwest,IL,Chicago,18,hospital,200,608,False,207RC0000X
+1479078465,Shannon,Young,primary care,adolescent medicine,West,OR,Portland,12,private,275,407,False,207Q00000X
+1479311619,Zachary,Montoya,oncology,hematologic,Midwest,IN,Fort Wayne,6,hospital,148,312,False,207RX0202X
+1479680351,Ryan,Rhodes,primary care,urgent care,Midwest,MN,Minneapolis,38,private,316,481,True,207Q00000X
+1480117328,Brittany,Grant,neurology,multiple sclerosis,West,CA,San Diego,25,academic,157,519,True,2084N0400X
+1480599715,Kathleen,Mitchell,oncology,breast,Midwest,OH,Toledo,12,hospital,119,280,False,207RX0202X
+1480866635,Joseph,Alvarez,rheumatology,osteoarthritis,Southeast,NC,Raleigh,31,private,141,622,True,207RR0500X
+1481179806,Joseph,Baird,primary care,family medicine,Northeast,MA,Cambridge,23,private,283,740,True,207Q00000X
+1481247389,Travis,Rosales,primary care,adolescent medicine,Southeast,NC,Winston-Salem,24,private,351,849,True,207Q00000X
+1484037258,Lindsay,Cunningham,oncology,gi malignancies,Midwest,MI,Lansing,38,private,189,488,True,207RX0202X
+1484162957,Julia,Taylor,pulmonology,critical care,West,CA,San Jose,19,private,300,732,True,207RP1001X
+1484424456,Joshua,Evans,rheumatology,osteoarthritis,West,WA,Seattle,17,private,190,474,False,207RR0500X
+1484724632,Alexis,Bradley,primary care,internal medicine,Northeast,NJ,Princeton,14,hospital,343,550,False,207Q00000X
+1486296159,Antonio,Thompson,oncology,thoracic,West,OR,Portland,8,hospital,118,283,False,207RX0202X
+1486382629,Rodney,Conley,oncology,breast,NE,ME,Bangor,10,academic,119,337,False,207RX0202X
+1486849361,Jose,Hill,cardiology,electrophysiology,West,CO,Colorado Springs,4,private,181,273,False,207RC0000X
+1486877065,Heidi,Powers,neurology,epilepsy,Northeast,ME,Portland,12,academic,133,537,True,2084N0400X
+1488515010,Jared,Wilson,primary care,family medicine,Midwest,MO,St. Louis,19,private,315,648,False,207Q00000X
+1488840616,Cynthia,Barton,rheumatology,lupus,Southeast,AL,Mobile,33,hospital,214,691,True,207RR0500X
+1489067862,Scott,Flores,rheumatology,lupus,Midwest,MI,Ann Arbor,35,hospital,199,358,True,207RR0500X
+1489598965,Larry,Knapp,primary care,adolescent medicine,Southeast,SC,Charleston,21,private,279,917,False,207Q00000X
+1491649715,Nicholas,Cabrera,endocrinology,diabetes,Southeast,TN,Chattanooga,42,academic,187,664,True,207RE0101X
+1492077734,Kenneth,Jones,cardiology,preventive,Midwest,WI,Green Bay,6,private,240,819,False,207RC0000X
+1494868502,Darrell,Harris,cardiology,heart failure,Southeast,AL,Huntsville,7,academic,161,413,False,207RC0000X
+1497642888,Richard,Hernandez,endocrinology,reproductive endocrinology,Northeast,PA,Pittsburgh,10,academic,185,389,False,207RE0101X
+1497664510,Adrian,Reynolds,rheumatology,vasculitis,Southeast,TN,Memphis,4,private,98,219,False,207RR0500X
+1498652761,Elizabeth,Hernandez,oncology,melanoma/skin,Midwest,MN,Minneapolis,7,private,100,153,False,207RX0202X
+1499123879,Julie,Mason,rheumatology,rheumatoid arthritis,Southeast,FL,Tampa,9,hospital,198,397,False,207RR0500X
+1501015600,Renee,Rush,pulmonology,sleep medicine,Southeast,VA,Arlington,22,private,286,345,False,207RP1001X
+1501344612,Craig,Hayden,primary care,internal medicine,Southeast,AL,Huntsville,7,private,173,364,False,207Q00000X
+1501563039,Terri,Kelly,rheumatology,rheumatoid arthritis,West,UT,Provo,9,private,185,443,False,207RR0500X
+1502571429,Dylan,Nelson,pulmonology,interstitial lung disease,Southeast,NC,Raleigh,11,hospital,175,364,False,207RP1001X
+1506356074,Bonnie,Johns,primary care,urgent care,Midwest,MI,Lansing,14,private,354,508,False,207Q00000X
+1506592454,Elizabeth,Espinoza,rheumatology,vasculitis,West,UT,Provo,6,academic,135,238,False,207RR0500X
+1506746308,Thomas,Hines,endocrinology,reproductive endocrinology,West,WA,Spokane,12,hospital,228,376,False,207RE0101X
+1507069536,Robert,Luna,endocrinology,reproductive endocrinology,Southwest,NM,Santa Fe,23,private,109,368,False,207RE0101X
+1507378861,Robert,Jackson,oncology,melanoma/skin,Northeast,NY,Buffalo,13,hospital,139,272,False,207RX0202X
+1508064668,Karen,Harris,endocrinology,thyroid,Southeast,VA,Charlottesville,12,private,193,391,False,207RE0101X
+1509977165,Steven,Smith,primary care,internal medicine,Northeast,ME,Bangor,27,private,372,1631,True,207Q00000X
+1510477734,Roger,Levy,neurology,movement disorders,Midwest,IN,Indianapolis,13,private,188,177,False,2084N0400X
+1511022174,Katherine,Walker,primary care,urgent care,Midwest,MI,Lansing,15,private,353,515,False,207Q00000X
+1511742359,Nancy,White,oncology,thoracic,Northeast,MA,Boston,16,academic,99,426,False,207RX0202X
+1512844550,Matthew,Morrison,neurology,multiple sclerosis,Southwest,OK,Tulsa,15,private,146,516,False,2084N0400X
+1512866082,Jason,Parker,primary care,internal medicine,Southeast,SC,Greenville,6,private,267,414,False,207Q00000X
+1513803142,Glenn,Jacobson,primary care,urgent care,West,UT,Salt Lake City,17,hospital,478,712,True,207Q00000X
+1516074709,Daniel,Acosta,cardiology,interventional,Southwest,AZ,Phoenix,20,private,263,749,True,207RC0000X
+1516379264,Brett,Scott,primary care,adolescent medicine,Southeast,SC,Greenville,22,hospital,380,1106,True,207Q00000X
+1518121706,Mark,Bowman,endocrinology,obesity medicine,Southeast,SC,Charleston,16,private,278,484,False,207RE0101X
+1518550110,Rebecca,Ferguson,neurology,movement disorders,West,WA,Tacoma,22,hospital,298,845,True,2084N0400X
+1519182780,Daniel,Ward,rheumatology,vasculitis,Midwest,WI,Milwaukee,11,private,254,439,False,207RR0500X
+1520551320,Lindsay,Mack,rheumatology,rheumatoid arthritis,Northeast,NY,Syracuse,13,hospital,230,426,False,207RR0500X
+1523498065,Cheryl,Reed,primary care,geriatrics,Southeast,SC,Columbia,15,academic,227,450,False,207Q00000X
+1523681389,Miranda,Mays,primary care,internal medicine,Midwest,WI,Milwaukee,8,hospital,296,514,False,207Q00000X
+1523987174,Lori,Turner,neurology,neuromuscular,West,CO,Denver,8,hospital,159,294,False,2084N0400X
+1524065749,Samantha,Bruce,rheumatology,vasculitis,Northeast,MA,Worcester,16,academic,122,621,False,207RR0500X
+1526669415,Daniel,Jenkins,primary care,geriatrics,Southwest,AZ,Tucson,15,private,349,470,False,207Q00000X
+1526834563,Lynn,Williams,pulmonology,sleep medicine,Southeast,SC,Columbia,15,private,271,579,False,207RP1001X
+1527981900,Jennifer,Cook,neurology,headache,Northeast,NY,Syracuse,14,hospital,192,371,False,2084N0400X
+1529045985,Melissa,Mendoza,primary care,urgent care,Midwest,IL,Chicago,13,private,226,435,False,207Q00000X
+1529873311,Tyler,Melendez,neurology,headache,Southwest,AZ,Mesa,4,private,128,288,False,2084N0400X
+1531018426,Stephen,King,pulmonology,interstitial lung disease,West,OR,Eugene,21,private,274,630,True,207RP1001X
+1533003293,John,Carter,pulmonology,asthma/allergy,Midwest,WI,Green Bay,5,hospital,200,567,False,207RP1001X
+1534239003,Robert,Harper,neurology,epilepsy,Southwest,NV,Reno,18,private,143,235,False,2084N0400X
+1534502129,Tim,Doyle,primary care,adolescent medicine,West,CO,Denver,22,private,295,379,False,207Q00000X
+1535323178,Christopher,Rhodes,oncology,thoracic,Northeast,CT,Stamford,17,academic,159,499,False,207RX0202X
+1535436392,Alexander,Li,oncology,genitourinary,Northeast,MA,Cambridge,2,hospital,75,188,False,207RX0202X
+1535436392,  ALEXANDER , Li  ,oncology,genitourinary,Northeast,MA,Cambridge,2,hospital,75,188,False,207RX0202X
+1535820066,Heather,Russell,primary care,geriatrics,West,CO,Denver,10,private,424,824,False,207Q00000X
+1536141264,Shelby,Lewis,pulmonology,asthma/allergy,Northeast,CT,Stamford,7,private,194,563,False,207RP1001X
+1536278926,Erica,Salas,primary care,adolescent medicine,West,UT,Provo,13,private,365,731,False,207Q00000X
+1540759788,Kathleen,Johnson,primary care,urgent care,Midwest,MO,St. Louis,6,private,225,490,False,207Q00000X
+1541379537,Vanessa,Paul,cardiology,preventive,Northeast,MA,Worcester,11,private,228,724,False,207RC0000X
+1541422121,Rick,Jordan,endocrinology,thyroid,Southeast,VA,Richmond,6,academic,150,440,False,207RE0101X
+1546151204,Charles,Miller,primary care,adolescent medicine,Northeast,NJ,Newark,13,hospital,270,494,False,207Q00000X
+1546273719,Nicole,Williams,pulmonology,critical care,Southeast,VA,Norfolk,15,hospital,186,424,False,207RP1001X
+1546587092,Russell,Sweeney,rheumatology,lupus,Midwest,MI,Lansing,35,private,191,547,True,207RR0500X
+1547112395,Cynthia,Ochoa,pulmonology,critical care,Midwest,IN,Indianapolis,10,private,209,414,False,207RP1001X
+1547244776,Angel,Alvarez,pulmonology,interstitial lung disease,Northeast,MA,Cambridge,18,hospital,241,397,False,207RP1001X
+1547244776,  ANGEL , Alvarez  ,pulmonology,interstitial lung disease,Northeast,MA,Cambridge,18,hospital,241,397,False,207RP1001X
+1547660377,Katie,Johnson,primary care,adolescent medicine,West,UT,Provo,12,private,322,418,False,207Q00000X
+1548035017,Bailey,Stark,neurology,stroke,Northeast,CT,Stamford,12,private,225,298,False,2084N0400X
+1548652282,Tara,Vega,primary care,urgent care,Midwest,MI,Grand Rapids,5,private,302,649,False,207Q00000X
+1551107307,James,Cohen,endocrinology,bone & mineral,Midwest,IL,Peoria,12,academic,106,649,False,207RE0101X
+1551962891,Jennifer,Gardner,cardiology,structural heart,Midwest,WI,Madison,13,private,166,320,False,207RC0000X
+1552813903,Victoria,Miranda,primary care,geriatrics,Northeast,NJ,Newark,10,private,425,777,False,207Q00000X
+1553755327,Sharon,Conner,oncology,thoracic,Southwest,NM,Santa Fe,18,private,160,634,True,207RX0202X
+1555114069,Christine,Ramos,oncology,breast,Southeast,VA,Richmond,11,hospital,176,518,False,207RX0202X
+1555285877,Gabriel,Bauer,cardiology,heart failure,Southwest,TX,Houston,8,private,146,292,False,207RC0000X
+1555316755,Maria,Sanders,neurology,epilepsy,Midwest,OH,Toledo,23,private,146,707,True,2084N0400X
+1555906795,Tracy,Mccann,pulmonology,copd,Midwest,WI,Green Bay,13,hospital,167,775,False,207RP1001X
+1556860702,Matthew,Porter,endocrinology,reproductive endocrinology,West,CO,Colorado Springs,10,hospital,182,253,False,207RE0101X
+1557944620,Matthew,Horton,primary care,adolescent medicine,Southwest,NV,Reno,21,hospital,260,817,True,207Q00000X
+1561159348,Laura,Franco,neurology,stroke,Northeast,ME,Portland,7,hospital,140,440,False,2084N0400X
+1566070763,Tammy,Brown,pulmonology,copd,Northeast,CT,New Haven,14,private,284,924,True,207RP1001X
+1566276774,Lynn,Grant,primary care,geriatrics,Southwest,NV,Reno,20,hospital,624,926,False,207Q00000X
+1566888198,Anna,Wilcox,primary care,geriatrics,Midwest,MI,Ann Arbor,26,private,270,559,False,207Q00000X
+1567742360,Eric,Shaw,primary care,internal medicine,West,UT,Provo,8,private,361,588,False,207Q00000X
+1567823350,Corey,Moody,cardiology,structural heart,Midwest,WI,Madison,6,academic,125,145,False,207RC0000X
+1567993435,Norman,Mendoza,neurology,headache,Northeast,NY,Buffalo,9,hospital,189,371,False,2084N0400X
+1568842342,Stephanie,Wilson,endocrinology,thyroid,West,OR,Eugene,20,private,150,366,False,207RE0101X
+1569475654,Erica,Webb,neurology,headache,West,OR,Eugene,5,hospital,209,227,False,2084N0400X
+1570328496,Becky,Knapp,rheumatology,rheumatoid arthritis,Northeast,NY,New York,17,academic,251,883,True,207RR0500X
+1572180861,Christopher,Wilson,primary care,geriatrics,Southeast,AL,Mobile,27,private,212,514,False,207Q00000X
+1572650665,Caitlin,Davis,endocrinology,bone & mineral,Southwest,NM,Santa Fe,16,private,337,890,True,207RE0101X
+1573445784,Bruce,Weber,pulmonology,asthma/allergy,Northeast,MA,Springfield,16,private,230,406,False,207RP1001X
+1577953643,Amanda,Hicks,cardiology,structural heart,West,OR,Portland,10,private,280,298,False,207RC0000X
+1580871600,Crystal,Singleton,oncology,thoracic,Northeast,NJ,Jersey City,4,hospital,109,264,False,207RX0202X
+1581992355,Joyce,Whitney,cardiology,electrophysiology,Northeast,NY,Albany,20,academic,160,660,True,207RC0000X
+1583696442,Jesse,Pena,endocrinology,diabetes,West,OR,Portland,18,private,220,491,False,207RE0101X
+1584097178,Angel,Sanchez,oncology,breast,Southeast,SC,Columbia,10,private,248,465,False,207RX0202X
+1586730040,Crystal,Wilson,neurology,neuromuscular,West,CO,Denver,2,private,135,188,False,2084N0400X
+1588179048,Cory,Ayala,pulmonology,interstitial lung disease,Midwest,WI,Milwaukee,12,private,164,338,False,207RP1001X
+1589965130,Makayla,Sullivan,pulmonology,critical care,West,CO,Denver,40,hospital,320,796,True,207RP1001X
+1590337907,Gregory,Mendez,rheumatology,vasculitis,Northeast,MA,Worcester,9,hospital,174,656,False,207RR0500X
+1590602128,Denise,Lane,primary care,internal medicine,Midwest,MN,Minneapolis,27,hospital,442,687,True,207Q00000X
+1590869917,John,Pineda,primary care,internal medicine,Southwest,OK,Oklahoma City,10,private,239,420,False,207Q00000X
+1592062677,Kenneth,Keller,neurology,headache,Southeast,TN,Nashville,9,hospital,239,576,False,2084N0400X
+1592123891,Amy,White,primary care,geriatrics,Northeast,PA,Allentown,18,hospital,485,756,False,207Q00000X
+1594083903,Jennifer,Freeman,neurology,stroke,Northeast,NJ,Newark,9,hospital,192,1054,True,2084N0400X
+1594466975,Christine,Moreno,cardiology,interventional,West,UT,Salt Lake City,17,private,226,569,False,207RC0000X
+1594739314,Kenneth,Browning,neurology,,West,UT,Provo,4,hospital,94,172,False,2084N0400X
+1595301304,Krystal,Morris,primary care,internal medicine,Southwest,OK,Tulsa,13,private,420,513,False,207Q00000X
+1595774286,Darius,Rose,rheumatology,vasculitis,Midwest,IL,Peoria,13,private,233,657,False,207RR0500X
+1596580633,William,Bishop,primary care,urgent care,West,CA,Sacramento,14,hospital,280,235,False,207Q00000X
+1596912711,Gabrielle,Nolan,oncology,breast,Northeast,NJ,Princeton,3,academic,60,249,False,207RX0202X
+1598661571,Matthew,Velasquez,rheumatology,rheumatoid arthritis,Northeast,CT,Stamford,10,academic,138,584,False,207RR0500X
+1598998692,Stephanie,Roberts,endocrinology,diabetes,Southwest,OK,Tulsa,12,private,134,459,False,207RE0101X
+1599978586,Nicole,Kelly,cardiology,,West,UT,Salt Lake City,11,private,229,567,False,207RC0000X
+1599978586,  NICOLE , Kelly  ,cardiology,,West,UT,Salt Lake City,11,private,229,567,False,207RC0000X
+1599989245,Debra,Luna,oncology,hematologic,Northeast,NY,New York,13,hospital,201,389,False,207RX0202X
+1600621852,Julie,Long,endocrinology,bone & mineral,West,CA,San Diego,28,private,123,691,True,207RE0101X
+1600833937,Amber,Stephenson,oncology,breast,West,CO,Colorado Springs,12,academic,130,526,True,207RX0202X
+1601451010,Linda,Harris,rheumatology,psoriatic arthritis,Southwest,NV,Las Vegas,19,academic,215,437,False,207RR0500X
+1602648309,Mark,Schultz,rheumatology,rheumatoid arthritis,Northeast,NJ,Camden,14,private,194,762,False,207RR0500X
+1604279475,James,Brown,cardiology,preventive,Southwest,OK,Tulsa,19,hospital,213,1082,True,207RC0000X
+1605645914,Laurie,Owens,endocrinology,bone & mineral,Southwest,NM,Santa Fe,29,academic,122,188,False,207RE0101X
+1606566010,Jamie,Gallagher,endocrinology,diabetes,West,OR,Eugene,14,private,268,246,False,207RE0101X
+1607660754,Eric,Rivera,cardiology,structural heart,Southeast,AL,Mobile,17,academic,177,725,True,207RC0000X
+1608203554,Julia,Mosley,pulmonology,sleep medicine,Northeast,CT,Hartford,27,academic,146,517,True,207RP1001X
+1608203554,julia,MOSLEY,pulmonology,sleep medicine,Northeast,CT,Hartford,27,academic,146,517,True,207RP1001X
+1610177150,Ryan,Vang,cardiology,preventive,Southeast,AL,Mobile,19,hospital,334,649,True,207RC0000X
+1610429726,Kathryn,Little,rheumatology,vasculitis,Southeast,VA,Charlottesville,27,private,191,357,False,207RR0500X
+1610820601,Vincent,Murphy,primary care,geriatrics,Midwest,MI,Lansing,9,private,244,533,False,207Q00000X
+1611741350,Brandi,Lawson,cardiology,interventional,Southeast,VA,Norfolk,16,hospital,257,697,True,207RC0000X
+1611952734,Cynthia,Herman,neurology,stroke,West,WA,Tacoma,6,hospital,186,320,False,2084N0400X
+1613561947,Leonard,Knox,primary care,geriatrics,Southeast,VA,Norfolk,16,hospital,478,604,False,207Q00000X
+1614682395,Ryan,Bush,primary care,geriatrics,Southwest,OK,Oklahoma City,30,private,307,871,True,207Q00000X
+1614978876,Eric,Villegas,cardiology,heart failure,West,UT,Provo,4,hospital,158,274,False,207RC0000X
+1615059528,Lori,Hernandez,primary care,geriatrics,Southeast,GA,Savannah,12,private,382,453,False,207Q00000X
+1616066910,Kyle,Green,rheumatology,osteoarthritis,West,CO,Denver,25,private,216,533,True,207RR0500X
+1616115113,Courtney,Smith,neurology,headache,Southwest,NV,Reno,11,academic,88,241,False,2084N0400X
+1616418756,Sandra,Brown,neurology,stroke,Northeast,MA,Worcester,8,hospital,175,486,False,2084N0400X
+1616839134,Carlos,Murray,rheumatology,rheumatoid arthritis,Northeast,CT,New Haven,10,private,200,988,True,207RR0500X
+1617703974,Devon,Khan,endocrinology,reproductive endocrinology,Southwest,NV,Las Vegas,22,private,272,479,False,207RE0101X
+1618334340,Martha,Bush,rheumatology,rheumatoid arthritis,west coast,CA,Palo Alto,18,private,155,286,False,207RR0500X
+1618352078,Alicia,Lucas,neurology,neuromuscular,Southwest,TX,Austin,11,hospital,199,478,False,2084N0400X
+1619471448,Joseph,Cummings,primary care,urgent care,Northeast,ME,Bangor,25,private,284,987,True,207Q-00000-X
+1621199177,Eric,Hardy,primary care,adolescent medicine,Southeast,FL,Gainesville,16,private,259,512,False,207Q00000X
+1621842156,Ryan,Henderson,oncology,breast,Northeast,PA,Hershey,28,academic,143,421,True,207RX0202X
+1622391112,Tiffany,Brown,neurology,neuromuscular,Southwest,NV,Las Vegas,8,hospital,137,216,False,2084N0400X
+1623506957,Theresa,Wilson,cardiology,structural heart,Midwest,IL,Peoria,26,private,252,334,False,207RC0000X
+1624547729,Rodney,Mendez,cardiology,heart failure,Northeast,CT,Stamford,15,private,235,425,False,207RC0000X
+1625192632,Kendra,Edwards,primary care,adolescent medicine,Southwest,NV,Las Vegas,10,private,285,371,False,207Q00000X
+1626268928,Brenda,Rice,pulmonology,critical care,West,OR,Portland,19,private,184,643,False,207RP1001X
+1630483653,Karen,Parsons,endocrinology,obesity medicine,Northeast,NJ,Newark,25,private,319,921,True,207RE0101X
+1630629040,Heather,Lee,endocrinology,obesity medicine,Southeast,SC,Greenville,6,hospital,164,439,False,207RE0101X
+1631526641,Rebecca,Shelton,cardiology,structural heart,Southwest,OK,Oklahoma City,16,private,219,594,False,207RC0000X
+1632734848,David,Dawson,pulmonology,copd,Northeast,NY,Albany,7,hospital,213,412,False,207RP1001X
+1635476009,Lauren,Wagner,neurology,neuromuscular,Northeast,CT,Hartford,18,hospital,215,510,False,2084N0400X
+1635581279,Randy,Brown,primary care,urgent care,Southeast,NC,Charlotte,18,hospital,475,845,False,207Q00000X
+1636376422,Terrance,Adams,neurology,neuromuscular,Southwest,TX,San Antonio,7,private,159,477,False,2084N0400X
+1637550512,Courtney,Bailey,oncology,hematologic,Southeast,AL,Birmingham,7,hospital,138,241,False,207RX0202X
+1638368260,Robert,Johnson,rheumatology,vasculitis,West,WA,Seattle,13,hospital,146,363,False,207RR0500X
+1639269087,Andrea,Nunez,primary care,internal medicine,Northeast,NY,Buffalo,18,private,563,558,False,207Q00000X
+1640263392,Jesse,Decker,oncology,melanoma/skin,Southeast,NC,Winston-Salem,18,academic,144,517,False,207RX0202X
+1641859123,Randall,Thompson,rheumatology,psoriatic arthritis,Western,CO,Denver,12,hospital,244,567,False,207R-R0500-X
+1642024693,Dawn,Terrell,rheumatology,osteoarthritis,Northeast,NY,Buffalo,10,private,145,321,False,207RR0500X
+1643297637,David,Nichols,primary care,urgent care,West,OR,Portland,6,private,331,357,False,207Q00000X
+1643343233,Justin,Wong,rheumatology,psoriatic arthritis,Southeast,SC,Columbia,17,private,170,705,False,207RR0500X
+1644815767,David,Fuller,primary care,geriatrics,West,WA,Tacoma,16,academic,350,678,False,207Q00000X
+1645013610,Danielle,Richard,oncology,thoracic,Northeast,NJ,Newark,17,hospital,79,288,False,207RX0202X
+1645233598,Dawn,Ewing,endocrinology,thyroid,Northeast,MA,Boston,10,private,160,872,False,207RE0101X
+1645750203,Tracy,Parker,cardiology,interventional,Southeast,VA,Richmond,24,private,240,434,True,207RC0000X
+1646133078,John,Wood,endocrinology,bone & mineral,west coast,CO,Denver,13,hospital,322,1258,True,207RE0101X
+1646792071,Nicole,Porter,cardiology,electrophysiology,Midwest,IL,Chicago,20,private,255,749,True,207RC0000X
+1647196991,Christine,Clark,rheumatology,lupus,Southeast,VA,Richmond,8,academic,142,765,False,207RR0500X
+1647700669,Jamie,Rodriguez,pulmonology,sleep medicine,West,CO,Colorado Springs,6,private,165,312,False,207RP1001X
+1648553570,Jeremy,Flores,cardiology,preventive,Southwest,TX,Houston,11,hospital,394,955,True,207RC0000X
+1648626962,Tammy,Malone,pulmonology,sleep medicine,Southwest,OK,Tulsa,16,academic,184,491,False,207RP1001X
+1650044724,William,Warner,primary care,urgent care,Southwest,NV,Reno,11,hospital,357,300,False,207Q00000X
+1655321622,Stuart,Johnson,cardiology,interventional,Northeast,MA,Worcester,19,private,294,459,False,207RC0000X
+1655374878,Monique,Smith,neurology,stroke,Midwest,MN,Minneapolis,3,academic,114,226,False,2084N0400X
+1655727265,Anna,Jones,pulmonology,interstitial lung disease,Northeast,ME,Bangor,12,hospital,348,571,False,207RP1001X
+1656483868,Andrea,Gould,cardiology,preventive,MIDWEST,MN,Rochester,10,hospital,209,323,False,207RC0000X
+1656529157,Andrew,Fowler,endocrinology,thyroid,Southwest,TX,Houston,19,hospital,179,882,True,207RE0101X
+1657025858,Jason,Patel,endocrinology,bone & mineral,Northeast,NY,Buffalo,10,private,177,623,False,207RE0101X
+1657035808,Alexandra,Green,primary care,family medicine,West,OR,Eugene,14,private,424,402,False,207Q00000X
+1657655308,Andrew,Robles,endocrinology,reproductive endocrinology,Northeast,NY,New York,9,academic,144,306,False,207RE0101X
+1657725655,Elizabeth,Jimenez,cardiology,structural heart,West,WA,Seattle,13,private,275,858,False,207RC0000X
+1658483767,Jason,Richardson,oncology,gi malignancies,Midwest,WI,Milwaukee,6,hospital,78,213,False,207RX0202X
+1659738110,Eric,Thompson,oncology,hematologic,Northeast,ME,Bangor,10,academic,90,301,False,207RX0202X
+1661525075,Greg,Gomez,pulmonology,critical care,West,CA,San Diego,24,private,172,285,False,207RP1001X
+1663073843,Bryan,Myers,oncology,breast,Southwest,NM,Santa Fe,14,hospital,175,370,False,207RX0202X
+1665478461,Nicholas,Ramos,primary care,,Northeast,NY,New York,10,private,319,541,False,207Q00000X
+1666152792,Ashlee,Landry,neurology,epilepsy,West,CO,Colorado Springs,12,private,115,252,False,2084N0400X
+1666389063,Frederick,Cook,endocrinology,obesity medicine,Midwest,IN,Indianapolis,17,private,196,387,False,207RE0101X
+1670560261,Donna,Sullivan,primary care,adolescent medicine,Southwest,OK,Tulsa,13,hospital,345,539,False,207Q00000X
+1670701188,Yvette,Rodriguez,cardiology,electrophysiology,SE,TN,Chattanooga,7,private,256,703,False,207RC0000X
+1672904236,Jacob,Cooper,cardiology,interventional,Northeast,PA,Philadelphia,5,hospital,236,390,False,207RC0000X
+1674102136,Tiffany,Sanders,primary care,urgent care,Northeast,CT,Hartford,13,private,275,368,False,207Q00000X
+1674345776,Laura,Green,neurology,multiple sclerosis,Midwest,OH,Cleveland,14,hospital,135,435,False,2084N0400X
+1674708775,Miranda,Jones,rheumatology,rheumatoid arthritis,Northeast,MA,Cambridge,9,academic,151,758,False,207RR0500X
+1676011079,Corey,Mason,pulmonology,asthma/allergy,Midwest,IL,Rockford,17,hospital,242,580,True,207RP1001X
+1676855970,Brian,Chase,primary care,adolescent medicine,West,UT,Provo,16,private,249,462,False,207Q00000X
+1677860136,Melanie,Burch,endocrinology,obesity medicine,Northeast,NY,Buffalo,5,private,124,530,False,207RE0101X
+1679256069,Marie,Wise,oncology,thoracic,Northeast,PA,Hershey,34,hospital,153,798,True,207R-X0202-X
+1679813331,Michelle,Washington,pulmonology,interstitial lung disease,Midwest,WI,Milwaukee,20,private,164,388,False,207RP1001X
+1681501296,Melanie,Frazier,pulmonology,interstitial lung disease,West,WA,Spokane,8,hospital,155,333,False,207RP1001X
+1681526517,Melanie,Cole,oncology,genitourinary,Midwest,MN,Rochester,23,hospital,246,850,True,207RX0202X
+1683943777,John,Shelton,cardiology,structural heart,West,UT,Provo,8,hospital,210,573,False,207RC0000X
+1685524518,Jessica,Stewart,primary care,family medicine,Southeast,AL,Mobile,4,private,306,355,False,207Q00000X
+1686810049,Denise,Patton,endocrinology,obesity medicine,Southeast,SC,Greenville,28,private,155,828,True,207RE0101X
+1686880901,Ronald,Maynard,primary care,adolescent medicine,West,UT,Salt Lake City,13,hospital,515,333,False,207Q00000X
+1688735228,Barbara,Nguyen,rheumatology,lupus,Northeast,NJ,Camden,23,academic,123,389,False,207RR0500X
+1688976343,Charlene,Brock,pulmonology,asthma/allergy,Southeast,NC,Charlotte,14,academic,190,642,False,207RP1001X
+1689059347,Sarah,Medina,primary care,geriatrics,Southwest,NV,Reno,9,private,283,408,False,207Q00000X
+1689916181,Shawn,Kane,primary care,geriatrics,Northeast,ME,Bangor,6,private,582,623,False,207Q00000X
+1690348028,Ashley,Johnston,rheumatology,vasculitis,Midwest,IN,Fort Wayne,39,private,270,762,True,207RR0500X
+1692444494,Jason,Smith,pulmonology,interstitial lung disease,Southeast,AL,Birmingham,8,private,236,1003,True,207RP1001X
+1693013389,Emma,Fuller,cardiology,interventional,Northeast,ME,Portland,20,academic,231,596,True,207RC0000X
+1693072195,Susan,Valencia,endocrinology,thyroid,Northeast,ME,Portland,37,private,150,872,True,207RE0101X
+1693350831,James,Bailey,oncology,melanoma/skin,Northeast,NJ,Jersey City,17,private,118,406,False,207RX0202X
+1693809661,Michael,Gilbert,oncology,breast,Southeast,SC,Greenville,33,private,136,384,True,207RX0202X
+1694658844,Rebecca,Morales,endocrinology,diabetes,Southeast,TN,Knoxville,6,hospital,176,610,False,207RE0101X
+1695082515,Selena,Walker,oncology,genitourinary,Southwest,OK,Tulsa,19,academic,128,326,False,207R-X0202-X
+1696606064,Aaron,Lopez,pulmonology,asthma/allergy,West,UT,Provo,6,academic,166,378,False,207RP1001X
+1696806755,Charles,Goodwin,rheumatology,vasculitis,Midwest,IL,Peoria,14,hospital,218,348,False,207RR0500X
+1697719783,John,Cortez,neurology,neuromuscular,Southwest,NV,Las Vegas,7,academic,147,351,False,2084N0400X
+1697855363,Mitchell,Peterson,pulmonology,copd,Northeast,PA,Hershey,14,private,227,542,False,207RP1001X
+1699200295,Marilyn,Bailey,rheumatology,rheumatoid arthritis,West,UT,Salt Lake City,19,private,112,373,False,207RR0500X
+1701585576,Robert,West,cardiology,interventional,Southwest,AZ,Scottsdale,9,hospital,223,515,False,207RC0000X
+1702446943,Adam,Duran,endocrinology,reproductive endocrinology,West,WA,Spokane,12,hospital,178,417,False,207RE0101X
+1702497342,Christopher,Silva,endocrinology,thyroid,Southeast,TN,Knoxville,9,academic,223,655,False,207RE0101X
+1703230064,Morgan,Sanchez,neurology,stroke,West,WA,Seattle,11,hospital,159,268,False,2084N0400X
+1703413967,Loretta,May,endocrinology,thyroid,West,CO,Boulder,26,academic,226,671,True,207RE0101X
+1704216484,Brandon,Sanchez,rheumatology,osteoarthritis,Southwest,NM,Albuquerque,18,private,161,342,False,207RR0500X
+1704308638,Rachel,Anderson,pulmonology,interstitial lung disease,Southeast,VA,Arlington,15,private,355,665,True,207RP1001X
+1704331150,Michael,Ramirez,endocrinology,obesity medicine,West,CO,Denver,11,hospital,254,671,False,207RE0101X
+1704492101,David,Solis,oncology,gi malignancies,Southeast,GA,Savannah,24,hospital,154,387,False,207RX0202X
+1705644676,Jeffrey,Douglas,oncology,hematologic,West,UT,Provo,21,private,144,419,False,207RX0202X
+1706645516,James,Butler,endocrinology,reproductive endocrinology,Southeast,AL,Mobile,9,private,153,352,False,207RE0101X
+1706770306,Wendy,Hays,cardiology,structural heart,Southwest,TX,Fort Worth,9,private,203,349,False,207RC0000X
+1706991829,Scott,David,endocrinology,bone & mineral,Midwest,WI,Milwaukee,19,private,178,602,False,207RE0101X
+1707268052,Virginia,Taylor,pulmonology,sleep medicine,Southeast,TN,Chattanooga,15,private,279,905,True,207RP1001X
+1707435529,John,Young,primary care,internal medicine,Southeast,VA,Norfolk,14,academic,283,516,False,207Q00000X
+1707917476,Gregory,Gross,endocrinology,bone & mineral,West,CA,San Jose,19,private,163,332,False,207RE0101X
+1708639657,Kevin,Bartlett,endocrinology,reproductive endocrinology,Northeast,MA,Worcester,7,private,179,411,False,207RE0101X
+1710163217,Sarah,Green,cardiology,interventional,Northeast,NY,Albany,11,hospital,299,441,False,207RC0000X
+1710487228,Julie,Armstrong,pulmonology,interstitial lung disease,Midwest,WI,Milwaukee,18,academic,121,270,False,207RP1001X
+1712092349,Joseph,Jennings,oncology,gi malignancies,West,WA,Seattle,29,private,159,342,True,207RX0202X
+1712965692,Douglas,Green,neurology,epilepsy,West,CA,San Jose,9,private,234,411,False,2084N0400X
+1713444978,Justin,Martinez,endocrinology,obesity medicine,Midwest,IL,Peoria,11,private,190,872,False,207RE0101X
+1713480105,Tricia,Robertson,cardiology,preventive,Midwest,MO,Columbia,11,private,283,845,True,207RC0000X
+1713519829,Alan,Hughes,cardiology,interventional,Southeast,VA,Charlottesville,6,academic,150,353,False,207RC0000X
+1713731663,Cory,Edwards,pulmonology,copd,Southeast,AL,Mobile,14,hospital,181,670,False,207RP1001X
+1714021262,Jessica,James,primary care,adolescent medicine,Northeast,MA,Worcester,5,private,339,607,False,207Q00000X
+1714292012,Todd,Bryant,cardiology,heart failure,Southeast,FL,Tampa,14,academic,177,567,False,207RC0000X
+1714986282,Ryan,Lara,cardiology,preventive,West,WA,Tacoma,10,academic,196,505,False,207RC0000X
+1715246280,Andrew,Garcia,rheumatology,vasculitis,Southeast,GA,Augusta,13,private,140,263,False,207RR0500X
+1715729269,Laura,Bruce,cardiology,interventional,Southeast,GA,Savannah,38,hospital,267,674,True,207RC0000X
+1715729269,Laura ,bruce  ,cardiology,interventional,Southeast,GA,Savannah,38,hospital,267,674,True,207RC0000X
+1716162536,Michelle,Gallegos,cardiology,electrophysiology,Northeast,PA,Allentown,30,hospital,207,420,True,207RC0000X
+1717519684,Aaron,Morrow,endocrinology,diabetes,Midwest,IL,Springfield,22,private,223,716,False,207RE0101X
+1718275724,Nicholas,Crawford,neurology,,West,UT,Provo,9,hospital,183,244,False,2084N0400X
+1719186219,Mario,Anderson,oncology,genitourinary,West,CA,Sacramento,14,hospital,172,454,False,207RX0202X
+1719574174,David,Hernandez,neurology,stroke,Midwest,MO,St. Louis,11,private,192,364,False,2084N0400X
+1719722377,Kyle,Brown,endocrinology,diabetes,Southeast,NC,Durham,37,hospital,268,785,True,207RE0101X
+1720146327,Julie,Rodriguez,neurology,movement disorders,Northeast,ME,Bangor,11,private,268,800,True,2084N0400X
+1721479586,Jeffery,Hernandez,primary care,family medicine,West,CA,San Diego,8,private,360,590,False,207Q00000X
+1721743411,Michele,Hayes,cardiology,heart failure,Midwest,MN,Rochester,23,private,215,298,False,207RC0000X
+1722038985,Amy,Cisneros,cardiology,heart failure,West,CO,Denver,8,academic,274,509,False,207RC0000X
+1722502113,Randall,Ortiz,oncology,gi malignancies,SOUTHWEST,AZ,Mesa,11,academic,115,267,False,207RX0202X
+1722581836,William,Taylor,pulmonology,interstitial lung disease,West,WA,Seattle,8,hospital,207,350,False,207RP1001X
+1722898792,Jessica,Arnold,cardiology,heart failure,Southeast,VA,Charlottesville,19,private,279,589,False,207RC0000X
+1723841155,Amanda,Gentry,primary care,adolescent medicine,Southeast,TN,Nashville,31,academic,357,561,True,207Q00000X
+1724088210,Anthony,Byrd,rheumatology,osteoarthritis,SW,NM,Albuquerque,42,private,208,926,True,207RR0500X
+1724092733,Meghan,Simmons,cardiology,interventional,Northeast,PA,Pittsburgh,5,hospital,228,474,False,207RC0000X
+1724378447,Edgar,Fry,neurology,stroke,Southeast,TN,Memphis,13,hospital,88,288,False,2084N0400X
+1725198265,Megan,Cooper,oncology,genitourinary,West,UT,Provo,19,hospital,154,618,True,207RX0202X
+1725623817,Hannah,Love,primary care,urgent care,Southwest,NV,Las Vegas,9,hospital,451,718,False,207Q00000X
+1725724532,Jasmine,Clark,primary care,family medicine,Northeast,MA,Boston,32,private,425,1220,True,207Q00000X
+1727100020,Pamela,Cook,cardiology,electrophysiology,Northeast,NY,Albany,15,academic,205,694,True,207RC0000X
+1727463709,Jade,Richardson,cardiology,structural heart,West,UT,Salt Lake City,13,hospital,210,441,False,207RC0000X
+1727524690,Christopher,Oliver,pulmonology,critical care,West,OR,Portland,10,private,243,260,False,207R-P1001-X
+1728890785,Jessica,Craig,neurology,multiple sclerosis,Southeast,VA,Charlottesville,10,hospital,123,334,False,2084N0400X
+1730655531,Cindy,Obrien,endocrinology,obesity medicine,Northeast,CT,New Haven,9,private,220,705,False,207RE0101X
+1731313338,Amy,Villarreal,pulmonology,copd,West,CA,Palo Alto,11,private,107,247,False,207RP1001X
+1732000645,Tanya,Turner,cardiology,preventive,Southwest,AZ,Scottsdale,8,private,229,660,False,207RC0000X
+1732527431,Donna,Ruiz,primary care,adolescent medicine,Southeast,VA,Arlington,9,private,299,759,False,207Q00000X
+1732914373,Joseph,Hendricks,cardiology,structural heart,West,WA,Tacoma,10,private,246,475,False,207RC0000X
+1734447604,Shawn,Knight,pulmonology,interstitial lung disease,Southeast,AL,Birmingham,29,hospital,210,508,True,207RP1001X
+1735062055,Linda,Rivera,neurology,movement disorders,Midwest,WI,Madison,27,hospital,189,506,True,2084N0400X
+1736538384,Crystal,Ballard,endocrinology,thyroid,Northeast,PA,Allentown,14,private,241,369,False,207RE0101X
+1736829924,Shawn,Valentine,pulmonology,sleep medicine,Southeast,AL,Birmingham,14,academic,172,404,False,207RP1001X
+1737156715,Bradley,Hernandez,neurology,multiple sclerosis,Midwest,WI,Milwaukee,31,private,175,657,True,2084N0400X
+1737256036,Whitney,Escobar,oncology,hematologic,Midwest,WI,Green Bay,9,private,106,466,False,207RX0202X
+1738266356,Kenneth,May,neurology,stroke,Southwest,TX,Dallas,11,private,98,248,False,2084N0400X
+1738903891,Jonathon,Jimenez,endocrinology,bone & mineral,Southeast,NC,Charlotte,18,hospital,419,780,False,207RE0101X
+1738916414,Stephanie,Kim,pulmonology,asthma/allergy,West,CA,San Jose,10,hospital,228,478,False,207RP1001X
+1739517849,Wendy,Butler,cardiology,preventive,West,CO,Colorado Springs,19,hospital,185,336,False,207RC0000X
+1739712036,Sarah,Ross,rheumatology,vasculitis,Northeast,CT,Hartford,13,hospital,121,429,False,207RR0500X
+1740047711,Courtney,Bates,primary care,adolescent medicine,Southeast,SC,Greenville,13,private,316,460,False,207Q00000X
+1740626134,Zoe,Watts,endocrinology,bone & mineral,Southwest,OK,Oklahoma City,5,academic,181,503,False,207RE0101X
+1741672111,Jill,Foster,oncology,thoracic,Midwest,WI,Green Bay,20,private,110,248,False,207RX0202X
+1742100898,Veronica,Turner,primary care,urgent care,Midwest,MN,St. Paul,12,hospital,210,246,False,207Q00000X
+1742245693,Sierra,Fisher,primary care,family medicine,Southeast,NC,Raleigh,32,private,327,431,True,207Q00000X
+1742318383,James,Taylor,cardiology,preventive,Midwest,MO,Columbia,8,hospital,185,471,False,207RC0000X
+1742579091,Crystal,Thompson,primary care,geriatrics,Northeast,ME,Bangor,25,private,370,977,True,207Q00000X
+1742859469,Kristy,Cruz,pulmonology,critical care,West,WA,Spokane,2,hospital,272,600,False,207RP1001X
+1742974847,Scott,Martin,primary care,geriatrics,Northeast,NJ,Princeton,7,private,166,265,False,207Q00000X
+1743431961,James,Morris,cardiology,preventive,Southeast,SC,Charleston,14,private,177,371,False,207R-C0000-X
+1743613295,Sarah,Martin,oncology,breast,Midwest,OH,Cincinnati,11,private,214,329,False,207RX0202X
+1743803979,Natasha,Guerra,oncology,gi malignancies,Midwest,OH,Cleveland,15,academic,90,297,False,207RX0202X
+1745370779,Nicholas,Burton,oncology,gi malignancies,West,OR,Eugene,21,academic,114,291,False,207RX0202X
+1745601371,Tina,Leon,cardiology,interventional,Midwest,IL,Peoria,11,private,345,415,False,207RC0000X
+1746046261,Diana,Gonzales,endocrinology,bone & mineral,Northeast,PA,Hershey,4,hospital,213,394,False,207RE0101X
+1746587884,Lisa,Beltran,cardiology,structural heart,Northeast,PA,Pittsburgh,12,private,284,374,False,207RC0000X
+1747032997,Sandra,Obrien,primary care,adolescent medicine,Northeast,NY,New York,9,hospital,314,505,False,207Q00000X
+1747637738,Kimberly,Ingram,primary care,internal medicine,Midwest,IL,Chicago,7,academic,152,386,False,207Q00000X
+1749263335,Grace,Adkins,primary care,family medicine,Southeast,SC,Greenville,14,private,358,1407,True,207Q00000X
+1749355669,Paul,Atkinson,neurology,stroke,West,CA,Los Angeles,8,academic,122,517,False,2084-N0400-X
+1749652321,Rachel,Le,endocrinology,thyroid,West,CO,Colorado Springs,8,hospital,135,322,False,207RE0101X
+1750236147,Alec,Walsh,cardiology,heart failure,Southwest,TX,Austin,12,private,202,495,False,207RC0000X
+1751172259,Robert,Thompson,cardiology,heart failure,Southeast,GA,Savannah,12,academic,154,486,False,207RC0000X
+1752055289,Jason,Ford,oncology,gi malignancies,Midwest,IN,Fort Wayne,32,hospital,222,298,False,207RX0202X
+1752727945,Melissa,Wright,primary care,geriatrics,West,CA,Los Angeles,14,private,410,365,False,207Q00000X
+1753387863,Mariah,Blevins,primary care,internal medicine,Southeast,FL,Jacksonville,32,hospital,438,620,True,207Q00000X
+1755292830,Leonard,Watson,oncology,breast,West,UT,Provo,8,hospital,125,209,False,207RX0202X
+1756884833,Karen,Richardson,endocrinology,obesity medicine,West,CA,San Diego,22,private,265,427,False,207RE0101X
+1757283357,Angela,Flynn,rheumatology,psoriatic arthritis,Midwest,IL,Chicago,23,hospital,209,545,False,207RR0500X
+1757379494,Marie,Nunez,endocrinology,obesity medicine,Southeast,FL,Tampa,30,hospital,153,768,True,207RE0101X
+1758206720,Thomas,Ferguson,oncology,hematologic,Southwest,AZ,Tucson,18,academic,86,438,False,207RX0202X
+1758794279,David,Bryant,endocrinology,thyroid,Northeast,NJ,Jersey City,7,private,167,720,False,207RE0101X
+1759630787,Julie,Johnson,rheumatology,osteoarthritis,Midwest,WI,Milwaukee,9,private,133,322,False,207RR0500X
+1760628762,Karen,Gonzalez,cardiology,interventional,Southwest,OK,Oklahoma City,13,private,267,411,False,207RC0000X
+1761262934,Darlene,Montgomery,pulmonology,interstitial lung disease,Northeast,CT,New Haven,22,hospital,213,476,False,207RP1001X
+1762664088,Eric,Sanders,cardiology,structural heart,Midwest,MI,Detroit,10,hospital,183,431,False,207RC0000X
+1762971749,Joseph,Peck,primary care,urgent care,Northeast,CT,New Haven,9,private,301,447,False,207Q00000X
+1765149178,Ashley,Freeman,neurology,multiple sclerosis,Southeast,SC,Greenville,10,academic,104,310,False,2084N0400X
+1765233105,Marc,Compton,neurology,headache,Midwest,IL,Peoria,6,private,162,350,False,2084N0400X
+1766730505,Lisa,Wallace,cardiology,interventional,Midwest,MI,Ann Arbor,12,private,174,614,False,207RC0000X
+1767249513,Rose,Frost,pulmonology,asthma/allergy,West,CO,Boulder,8,private,185,492,False,207RP1001X
+1767320793,Haley,Wagner,primary care,urgent care,Southeast,GA,Macon,18,academic,329,787,True,207Q00000X
+1767508967,Mitchell,Steele,primary care,family medicine,Northeast,MA,Worcester,27,hospital,367,553,False,207Q00000X
+1768225918,Elijah,Jackson,endocrinology,reproductive endocrinology,Midwest,IN,South Bend,9,academic,96,599,False,207RE0101X
+1768831921,Brenda,Ortiz,rheumatology,psoriatic arthritis,Northeast,NY,Rochester,11,hospital,185,498,False,207RR0500X
+1769198304,Catherine,Harris,pulmonology,copd,Northeast,CT,New Haven,12,private,160,273,False,207RP1001X
+1769234364,Jeffrey,Hickman,primary care,adolescent medicine,Southwest,OK,Tulsa,21,academic,233,514,False,207Q00000X
+1769333869,Amy,Khan,endocrinology,thyroid,Southeast,SC,Columbia,20,private,124,567,False,207RE0101X
+1769352273,Jody,Schwartz,primary care,internal medicine,Southwest,NM,Santa Fe,27,private,289,586,False,207Q00000X
+1769764832,Sarah,Chambers,neurology,stroke,Northeast,MA,Cambridge,11,hospital,180,439,False,2084N0400X
+1772776476,Brenda,Gregory,oncology,genitourinary,Western,OR,Portland,19,hospital,154,304,False,207RX0202X
+1773180629,Lisa,Haney,primary care,adolescent medicine,Southeast,SC,Charleston,7,hospital,279,366,False,207Q00000X
+1774691384,Tracy,Brown,neurology,neuromuscular,Northeast,ME,Bangor,12,academic,150,283,False,2084N0400X
+1775551348,Jacqueline,Smith,rheumatology,vasculitis,Northeast,NJ,Newark,11,private,216,627,False,207RR0500X
+1775788783,Thomas,Bailey,oncology,breast,Northeast,PA,Allentown,9,hospital,141,620,True,207RX0202X
+1775891033,Chad,Nelson,oncology,gi malignancies,Southeast,AL,Huntsville,12,hospital,115,316,False,207RX0202X
+1776723276,Jeremiah,Wright,primary care,urgent care,Midwest,MN,Rochester,21,private,275,604,False,207Q00000X
+1779411515,Jeffrey,Fischer,endocrinology,reproductive endocrinology,Midwest,MO,Kansas City,11,private,249,516,False,207RE0101X
+1779918477,Sheila,Martinez,cardiology,heart failure,Northeast,CT,New Haven,17,private,158,494,False,207RC0000X
+1782077311,Kevin,Edwards,pulmonology,critical care,Southeast,FL,Tampa,9,private,220,314,False,207RP1001X
+1782341873,Debra,Carter,pulmonology,asthma/allergy,Southeast,VA,Charlottesville,5,private,155,497,False,207RP1001X
+1783823739,Marilyn,Garcia,primary care,urgent care,Southwest,OK,Oklahoma City,13,academic,284,869,False,207Q00000X
+1785764022,Amanda,Rodgers,oncology,gi malignancies,Northeast,ME,Bangor,17,academic,130,407,False,207RX0202X
+1785926670,Elizabeth,Deleon,endocrinology,thyroid,Midwest,WI,Green Bay,12,private,147,438,False,207RE0101X
+1787619711,Ronald,Jones,cardiology,interventional,Midwest,MN,St. Paul,13,private,322,847,False,207RC0000X
+1788421810,Barry,Giles,neurology,epilepsy,Northeast,MA,Springfield,15,hospital,142,417,False,2084-N0400-X
+1788668972,Noah,Alvarez,oncology,gi malignancies,Southwest,AZ,Scottsdale,16,hospital,204,442,False,207RX0202X
+1788800922,Jacob,Rice,primary care,internal medicine,Northeast,ME,Portland,22,hospital,392,1078,True,207Q00000X
+1789149345,Jason,Kim,oncology,genitourinary,Northeast,PA,Pittsburgh,18,private,195,294,False,207RX0202X
+1789632894,Tracey,Santos,cardiology,heart failure,Midwest,WI,Milwaukee,2,private,104,378,False,207RC0000X
+1793579560,Joseph,Kim,oncology,hematologic,Midwest,OH,Columbus,14,hospital,110,663,False,207RX0202X
+1793685516,Mark,Daniels,cardiology,structural heart,Southeast,AL,Birmingham,16,private,145,574,False,207RC0000X
+1795350721,Shannon,Sanchez,rheumatology,osteoarthritis,Southwest,OK,Oklahoma City,6,private,266,546,False,207RR0500X
+1797940958,Duane,Peters,pulmonology,critical care,West,UT,Provo,14,hospital,164,315,False,207RP1001X
+1798313247,Bryan,Elliott,pulmonology,asthma/allergy,Midwest,MI,Lansing,13,private,162,428,False,207RP1001X
+1798488478,Jennifer,Gray,pulmonology,interstitial lung disease,Midwest,MO,Columbia,10,academic,128,261,False,207RP1001X
+1799582725,Tammy,York,cardiology,electrophysiology,Southwest,AZ,Tucson,24,hospital,239,464,True,207RC0000X
+1801296579,Christina,Williams,rheumatology,rheumatoid arthritis,West,OR,Eugene,16,academic,180,837,True,207RR0500X
+1801662945,Barbara,Higgins,endocrinology,bone & mineral,Midwest,MO,Columbia,14,private,224,452,False,207RE0101X
+1803233885,Harry,Smith,primary care,urgent care,Southeast,TN,Knoxville,16,hospital,339,623,False,207Q00000X
+1803339427,Bethany,Ferguson,endocrinology,diabetes,Midwest,OH,Toledo,11,academic,119,730,False,207RE0101X
+1803461205,Brianna,Davidson,oncology,genitourinary,Midwest,OH,Cleveland,12,private,85,201,False,207R-X0202-X
+1803502636,Lee,White,endocrinology,,Northeast,NJ,Princeton,7,private,172,571,False,207RE0101X
+1803952245,Michelle,Cabrera,neurology,neuromuscular,Northeast,ME,Portland,3,private,156,200,False,2084N0400X
+1804484495,Emily,Roman,primary care,internal medicine,Southeast,NC,Winston-Salem,16,private,324,492,False,207Q00000X
+1805422742,Amber,Simpson,endocrinology,diabetes,Northeast,ME,Portland,16,private,204,770,False,207RE0101X
+1806103952,Richard,Berry,cardiology,structural heart,West,UT,Provo,8,hospital,198,411,False,207RC0000X
+1806479196,Steven,Klein,primary care,family medicine,Southwest,OK,Oklahoma City,16,hospital,304,832,False,207Q00000X
+1806707737,Cynthia,Mcknight,primary care,,West,CO,Boulder,9,private,282,357,False,207Q00000X
+1808310134,Michael,Hunter,rheumatology,,Southwest,NM,Santa Fe,12,private,207,772,False,207RR0500X
+1808677938,Anthony,Robertson,endocrinology,thyroid,West,WA,Tacoma,12,hospital,157,358,False,207RE0101X
+1808826295,Taylor,Rodriguez,primary care,internal medicine,Southeast,FL,Miami,20,hospital,304,667,False,207Q00000X
+1809220084,Travis,Sanders,pulmonology,interstitial lung disease,West,CA,Los Angeles,9,private,117,351,False,207RP1001X
+1811081532,Craig,Jones,oncology,genitourinary,Northeast,PA,Philadelphia,12,academic,129,458,False,207RX0202X
+1812123887,Charles,Todd,primary care,geriatrics,Southwest,AZ,Tucson,9,private,504,599,False,207Q00000X
+1812815243,Chelsea,Hill,primary care,adolescent medicine,Midwest,WI,Milwaukee,7,hospital,613,720,False,207Q00000X
+1814938340,Joseph,Spencer,cardiology,interventional,Southeast,AL,Huntsville,13,private,185,473,False,207RC0000X
+1815549120,Natasha,Roberts,neurology,epilepsy,Southwest,OK,Oklahoma City,9,private,151,262,False,2084N0400X
+1815807585,Lynn,Gibbs,primary care,family medicine,Southeast,TN,Knoxville,13,hospital,315,653,False,207Q00000X
+1820307894,Judy,Stein,pulmonology,interstitial lung disease,Southeast,SC,Columbia,24,hospital,188,640,True,207RP1001X
+1821424144,Christopher,Cook,oncology,breast,Southeast,TN,Memphis,24,private,144,463,True,207RX0202X
+1821714619,Stephen,Nielsen,neurology,headache,West,CA,San Jose,20,hospital,207,271,False,2084N0400X
+1822345694,David,Johnson,cardiology,preventive,Southeast,VA,Arlington,14,hospital,254,943,True,207RC0000X
+1823309871,David,Moss,cardiology,interventional,Southwest,TX,San Antonio,5,hospital,258,572,False,207RC0000X
+1823835685,Sherri,Mills,oncology,genitourinary,Southeast,FL,Gainesville,13,private,130,424,False,207RX0202X
+1824149854,Megan,Henry,neurology,movement disorders,Southeast,TN,Memphis,12,hospital,160,451,False,2084N0400X
+1824172013,Marcus,Bennett,primary care,adolescent medicine,Midwest,MI,Grand Rapids,10,private,454,861,False,207Q00000X
+1827318308,Matthew,Williams,endocrinology,reproductive endocrinology,West,UT,Provo,7,hospital,221,384,False,207RE0101X
+1828766265,Allison,Collins,oncology,hematologic,Southwest,TX,Fort Worth,8,hospital,137,244,False,207RX0202X
+1828803407,Teresa,Lin,oncology,hematologic,Northeast,MA,Cambridge,16,private,124,333,False,207RX0202X
+1829206543,Alyssa,Rogers,oncology,genitourinary,Northeast,PA,Philadelphia,28,private,103,492,True,207RX0202X
+1830884742,Angela,Beck,cardiology,interventional,Southwest,TX,Fort Worth,17,hospital,270,396,False,207RC0000X
+1831183839,John,Moore,pulmonology,sleep medicine,Southeast,NC,Durham,12,hospital,141,394,False,207RP1001X
+1831786672,Wanda,Reyes,oncology,thoracic,Southeast,FL,Jacksonville,20,hospital,111,382,False,207RX0202X
+1832506087,Sabrina,Williams,primary care,geriatrics,Midwest,MI,Grand Rapids,14,hospital,401,1168,False,207Q00000X
+1834127445,Charles,Frye,endocrinology,diabetes,West,OR,Eugene,26,hospital,170,945,True,207RE0101X
+1835339551,Jennifer,Nixon,rheumatology,rheumatoid arthritis,Northeast,PA,Hershey,18,private,306,1200,True,207RR0500X
+1835878442,Jennifer,Wright,endocrinology,,Midwest,MN,Rochester,7,private,184,338,False,207RE0101X
+1836314447,Christopher,Elliott,endocrinology,obesity medicine,Southeast,VA,Richmond,5,private,139,576,False,207RE0101X
+1836894604,Curtis,Rush,cardiology,heart failure,Southeast,VA,Norfolk,12,hospital,210,470,False,207RC0000X
+1836939912,Debra,Lopez,neurology,,Southeast,GA,Savannah,6,academic,126,333,False,2084N0400X
+1838439200,Justin,Zuniga,primary care,adolescent medicine,Southeast,SC,Greenville,16,private,392,801,False,207Q00000X
+1838576308,Mark,Mccann,pulmonology,critical care,Southeast,SC,Columbia,6,academic,167,435,False,207RP1001X
+1838809964,Heather,Russo,neurology,multiple sclerosis,Southeast,SC,Greenville,8,private,203,421,False,2084N0400X
+1840863041,Joseph,Spencer,oncology,breast,Southeast,FL,Miami,13,academic,179,522,False,207RX0202X
+1841542198,Matthew,Snyder,oncology,hematologic,MW,IN,South Bend,6,academic,99,362,False,207RX0202X
+1841791217,Lisa,Wells,neurology,movement disorders,Midwest,OH,Cleveland,21,academic,177,502,False,2084N0400X
+1842420535,Todd,Gillespie,primary care,,Midwest,IL,Springfield,11,private,318,417,False,207Q00000X
+1844625859,Michelle,Davies,cardiology,heart failure,West,WA,Seattle,19,private,158,259,False,207RC0000X
+1844747141,Victoria,Miller,primary care,urgent care,West,CO,Colorado Springs,12,academic,278,612,False,207Q00000X
+1844748057,Samantha,Key,neurology,multiple sclerosis,Midwest,MN,St. Paul,16,hospital,167,417,False,2084N0400X
+1847082322,Elizabeth,Riggs,rheumatology,rheumatoid arthritis,Northeast,MA,Boston,16,private,216,444,False,207RR0500X
+1847562299,Joe,Ingram,cardiology,preventive,Midwest,MO,St. Louis,7,hospital,196,244,False,207RC0000X
+1847562299,joe,INGRAM,cardiology,preventive,Midwest,MO,St. Louis,7,hospital,196,244,False,207RC0000X
+1847794991,David,Harris,primary care,geriatrics,West,CO,Colorado Springs,10,private,164,301,False,207Q00000X
+1848624494,Christopher,Jones,primary care,geriatrics,Midwest,MO,Kansas City,14,private,395,561,False,207Q00000X
+1848800052,Jessica,Galvan,cardiology,interventional,Northeast,NY,Albany,9,private,256,460,False,207RC0000X
+1849328657,Mathew,Johnson,primary care,family medicine,Midwest,MN,Minneapolis,22,private,347,444,False,207Q00000X
+1849988823,Elizabeth,Ortiz,primary care,geriatrics,Northeast,CT,Stamford,10,private,206,151,False,207Q00000X
+1850313960,Nicole,Hines,cardiology,preventive,West,WA,Tacoma,21,private,200,336,False,207RC0000X
+1851932792,Caroline,Barr,primary care,geriatrics,West,OR,Portland,20,hospital,402,483,False,207Q00000X
+1852326267,Jessica,Joyce,oncology,breast,Southwest,OK,Tulsa,12,private,122,396,False,207RX0202X
+1854727892,Adam,Gonzalez,oncology,thoracic,Northeast,PA,Allentown,29,academic,139,488,True,207RX0202X
+1854852153,Jason,Johnston,pulmonology,critical care,Southwest,TX,Houston,17,private,143,513,False,207RP1001X
+1855585794,Anthony,Bullock,oncology,thoracic,Midwest,IN,Indianapolis,11,academic,126,362,False,207RX0202X
+1856406925,James,Welch,cardiology,preventive,Northeast,PA,Pittsburgh,12,hospital,176,457,False,207RC0000X
+1856601467,Erica,Whitaker,neurology,multiple sclerosis,West,OR,Portland,27,private,127,650,True,2084N0400X
+1857629178,Patricia,Morgan,oncology,melanoma/skin,West,OR,Eugene,3,academic,116,265,False,207RX0202X
+1860037419,Brandy,Maxwell,cardiology,interventional,Northeast,NY,Syracuse,15,hospital,287,422,False,207RC0000X
+1862986803,Diane,Bailey,primary care,geriatrics,Midwest,MI,Grand Rapids,25,private,403,640,False,207Q00000X
+1864283779,Monica,Taylor,oncology,thoracic,Southwest,TX,Houston,20,hospital,136,454,True,207RX0202X
+1867204764,Ricky,Ali,pulmonology,sleep medicine,Southeast,NC,Winston-Salem,15,hospital,284,547,False,207RP1001X
+1869092142,Sara,Stephens,primary care,family medicine,Midwest,IL,Rockford,24,hospital,470,1448,True,207Q00000X
+1870532862,Mark,Ward,pulmonology,copd,Southwest,AZ,Phoenix,11,private,191,390,False,207RP1001X
+1870533357,Laura,Ponce,oncology,genitourinary,Midwest,OH,Cincinnati,17,hospital,173,361,False,207RX0202X
+1870612441,Adrienne,Johnson,endocrinology,diabetes,Midwest,IL,Chicago,20,academic,136,628,False,207RE0101X
+1871372714,Rachel,Osborne,cardiology,heart failure,Northeast,ME,Portland,19,hospital,229,586,False,207RC0000X
+1872102060,Monique,Arnold,neurology,multiple sclerosis,Midwest,MI,Grand Rapids,39,private,156,242,True,2084N0400X
+1873780039,Javier,Thompson,primary care,,West,UT,Provo,9,private,258,699,False,207Q00000X
+1874547676,Jennifer,Boone,neurology,movement disorders,Northeast,NJ,Camden,12,hospital,122,279,False,2084N0400X
+1875587127,Ryan,Munoz,neurology,stroke,Southeast,FL,Jacksonville,22,hospital,193,543,True,2084N0400X
+1875708707,Richard,Taylor,endocrinology,diabetes,West,CA,San Francisco,26,hospital,137,340,False,207RE0101X
+1875967568,Darius,Abbott,pulmonology,sleep medicine,Southwest,NM,Santa Fe,14,hospital,276,575,False,207RP1001X
+1877046932,Kevin,Robertson,primary care,geriatrics,Northeast,MA,Boston,16,hospital,332,568,False,207Q00000X
+1877986913,Colin,Wolf,oncology,melanoma/skin,Southwest,TX,Fort Worth,16,academic,113,307,False,207RX0202X
+1878312481,Daniel,Wood,cardiology,interventional,Mid-West,WI,Green Bay,26,private,222,462,False,207RC0000X
+1879804551,Antonio,Roberson,pulmonology,copd,Southwest,NV,Las Vegas,19,private,156,273,False,207RP1001X
+1879821175,Scott,Smith,neurology,epilepsy,Northeast,NJ,Camden,12,private,191,521,False,2084N0400X
+1880040971,Amy,Fuentes,oncology,thoracic,West,CO,Denver,20,academic,91,241,False,207RX0202X
+1880265578,Darrell,Owen,cardiology,electrophysiology,Midwest,OH,Columbus,11,private,220,550,False,207RC0000X
+1880426881,Jeanne,Hammond,endocrinology,reproductive endocrinology,Northeast,NY,Buffalo,10,hospital,193,759,False,207RE0101X
+1880717263,Derek,Allen,pulmonology,copd,Northeast,ME,Portland,12,hospital,181,523,False,207RP1001X
+1881781243,Emily,Frazier,endocrinology,thyroid,mid west,IN,Indianapolis,13,private,144,292,False,207RE0101X
+1883526315,Hunter,Harris,primary care,urgent care,Midwest,IN,South Bend,19,hospital,450,1215,True,207Q00000X
+1884150503,Wesley,Reid,cardiology,interventional,Midwest,WI,Milwaukee,29,hospital,190,619,True,207RC0000X
+1884938808,Michael,Herrera,rheumatology,rheumatoid arthritis,West,CA,Palo Alto,14,private,225,597,False,207RR0500X
+1885189138,Kimberly,Watson,cardiology,preventive,Northeast,NY,Syracuse,7,private,121,559,False,207RC0000X
+1885387740,Debra,Wells,endocrinology,bone & mineral,Northeast,NY,Syracuse,38,hospital,202,825,True,207RE0101X
+1886821390,Cynthia,Wyatt,oncology,gi malignancies,Southeast,GA,Macon,5,academic,126,206,False,207RX0202X
+1888770710,Jessica,Pearson,oncology,gi malignancies,Southwest,NM,Albuquerque,15,private,83,226,False,207RX0202X
+1889545335,Jerry,Sawyer,oncology,genitourinary,West,WA,Spokane,22,hospital,124,669,True,207RX0202X
+1889776344,Colton,Jones,pulmonology,sleep medicine,Northeast,NJ,Camden,7,hospital,259,432,False,207RP1001X
+1890077344,Julia,Edwards,endocrinology,reproductive endocrinology,Southeast,SC,Charleston,18,private,230,637,False,207RE0101X
+1890080918,Nicholas,Smith,cardiology,preventive,Southeast,GA,Atlanta,15,private,269,910,True,207RC0000X
+1892083019,Jacob,Khan,primary care,adolescent medicine,Southeast,AL,Mobile,27,academic,457,531,False,207Q00000X
+1892264320,Emily,Webb,rheumatology,osteoarthritis,West,CA,San Francisco,7,private,147,275,False,207RR0500X
+1892307210,Bobby,Brown,rheumatology,psoriatic arthritis,Northeast,ME,Bangor,17,hospital,225,431,False,207RR0500X
+1892897319,Elijah,Pierce,rheumatology,lupus,Southwest,NV,Las Vegas,7,private,240,584,False,207RR0500X
+1893020424,Albert,Hernandez,neurology,stroke,Midwest,IL,Rockford,16,private,250,494,False,2084N0400X
+1893606271,Chelsea,Cole,oncology,hematologic,Southwest,TX,Austin,7,academic,116,470,False,207RX0202X
+1893638738,David,Russell,pulmonology,copd,Midwest,MN,St. Paul,11,private,180,231,False,207RP1001X
+1895078685,Heather,Ruiz,endocrinology,thyroid,Southwest,TX,Fort Worth,15,private,202,768,False,207RE0101X
+1895795452,Eric,Hinton,pulmonology,sleep medicine,West,OR,Eugene,3,private,175,264,False,207RP1001X
+1896554999,Yvonne,Ford,primary care,adolescent medicine,West,OR,Eugene,14,private,397,838,False,207Q00000X
+1897045260,Erica,Collins,oncology,genitourinary,Midwest,IN,Indianapolis,19,academic,89,409,True,207RX0202X
+1897395806,James,Shaw,cardiology,heart failure,Northeast,ME,Portland,15,private,240,559,False,207RC0000X
+1897723296,Joseph,Allen,cardiology,interventional,Northeast,ME,Portland,19,private,162,408,False,207RC0000X
+1897724641,David,Caldwell,primary care,geriatrics,Midwest,IN,Indianapolis,40,hospital,283,504,True,207Q00000X
+1898803444,Andrew,Silva,endocrinology,obesity medicine,West,UT,Salt Lake City,11,academic,207,541,False,207RE0101X
+1900401815,Daniel,Edwards,endocrinology,diabetes,Northeast,NJ,Princeton,25,hospital,256,642,True,207RE0101X
+1900445093,Rita,Perez,oncology,genitourinary,Midwest,MO,Columbia,14,hospital,112,287,False,207RX0202X
+1901019392,Kristen,Thomas,cardiology,interventional,West,OR,Portland,16,hospital,270,1312,True,207RC0000X
+1901417067,Julie,Bennett,neurology,movement disorders,Northeast,MA,Springfield,13,private,128,322,False,2084N0400X
+1901453930,Julie,Duran,neurology,neuromuscular,West,CO,Denver,17,private,147,281,False,2084N0400X
+1902607450,Brian,Collins,rheumatology,vasculitis,West,CO,Denver,8,private,185,419,False,207RR0500X
+1903121188,Tracy,Torres,pulmonology,sleep medicine,Northeast,PA,Philadelphia,18,academic,182,394,False,207RP1001X
+1903521262,Tasha,Bennett,oncology,,Southeast,GA,Savannah,13,academic,103,254,False,207RX0202X
+1903798589,Alejandro,Sanchez,primary care,internal medicine,Southwest,TX,Austin,19,private,452,642,False,207Q00000X
+1903865289,Daniel,Thomas,oncology,genitourinary,West,WA,Tacoma,18,hospital,165,564,True,207RX0202X
+1905395731,Bill,Harris,primary care,geriatrics,West,CO,Boulder,13,private,179,241,False,207Q00000X
+1907112910,Briana,Scott,neurology,multiple sclerosis,Southeast,GA,Atlanta,22,hospital,175,351,False,2084N0400X
+1907128700,Kari,Patrick,rheumatology,osteoarthritis,Northeast,MA,Cambridge,36,academic,178,411,True,207RR0500X
+1908127628,Melinda,Barnes,cardiology,electrophysiology,Southeast,AL,Mobile,14,private,233,468,False,207RC0000X
+1908168895,Travis,Michael,primary care,internal medicine,Southwest,NM,Albuquerque,16,private,316,457,False,207Q00000X
+1909167417,Jacqueline,Velez,primary care,urgent care,Midwest,MI,Detroit,18,private,465,1174,True,207Q00000X
+1910188758,Zachary,Bryan,endocrinology,obesity medicine,Southeast,VA,Charlottesville,16,hospital,191,318,False,207RE0101X
+1912301342,Amy,Norton,endocrinology,reproductive endocrinology,Southeast,NC,Winston-Salem,25,hospital,361,879,True,207RE0101X
+1913683516,Deborah,Huang,oncology,gi malignancies,Southeast,TN,Memphis,8,academic,119,353,False,207RX0202X
+1913743435,David,Potts,oncology,melanoma/skin,Northeast,MA,Springfield,13,hospital,190,581,False,207RX0202X
+1914644640,Mary,Arnold,neurology,stroke,Northeast,MA,Worcester,11,private,118,533,False,2084N0400X
+1916437647,Molly,Parker,pulmonology,asthma/allergy,Southeast,TN,Nashville,12,private,211,380,False,207RP1001X
+1917761615,Dana,Estrada,neurology,neuromuscular,Northeast,PA,Philadelphia,21,academic,134,784,True,2084N0400X
+1918398995,Barbara,Hill,oncology,gi malignancies,Midwest,MI,Ann Arbor,22,hospital,169,379,False,207RX0202X
+1921646299,Justin,Thomas,neurology,movement disorders,Southwest,OK,Oklahoma City,9,hospital,120,554,False,2084N0400X
+1922102391,Todd,Horton,rheumatology,vasculitis,West,OR,Portland,20,private,191,385,False,207RR0500X
+1922185990,Matthew,Lee,primary care,geriatrics,West,WA,Tacoma,6,hospital,290,238,False,207Q00000X
+1922670785,Christine,Smith,primary care,family medicine,Southeast,GA,Augusta,30,private,772,793,True,207Q00000X
+1923786978,Angel,Hughes,cardiology,interventional,Southeast,TN,Nashville,15,hospital,228,538,False,207RC0000X
+1924221140,Jennifer,Ewing,rheumatology,osteoarthritis,Southeast,SC,Greenville,4,private,132,333,False,207RR0500X
+1924355757,Stacey,Brown,primary care,family medicine,Southwest,NM,Albuquerque,7,hospital,521,702,False,207Q00000X
+1925142923,Amy,Simmons,neurology,multiple sclerosis,Southwest,OK,Oklahoma City,8,academic,96,330,False,2084N0400X
+1925493359,Samantha,Wiggins,rheumatology,vasculitis,Midwest,IL,Peoria,28,hospital,217,291,False,207RR0500X
+1927430854,Thomas,Reese,primary care,geriatrics,Southeast,VA,Richmond,13,private,407,721,False,207Q00000X
+1929302226,Anne,Randall,primary care,family medicine,Midwest,MO,Columbia,17,hospital,508,1333,True,207Q00000X
+1933607412,Michelle,Vance,cardiology,electrophysiology,West,WA,Tacoma,12,hospital,195,412,False,207RC0000X
+1934277181,Joshua,Dennis,neurology,multiple sclerosis,Southeast,FL,Orlando,9,academic,83,391,False,2084N0400X
+1934613260,Jessica,Reid,oncology,genitourinary,Southwest,AZ,Tucson,12,hospital,121,315,False,207RX0202X
+1934763735,Jason,Rodriguez,cardiology,structural heart,Midwest,IL,Rockford,7,hospital,343,466,False,207RC0000X
+1934829601,Christopher,Norris,cardiology,structural heart,Midwest,OH,Toledo,13,hospital,272,555,False,207RC0000X
+1935314678,Maria,Moore,endocrinology,obesity medicine,Midwest,MI,Ann Arbor,7,private,120,706,False,207RE0101X
+1937449878,Melissa,Gill,neurology,stroke,Southeast,VA,Charlottesville,9,academic,76,157,False,2084N0400X
+1937514325,Tonya,Gomez,primary care,family medicine,West,CO,Colorado Springs,15,private,389,651,False,207Q00000X
+1937526600,Danielle,Brown,oncology,,Southeast,TN,Chattanooga,12,academic,79,184,False,207RX0202X
+1939052563,Jacqueline,Anderson,primary care,adolescent medicine,West,CA,San Jose,8,hospital,425,286,False,207Q00000X
+1939526327,Erin,Williams,endocrinology,thyroid,West,WA,Seattle,9,hospital,195,287,False,207RE0101X
+1939785840,Kenneth,Martin,endocrinology,thyroid,Southwest,TX,Austin,30,private,292,656,True,207RE0101X
+1942292768,Amber,Valentine,oncology,melanoma/skin,Midwest,IL,Peoria,42,hospital,205,606,True,207RX0202X
+1942374996,William,Hicks,oncology,breast,Midwest,IL,Peoria,19,hospital,180,811,True,207RX0202X
+1943531446,Larry,Campbell,oncology,genitourinary,Midwest,IN,Indianapolis,17,private,152,413,False,207RX0202X
+1944079924,Jeremy,Bennett,rheumatology,lupus,Southeast,SC,Columbia,14,private,223,803,False,207RR0500X
+1944636921,John,May,neurology,epilepsy,West,CA,Palo Alto,8,hospital,151,301,False,2084N0400X
+1947002428,Jason,Moore,endocrinology,bone & mineral,West,CA,Los Angeles,23,private,230,609,True,207RE0101X
+1947954388,Kyle,Padilla,primary care,adolescent medicine,Northeast,NJ,Camden,3,private,198,299,False,207Q00000X
+1949335115,David,Morris,endocrinology,reproductive endocrinology,Southeast,TN,Nashville,8,hospital,191,683,False,207RE0101X
+1949931087,Robert,Wilson,rheumatology,rheumatoid arthritis,Midwest,MI,Lansing,29,private,191,624,True,207RR0500X
+1950588461,Kellie,Gomez,cardiology,electrophysiology,West,CA,Palo Alto,14,academic,169,578,False,207RC0000X
+1954580399,Amanda,Rodriguez,primary care,family medicine,West,CA,San Francisco,19,academic,514,771,True,207Q00000X
+1954971234,Angela,Garcia,oncology,melanoma/skin,Midwest,MI,Grand Rapids,6,private,150,297,False,207RX0202X
+1955070549,Christopher,Williamson,rheumatology,osteoarthritis,Midwest,MO,St. Louis,6,private,130,260,False,207RR0500X
+1955222058,Dana,Bolton,cardiology,electrophysiology,Southeast,TN,Chattanooga,4,private,179,486,False,207RC0000X
+1955620046,Travis,Townsend,primary care,adolescent medicine,Southeast,AL,Birmingham,8,hospital,476,705,False,207Q00000X
+1956217115,Steven,Evans,endocrinology,thyroid,Southwest,NM,Albuquerque,38,hospital,152,921,True,207RE0101X
+1960543621,Krystal,Porter,pulmonology,sleep medicine,West,OR,Portland,25,academic,133,416,False,207RP1001X
+1961509027,Stephanie,Brown,primary care,family medicine,West,UT,Provo,25,private,209,361,False,207Q00000X
+1962911834,Michele,Hines,oncology,gi malignancies,Midwest,MO,St. Louis,9,hospital,224,499,False,207RX0202X
+1964558476,Donna,Davis,pulmonology,copd,Northeast,CT,New Haven,14,hospital,204,861,True,207RP1001X
+1964572899,Matthew,Sutton,pulmonology,interstitial lung disease,Northeast,PA,Philadelphia,8,private,222,320,False,207RP1001X
+1964945871,Melissa,Tran,endocrinology,thyroid,Northeast,CT,New Haven,6,private,197,547,False,207RE0101X
+1965430253,Rebecca,Mitchell,oncology,genitourinary,Northeast,MA,Cambridge,6,private,109,316,False,207RX0202X
+1965727443,Alyssa,Gonzalez,primary care,urgent care,West,CO,Denver,35,private,255,586,True,207Q00000X
+1967802350,Joshua,Cook,pulmonology,copd,Midwest,MI,Lansing,12,hospital,171,392,False,207RP1001X
+1968209027,Andrew,Fowler,rheumatology,,Southeast,FL,Tampa,6,academic,139,363,False,207RR0500X
+1968340152,Joseph,Mullins,cardiology,interventional,Northeast,CT,New Haven,15,private,287,732,True,207RC0000X
+1968864862,Danielle,Underwood,neurology,stroke,West,CO,Denver,19,hospital,163,260,False,2084N0400X
+1969108517,Charles,Williams,cardiology,structural heart,Midwest,MN,Minneapolis,12,academic,206,553,False,207RC0000X
+1969914385,Veronica,Hernandez,oncology,breast,West,CO,Denver,12,private,113,400,False,207RX0202X
+1971035963,Wendy,Mendoza,neurology,multiple sclerosis,West,CA,San Diego,6,hospital,157,309,False,2084N0400X
+1971097054,Cassandra,Short,cardiology,structural heart,Midwest,OH,Cincinnati,8,hospital,220,399,False,207RC0000X
+1971977354,Raven,Jacobson,endocrinology,reproductive endocrinology,Southeast,AL,Mobile,15,private,259,372,False,207RE0101X
+1972351286,Ashley,Ellis,rheumatology,psoriatic arthritis,West,CA,San Diego,30,private,102,570,True,207RR0500X
+1973275377,Ashlee,Harrison,neurology,neuromuscular,Southeast,FL,Miami,12,private,146,331,False,2084N0400X
+1974446365,Kristy,Flores,neurology,movement disorders,Southeast,VA,Arlington,11,academic,100,309,False,2084N0400X
+1976038558,Sarah,Banks,cardiology,structural heart,Northeast,MA,Cambridge,32,hospital,171,622,True,207RC0000X
+1976509970,Julie,Sanchez,neurology,multiple sclerosis,West,OR,Eugene,6,hospital,129,215,False,2084N0400X
+1976707814,Jennifer,Henry,pulmonology,sleep medicine,Southwest,AZ,Mesa,7,academic,184,322,False,207RP1001X
+1977228745,Ricardo,Little,cardiology,structural heart,Midwest,WI,Madison,11,private,251,350,False,207RC0000X
+1977922420,Daniel,Martinez,cardiology,heart failure,West,WA,Seattle,11,private,177,542,False,207RC0000X
+1980850634,Stacey,Jenkins,oncology,breast,West,OR,Eugene,6,hospital,125,200,False,207RX0202X
+1980975555,Michael,Buck,neurology,headache,Northeast,ME,Bangor,10,hospital,137,401,False,2084N0400X
+1981504099,Jose,Davis,oncology,melanoma/skin,Southeast,AL,Birmingham,5,hospital,111,209,False,207RX0202X
+1983357579,Julie,Perez,pulmonology,,West,OR,Eugene,29,academic,144,382,True,207RP1001X
+1984924732,David,Snyder,primary care,geriatrics,Northeast,NJ,Princeton,21,hospital,322,745,True,207Q00000X
+1985685233,Joshua,Chapman,oncology,gi malignancies,West,UT,Provo,11,private,172,293,False,207RX0202X
+1985816515,Ryan,Gonzalez,endocrinology,thyroid,Midwest,IN,South Bend,9,private,103,214,False,207RE0101X
+1987092370,Chad,Wallace,oncology,genitourinary,Southeast,TN,Nashville,14,private,146,395,False,207RX0202X
+1987971524,Gregory,Davis,neurology,stroke,Midwest,IN,Fort Wayne,10,private,197,357,False,2084N0400X
+1989798412,Chelsea,Valdez,primary care,adolescent medicine,Southwest,NV,Las Vegas,13,private,344,891,False,207Q00000X
+1990264784,Breanna,Harrison,cardiology,structural heart,Midwest,MO,Columbia,12,private,115,232,False,207RC0000X
+1990401386,James,Griffith,endocrinology,thyroid,Southeast,SC,Columbia,30,private,173,340,False,207RE0101X
+1991291398,Derrick,Sullivan,rheumatology,osteoarthritis,Southwest,TX,Austin,11,private,157,666,False,207RR0500X
+1992928436,Jeffrey,Warren,oncology,hematologic,West,WA,Spokane,6,academic,72,206,False,207RX0202X
+1993367014,Donald,Matthews,pulmonology,copd,Midwest,MI,Ann Arbor,9,hospital,218,370,False,207RP1001X
+1993463169,Stefanie,Lane,endocrinology,diabetes,West,WA,Seattle,9,academic,143,543,False,207RE0101X
+1993874985,Megan,Woodard,rheumatology,,Northeast,MA,Boston,23,private,216,664,False,207RR0500X
+1995404856,Elizabeth,Adams,endocrinology,thyroid,Northeast,NJ,Camden,5,private,196,555,False,207RE0101X
+1997693654,Tracy,Williams,primary care,internal medicine,Southeast,SC,Columbia,6,private,292,471,False,207Q00000X
+1998699429,Daniel,Wilson,rheumatology,rheumatoid arthritis,West,UT,Salt Lake City,15,private,184,896,False,207RR0500X
+1999506508,Judy,Cole,endocrinology,diabetes,south west,AZ,Mesa,4,private,205,424,False,207RE0101X

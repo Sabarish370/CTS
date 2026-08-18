@@ -1,0 +1,4883 @@
+{
+  "metadata": {
+    "seed": 42,
+    "generation_date": "2025-11-15",
+    "true_effect_pct": 15.0,
+    "effect_definition": "Multiplicative +15% lift applied to rx_volume for the treatment HCP's anchor-event target_ndc_category only, starting on event_date. No lift on any other ndc_category, and none for non-treatment HCPs.",
+    "treatment_definition": "PRIMARY-EVENT ANCHOR RULE: an HCP with role='attendee' is a treatment unit; their primary event is the event of their EARLIEST attendance_date, ties broken by lowest event_id. De-duplicate attendance on (hcp_id, event_id) first.",
+    "analysis_window_months": 6,
+    "washout_rule": "The event month itself is partially exposed (lift ramps from event_date) and should be excluded from both pre and post windows. Pre = months [-6,-1], post = months [+1,+6] relative to the event month.",
+    "control_pool_rule": "Controls must exclude speakers. Filter out any hcp_id with speaker_eligible_flag=True OR any attendance row with role='speaker'; speaker_eligible=True HCPs who never spoke are still valid controls if they have zero attendance rows.",
+    "n_treatment_units": 540,
+    "rx_panel_months": [
+      "2022-12",
+      "2025-10"
+    ],
+    "event_window": [
+      "2023-07-01",
+      "2025-03-31"
+    ]
+  },
+  "treatment_units": [
+    {
+      "hcp_id": "1002145427",
+      "event_id": "EVT-0019",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1005067453",
+      "event_id": "EVT-0087",
+      "event_date": "2024-04-18",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1009179924",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1010852790",
+      "event_id": "EVT-0184",
+      "event_date": "2025-02-17",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1011940271",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1015191335",
+      "event_id": "EVT-0118",
+      "event_date": "2024-06-20",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1018018261",
+      "event_id": "EVT-0016",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1019230758",
+      "event_id": "EVT-0058",
+      "event_date": "2023-12-30",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1020833996",
+      "event_id": "EVT-0169",
+      "event_date": "2025-01-06",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1022312734",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1025231352",
+      "event_id": "EVT-0033",
+      "event_date": "2023-10-20",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1025978341",
+      "event_id": "EVT-0022",
+      "event_date": "2023-09-19",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1026722938",
+      "event_id": "EVT-0041",
+      "event_date": "2023-11-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1028436479",
+      "event_id": "EVT-0164",
+      "event_date": "2024-12-15",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1031568581",
+      "event_id": "EVT-0039",
+      "event_date": "2023-11-03",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1031907094",
+      "event_id": "EVT-0067",
+      "event_date": "2024-01-20",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1036327983",
+      "event_id": "EVT-0046",
+      "event_date": "2023-11-15",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1036718538",
+      "event_id": "EVT-0119",
+      "event_date": "2024-06-21",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1038444141",
+      "event_id": "EVT-0086",
+      "event_date": "2024-04-17",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1040239976",
+      "event_id": "EVT-0001",
+      "event_date": "2023-07-06",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1041585906",
+      "event_id": "EVT-0044",
+      "event_date": "2023-11-13",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1042224778",
+      "event_id": "EVT-0168",
+      "event_date": "2025-01-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1044303869",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1044379984",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1044666919",
+      "event_id": "EVT-0028",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1046736322",
+      "event_id": "EVT-0075",
+      "event_date": "2024-02-13",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1048976678",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1050506165",
+      "event_id": "EVT-0003",
+      "event_date": "2023-07-10",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1050705288",
+      "event_id": "EVT-0018",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1057676243",
+      "event_id": "EVT-0020",
+      "event_date": "2023-09-12",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1058647219",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1060922949",
+      "event_id": "EVT-0020",
+      "event_date": "2023-09-12",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1065091666",
+      "event_id": "EVT-0018",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1065455036",
+      "event_id": "EVT-0042",
+      "event_date": "2023-11-12",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1065870788",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1073902250",
+      "event_id": "EVT-0070",
+      "event_date": "2024-02-03",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1074076039",
+      "event_id": "EVT-0012",
+      "event_date": "2023-08-10",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1075036339",
+      "event_id": "EVT-0032",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1075683551",
+      "event_id": "EVT-0046",
+      "event_date": "2023-11-15",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1076376403",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1078096579",
+      "event_id": "EVT-0031",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1080672524",
+      "event_id": "EVT-0035",
+      "event_date": "2023-10-26",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1081031506",
+      "event_id": "EVT-0196",
+      "event_date": "2025-03-22",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1081051991",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1082909627",
+      "event_id": "EVT-0108",
+      "event_date": "2024-06-03",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1084471394",
+      "event_id": "EVT-0016",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1084919582",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1085110611",
+      "event_id": "EVT-0058",
+      "event_date": "2023-12-30",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1094274762",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1095874958",
+      "event_id": "EVT-0163",
+      "event_date": "2024-12-13",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1098995024",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1101185407",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1102089657",
+      "event_id": "EVT-0019",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1103232447",
+      "event_id": "EVT-0049",
+      "event_date": "2023-11-27",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1107038659",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1107378550",
+      "event_id": "EVT-0011",
+      "event_date": "2023-08-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1113023042",
+      "event_id": "EVT-0037",
+      "event_date": "2023-10-30",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1117854327",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1120080837",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1120302413",
+      "event_id": "EVT-0117",
+      "event_date": "2024-06-20",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1123148250",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1124726435",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1124890801",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1126098163",
+      "event_id": "EVT-0068",
+      "event_date": "2024-01-26",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1129206672",
+      "event_id": "EVT-0029",
+      "event_date": "2023-10-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1132120993",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1132792726",
+      "event_id": "EVT-0062",
+      "event_date": "2024-01-05",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1133042691",
+      "event_id": "EVT-0029",
+      "event_date": "2023-10-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1133130363",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1133616429",
+      "event_id": "EVT-0008",
+      "event_date": "2023-07-30",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1134089733",
+      "event_id": "EVT-0175",
+      "event_date": "2025-01-20",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1134509243",
+      "event_id": "EVT-0037",
+      "event_date": "2023-10-30",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1136500869",
+      "event_id": "EVT-0018",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1137408567",
+      "event_id": "EVT-0011",
+      "event_date": "2023-08-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1138208594",
+      "event_id": "EVT-0014",
+      "event_date": "2023-09-01",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1138281740",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1139166684",
+      "event_id": "EVT-0003",
+      "event_date": "2023-07-10",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1144669185",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1145899849",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1159301823",
+      "event_id": "EVT-0071",
+      "event_date": "2024-02-05",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1159833825",
+      "event_id": "EVT-0035",
+      "event_date": "2023-10-26",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1159841240",
+      "event_id": "EVT-0008",
+      "event_date": "2023-07-30",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1163199601",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1166368237",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1167711153",
+      "event_id": "EVT-0014",
+      "event_date": "2023-09-01",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1168657405",
+      "event_id": "EVT-0163",
+      "event_date": "2024-12-13",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1169238601",
+      "event_id": "EVT-0014",
+      "event_date": "2023-09-01",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1169614082",
+      "event_id": "EVT-0013",
+      "event_date": "2023-08-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1170846871",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1172835138",
+      "event_id": "EVT-0023",
+      "event_date": "2023-09-20",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1174145494",
+      "event_id": "EVT-0030",
+      "event_date": "2023-10-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1174238463",
+      "event_id": "EVT-0101",
+      "event_date": "2024-05-15",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1174785596",
+      "event_id": "EVT-0196",
+      "event_date": "2025-03-22",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1176034100",
+      "event_id": "EVT-0133",
+      "event_date": "2024-09-19",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1178533166",
+      "event_id": "EVT-0160",
+      "event_date": "2024-12-07",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1179994367",
+      "event_id": "EVT-0142",
+      "event_date": "2024-10-08",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1180932224",
+      "event_id": "EVT-0016",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1181854898",
+      "event_id": "EVT-0020",
+      "event_date": "2023-09-12",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1189244753",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1189769080",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1190842652",
+      "event_id": "EVT-0025",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1191545544",
+      "event_id": "EVT-0013",
+      "event_date": "2023-08-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1194203331",
+      "event_id": "EVT-0001",
+      "event_date": "2023-07-06",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1196385359",
+      "event_id": "EVT-0045",
+      "event_date": "2023-11-14",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1196400158",
+      "event_id": "EVT-0120",
+      "event_date": "2024-06-26",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1198262952",
+      "event_id": "EVT-0003",
+      "event_date": "2023-07-10",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1199976907",
+      "event_id": "EVT-0039",
+      "event_date": "2023-11-03",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1200096471",
+      "event_id": "EVT-0071",
+      "event_date": "2024-02-05",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1200480071",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1202669523",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1204261733",
+      "event_id": "EVT-0021",
+      "event_date": "2023-09-13",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1204787067",
+      "event_id": "EVT-0022",
+      "event_date": "2023-09-19",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1204959187",
+      "event_id": "EVT-0055",
+      "event_date": "2023-12-18",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1209464480",
+      "event_id": "EVT-0044",
+      "event_date": "2023-11-13",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1209829039",
+      "event_id": "EVT-0116",
+      "event_date": "2024-06-18",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1210642439",
+      "event_id": "EVT-0113",
+      "event_date": "2024-06-12",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1213511599",
+      "event_id": "EVT-0019",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1216532808",
+      "event_id": "EVT-0080",
+      "event_date": "2024-03-11",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1216575070",
+      "event_id": "EVT-0016",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1219516501",
+      "event_id": "EVT-0041",
+      "event_date": "2023-11-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1223523766",
+      "event_id": "EVT-0057",
+      "event_date": "2023-12-28",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1224230882",
+      "event_id": "EVT-0071",
+      "event_date": "2024-02-05",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1225504491",
+      "event_id": "EVT-0152",
+      "event_date": "2024-11-20",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1227780172",
+      "event_id": "EVT-0019",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1228081653",
+      "event_id": "EVT-0008",
+      "event_date": "2023-07-30",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1229022169",
+      "event_id": "EVT-0003",
+      "event_date": "2023-07-10",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1237205202",
+      "event_id": "EVT-0030",
+      "event_date": "2023-10-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1238983617",
+      "event_id": "EVT-0037",
+      "event_date": "2023-10-30",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1240190284",
+      "event_id": "EVT-0080",
+      "event_date": "2024-03-11",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1240393805",
+      "event_id": "EVT-0086",
+      "event_date": "2024-04-17",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1241711534",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1243754490",
+      "event_id": "EVT-0021",
+      "event_date": "2023-09-13",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1244876920",
+      "event_id": "EVT-0022",
+      "event_date": "2023-09-19",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1246066447",
+      "event_id": "EVT-0001",
+      "event_date": "2023-07-06",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1246448348",
+      "event_id": "EVT-0012",
+      "event_date": "2023-08-10",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1249657408",
+      "event_id": "EVT-0023",
+      "event_date": "2023-09-20",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1250017203",
+      "event_id": "EVT-0144",
+      "event_date": "2024-10-18",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1250474354",
+      "event_id": "EVT-0055",
+      "event_date": "2023-12-18",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1251567115",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1257723886",
+      "event_id": "EVT-0018",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1259584955",
+      "event_id": "EVT-0065",
+      "event_date": "2024-01-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1262874856",
+      "event_id": "EVT-0055",
+      "event_date": "2023-12-18",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1263807582",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1264333323",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1265952337",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1266945785",
+      "event_id": "EVT-0026",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1267903205",
+      "event_id": "EVT-0011",
+      "event_date": "2023-08-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1268222167",
+      "event_id": "EVT-0013",
+      "event_date": "2023-08-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1271463741",
+      "event_id": "EVT-0016",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1271768685",
+      "event_id": "EVT-0013",
+      "event_date": "2023-08-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1273912869",
+      "event_id": "EVT-0050",
+      "event_date": "2023-11-27",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1274985831",
+      "event_id": "EVT-0033",
+      "event_date": "2023-10-20",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1278315217",
+      "event_id": "EVT-0122",
+      "event_date": "2024-07-03",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1279255164",
+      "event_id": "EVT-0122",
+      "event_date": "2024-07-03",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1279507085",
+      "event_id": "EVT-0011",
+      "event_date": "2023-08-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1279684447",
+      "event_id": "EVT-0025",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1280087226",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1282327174",
+      "event_id": "EVT-0001",
+      "event_date": "2023-07-06",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1282948292",
+      "event_id": "EVT-0167",
+      "event_date": "2024-12-31",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1284061300",
+      "event_id": "EVT-0025",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1285347583",
+      "event_id": "EVT-0153",
+      "event_date": "2024-11-21",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1286477181",
+      "event_id": "EVT-0039",
+      "event_date": "2023-11-03",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1287287258",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1292975558",
+      "event_id": "EVT-0044",
+      "event_date": "2023-11-13",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1293643247",
+      "event_id": "EVT-0065",
+      "event_date": "2024-01-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1296552940",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1296624285",
+      "event_id": "EVT-0143",
+      "event_date": "2024-10-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1297280590",
+      "event_id": "EVT-0035",
+      "event_date": "2023-10-26",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1299418347",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1300654963",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1300832031",
+      "event_id": "EVT-0046",
+      "event_date": "2023-11-15",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1302899475",
+      "event_id": "EVT-0111",
+      "event_date": "2024-06-10",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1305686507",
+      "event_id": "EVT-0030",
+      "event_date": "2023-10-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1309371148",
+      "event_id": "EVT-0022",
+      "event_date": "2023-09-19",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1310164813",
+      "event_id": "EVT-0108",
+      "event_date": "2024-06-03",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1311764207",
+      "event_id": "EVT-0013",
+      "event_date": "2023-08-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1315385710",
+      "event_id": "EVT-0016",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1316743925",
+      "event_id": "EVT-0025",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1321405205",
+      "event_id": "EVT-0020",
+      "event_date": "2023-09-12",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1323611925",
+      "event_id": "EVT-0185",
+      "event_date": "2025-02-20",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1324237324",
+      "event_id": "EVT-0041",
+      "event_date": "2023-11-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1324722952",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1326516303",
+      "event_id": "EVT-0006",
+      "event_date": "2023-07-18",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1326905712",
+      "event_id": "EVT-0067",
+      "event_date": "2024-01-20",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1327009084",
+      "event_id": "EVT-0008",
+      "event_date": "2023-07-30",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1328056928",
+      "event_id": "EVT-0079",
+      "event_date": "2024-03-11",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1330017819",
+      "event_id": "EVT-0028",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1330067194",
+      "event_id": "EVT-0162",
+      "event_date": "2024-12-10",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1330156328",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1332369119",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1333393084",
+      "event_id": "EVT-0046",
+      "event_date": "2023-11-15",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1334266016",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1334793308",
+      "event_id": "EVT-0022",
+      "event_date": "2023-09-19",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1335670091",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1340345143",
+      "event_id": "EVT-0115",
+      "event_date": "2024-06-17",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1341556789",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1350739367",
+      "event_id": "EVT-0124",
+      "event_date": "2024-07-04",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1352578078",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1352702876",
+      "event_id": "EVT-0066",
+      "event_date": "2024-01-11",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1355374483",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1356982086",
+      "event_id": "EVT-0020",
+      "event_date": "2023-09-12",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1357524945",
+      "event_id": "EVT-0047",
+      "event_date": "2023-11-23",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1358245029",
+      "event_id": "EVT-0044",
+      "event_date": "2023-11-13",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1358340028",
+      "event_id": "EVT-0062",
+      "event_date": "2024-01-05",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1361521440",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1361620622",
+      "event_id": "EVT-0056",
+      "event_date": "2023-12-26",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1362560363",
+      "event_id": "EVT-0011",
+      "event_date": "2023-08-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1362648127",
+      "event_id": "EVT-0006",
+      "event_date": "2023-07-18",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1364458855",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1365873573",
+      "event_id": "EVT-0041",
+      "event_date": "2023-11-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1368009035",
+      "event_id": "EVT-0011",
+      "event_date": "2023-08-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1369172659",
+      "event_id": "EVT-0048",
+      "event_date": "2023-11-23",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1369949932",
+      "event_id": "EVT-0084",
+      "event_date": "2024-03-27",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1370467684",
+      "event_id": "EVT-0048",
+      "event_date": "2023-11-23",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1374281198",
+      "event_id": "EVT-0057",
+      "event_date": "2023-12-28",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1375349903",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1376656900",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1377426493",
+      "event_id": "EVT-0026",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1385532449",
+      "event_id": "EVT-0013",
+      "event_date": "2023-08-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1386514024",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1386832996",
+      "event_id": "EVT-0059",
+      "event_date": "2024-01-02",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1389159553",
+      "event_id": "EVT-0039",
+      "event_date": "2023-11-03",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1389574017",
+      "event_id": "EVT-0050",
+      "event_date": "2023-11-27",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1390939977",
+      "event_id": "EVT-0063",
+      "event_date": "2024-01-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1393791409",
+      "event_id": "EVT-0001",
+      "event_date": "2023-07-06",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1394609428",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1394982015",
+      "event_id": "EVT-0139",
+      "event_date": "2024-10-04",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1397955463",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1398789739",
+      "event_id": "EVT-0021",
+      "event_date": "2023-09-13",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1402958817",
+      "event_id": "EVT-0197",
+      "event_date": "2025-03-23",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1407459696",
+      "event_id": "EVT-0069",
+      "event_date": "2024-01-28",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1407931751",
+      "event_id": "EVT-0038",
+      "event_date": "2023-11-02",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1409867656",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1409960642",
+      "event_id": "EVT-0106",
+      "event_date": "2024-05-24",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1413495239",
+      "event_id": "EVT-0021",
+      "event_date": "2023-09-13",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1413519731",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1418997171",
+      "event_id": "EVT-0013",
+      "event_date": "2023-08-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1423152481",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1423753536",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1425340662",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1425610817",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1428792083",
+      "event_id": "EVT-0066",
+      "event_date": "2024-01-11",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1429255973",
+      "event_id": "EVT-0172",
+      "event_date": "2025-01-14",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1433980129",
+      "event_id": "EVT-0011",
+      "event_date": "2023-08-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1435662964",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1435949049",
+      "event_id": "EVT-0011",
+      "event_date": "2023-08-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1436505063",
+      "event_id": "EVT-0013",
+      "event_date": "2023-08-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1443520683",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1443551811",
+      "event_id": "EVT-0152",
+      "event_date": "2024-11-20",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1444774099",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1449048093",
+      "event_id": "EVT-0041",
+      "event_date": "2023-11-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1449331358",
+      "event_id": "EVT-0003",
+      "event_date": "2023-07-10",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1451968915",
+      "event_id": "EVT-0020",
+      "event_date": "2023-09-12",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1453128708",
+      "event_id": "EVT-0030",
+      "event_date": "2023-10-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1455101661",
+      "event_id": "EVT-0022",
+      "event_date": "2023-09-19",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1455779946",
+      "event_id": "EVT-0034",
+      "event_date": "2023-10-23",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1456207657",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1456299035",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1460081361",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1467704312",
+      "event_id": "EVT-0022",
+      "event_date": "2023-09-19",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1473057747",
+      "event_id": "EVT-0074",
+      "event_date": "2024-02-13",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1474100561",
+      "event_id": "EVT-0047",
+      "event_date": "2023-11-23",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1475115246",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1478412079",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1480599715",
+      "event_id": "EVT-0146",
+      "event_date": "2024-10-22",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1481247389",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1484724632",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1486296159",
+      "event_id": "EVT-0090",
+      "event_date": "2024-04-21",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1486849361",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1486877065",
+      "event_id": "EVT-0022",
+      "event_date": "2023-09-19",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1488515010",
+      "event_id": "EVT-0034",
+      "event_date": "2023-10-23",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1489598965",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1492077734",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1494868502",
+      "event_id": "EVT-0033",
+      "event_date": "2023-10-20",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1497642888",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1506356074",
+      "event_id": "EVT-0036",
+      "event_date": "2023-10-28",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1506746308",
+      "event_id": "EVT-0023",
+      "event_date": "2023-09-20",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1509977165",
+      "event_id": "EVT-0057",
+      "event_date": "2023-12-28",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1511022174",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1511742359",
+      "event_id": "EVT-0109",
+      "event_date": "2024-06-07",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1512844550",
+      "event_id": "EVT-0028",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1516074709",
+      "event_id": "EVT-0064",
+      "event_date": "2024-01-09",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1518121706",
+      "event_id": "EVT-0041",
+      "event_date": "2023-11-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1519182780",
+      "event_id": "EVT-0001",
+      "event_date": "2023-07-06",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1520551320",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1523498065",
+      "event_id": "EVT-0016",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1523681389",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1523987174",
+      "event_id": "EVT-0021",
+      "event_date": "2023-09-13",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1524065749",
+      "event_id": "EVT-0072",
+      "event_date": "2024-02-08",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1526669415",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1533003293",
+      "event_id": "EVT-0032",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1535436392",
+      "event_id": "EVT-0139",
+      "event_date": "2024-10-04",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1535820066",
+      "event_id": "EVT-0035",
+      "event_date": "2023-10-26",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1536278926",
+      "event_id": "EVT-0020",
+      "event_date": "2023-09-12",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1540759788",
+      "event_id": "EVT-0046",
+      "event_date": "2023-11-15",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1541422121",
+      "event_id": "EVT-0024",
+      "event_date": "2023-09-27",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1546151204",
+      "event_id": "EVT-0019",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1547112395",
+      "event_id": "EVT-0048",
+      "event_date": "2023-11-23",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1547244776",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1548035017",
+      "event_id": "EVT-0022",
+      "event_date": "2023-09-19",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1548652282",
+      "event_id": "EVT-0128",
+      "event_date": "2024-08-14",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1551107307",
+      "event_id": "EVT-0054",
+      "event_date": "2023-12-08",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1551962891",
+      "event_id": "EVT-0012",
+      "event_date": "2023-08-10",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1552813903",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1555114069",
+      "event_id": "EVT-0090",
+      "event_date": "2024-04-21",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1555906795",
+      "event_id": "EVT-0003",
+      "event_date": "2023-07-10",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1556860702",
+      "event_id": "EVT-0087",
+      "event_date": "2024-04-18",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1557944620",
+      "event_id": "EVT-0016",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1561159348",
+      "event_id": "EVT-0033",
+      "event_date": "2023-10-20",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1566888198",
+      "event_id": "EVT-0020",
+      "event_date": "2023-09-12",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1567742360",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1567993435",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1583696442",
+      "event_id": "EVT-0033",
+      "event_date": "2023-10-20",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1590337907",
+      "event_id": "EVT-0066",
+      "event_date": "2024-01-11",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1590869917",
+      "event_id": "EVT-0036",
+      "event_date": "2023-10-28",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1592062677",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1592123891",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1594466975",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1595301304",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1595774286",
+      "event_id": "EVT-0001",
+      "event_date": "2023-07-06",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1596580633",
+      "event_id": "EVT-0021",
+      "event_date": "2023-09-13",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1598661571",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1599978586",
+      "event_id": "EVT-0014",
+      "event_date": "2023-09-01",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1599989245",
+      "event_id": "EVT-0033",
+      "event_date": "2023-10-20",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1610177150",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1610429726",
+      "event_id": "EVT-0086",
+      "event_date": "2024-04-17",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1610820601",
+      "event_id": "EVT-0013",
+      "event_date": "2023-08-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1613561947",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1614978876",
+      "event_id": "EVT-0106",
+      "event_date": "2024-05-24",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1615059528",
+      "event_id": "EVT-0026",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1616418756",
+      "event_id": "EVT-0011",
+      "event_date": "2023-08-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1616839134",
+      "event_id": "EVT-0001",
+      "event_date": "2023-07-06",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1621199177",
+      "event_id": "EVT-0019",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1621842156",
+      "event_id": "EVT-0090",
+      "event_date": "2024-04-21",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1624547729",
+      "event_id": "EVT-0056",
+      "event_date": "2023-12-26",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1626268928",
+      "event_id": "EVT-0037",
+      "event_date": "2023-10-30",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1630629040",
+      "event_id": "EVT-0068",
+      "event_date": "2024-01-26",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1631526641",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1635476009",
+      "event_id": "EVT-0031",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1635581279",
+      "event_id": "EVT-0046",
+      "event_date": "2023-11-15",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1636376422",
+      "event_id": "EVT-0008",
+      "event_date": "2023-07-30",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1638368260",
+      "event_id": "EVT-0082",
+      "event_date": "2024-03-21",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1639269087",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1640263392",
+      "event_id": "EVT-0168",
+      "event_date": "2025-01-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1643343233",
+      "event_id": "EVT-0072",
+      "event_date": "2024-02-08",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1644815767",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1645233598",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1647196991",
+      "event_id": "EVT-0033",
+      "event_date": "2023-10-20",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1647700669",
+      "event_id": "EVT-0055",
+      "event_date": "2023-12-18",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1648553570",
+      "event_id": "EVT-0012",
+      "event_date": "2023-08-10",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1648626962",
+      "event_id": "EVT-0003",
+      "event_date": "2023-07-10",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1655321622",
+      "event_id": "EVT-0012",
+      "event_date": "2023-08-10",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1655727265",
+      "event_id": "EVT-0032",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1657025858",
+      "event_id": "EVT-0030",
+      "event_date": "2023-10-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1657035808",
+      "event_id": "EVT-0025",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1657725655",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1659738110",
+      "event_id": "EVT-0038",
+      "event_date": "2023-11-02",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1663073843",
+      "event_id": "EVT-0112",
+      "event_date": "2024-06-11",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1665478461",
+      "event_id": "EVT-0036",
+      "event_date": "2023-10-28",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1666389063",
+      "event_id": "EVT-0018",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1670560261",
+      "event_id": "EVT-0021",
+      "event_date": "2023-09-13",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1670701188",
+      "event_id": "EVT-0011",
+      "event_date": "2023-08-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1672904236",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1674102136",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1674345776",
+      "event_id": "EVT-0008",
+      "event_date": "2023-07-30",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1676855970",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1677860136",
+      "event_id": "EVT-0041",
+      "event_date": "2023-11-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1679256069",
+      "event_id": "EVT-0079",
+      "event_date": "2024-03-11",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1681501296",
+      "event_id": "EVT-0029",
+      "event_date": "2023-10-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1683943777",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1685524518",
+      "event_id": "EVT-0025",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1686880901",
+      "event_id": "EVT-0016",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1688735228",
+      "event_id": "EVT-0083",
+      "event_date": "2024-03-26",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1688976343",
+      "event_id": "EVT-0047",
+      "event_date": "2023-11-23",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1689059347",
+      "event_id": "EVT-0029",
+      "event_date": "2023-10-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1689916181",
+      "event_id": "EVT-0013",
+      "event_date": "2023-08-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1690348028",
+      "event_id": "EVT-0001",
+      "event_date": "2023-07-06",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1696606064",
+      "event_id": "EVT-0037",
+      "event_date": "2023-10-30",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1696806755",
+      "event_id": "EVT-0111",
+      "event_date": "2024-06-10",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1697719783",
+      "event_id": "EVT-0045",
+      "event_date": "2023-11-14",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1701585576",
+      "event_id": "EVT-0074",
+      "event_date": "2024-02-13",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1702497342",
+      "event_id": "EVT-0029",
+      "event_date": "2023-10-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1703413967",
+      "event_id": "EVT-0039",
+      "event_date": "2023-11-03",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1704308638",
+      "event_id": "EVT-0032",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1704331150",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1704492101",
+      "event_id": "EVT-0021",
+      "event_date": "2023-09-13",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1706645516",
+      "event_id": "EVT-0018",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1706991829",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1707435529",
+      "event_id": "EVT-0013",
+      "event_date": "2023-08-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1710163217",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1710487228",
+      "event_id": "EVT-0032",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1712965692",
+      "event_id": "EVT-0063",
+      "event_date": "2024-01-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1713444978",
+      "event_id": "EVT-0023",
+      "event_date": "2023-09-20",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1714292012",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1714986282",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1715729269",
+      "event_id": "EVT-0081",
+      "event_date": "2024-03-12",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1717519684",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1719186219",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1719574174",
+      "event_id": "EVT-0008",
+      "event_date": "2023-07-30",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1721479586",
+      "event_id": "EVT-0025",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1722038985",
+      "event_id": "EVT-0012",
+      "event_date": "2023-08-10",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1722898792",
+      "event_id": "EVT-0014",
+      "event_date": "2023-09-01",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1724092733",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1725623817",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1725724532",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1727463709",
+      "event_id": "EVT-0042",
+      "event_date": "2023-11-12",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1728890785",
+      "event_id": "EVT-0045",
+      "event_date": "2023-11-14",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1732000645",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1732527431",
+      "event_id": "EVT-0026",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1732914373",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1736829924",
+      "event_id": "EVT-0155",
+      "event_date": "2024-11-23",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1737256036",
+      "event_id": "EVT-0038",
+      "event_date": "2023-11-02",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1738903891",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1740047711",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1740626134",
+      "event_id": "EVT-0029",
+      "event_date": "2023-10-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1742100898",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1742579091",
+      "event_id": "EVT-0034",
+      "event_date": "2023-10-23",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1742859469",
+      "event_id": "EVT-0031",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1743613295",
+      "event_id": "EVT-0080",
+      "event_date": "2024-03-11",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1745601371",
+      "event_id": "EVT-0011",
+      "event_date": "2023-08-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1746046261",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1747032997",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1747637738",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1749355669",
+      "event_id": "EVT-0092",
+      "event_date": "2024-04-28",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1749652321",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1750236147",
+      "event_id": "EVT-0039",
+      "event_date": "2023-11-03",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1752727945",
+      "event_id": "EVT-0016",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1757283357",
+      "event_id": "EVT-0091",
+      "event_date": "2024-04-24",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1758206720",
+      "event_id": "EVT-0044",
+      "event_date": "2023-11-13",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1758794279",
+      "event_id": "EVT-0030",
+      "event_date": "2023-10-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1760628762",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1761262934",
+      "event_id": "EVT-0003",
+      "event_date": "2023-07-10",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1762664088",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1766730505",
+      "event_id": "EVT-0125",
+      "event_date": "2024-07-05",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1767249513",
+      "event_id": "EVT-0048",
+      "event_date": "2023-11-23",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1767508967",
+      "event_id": "EVT-0175",
+      "event_date": "2025-01-20",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1768225918",
+      "event_id": "EVT-0031",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1768831921",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1769234364",
+      "event_id": "EVT-0154",
+      "event_date": "2024-11-22",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1769352273",
+      "event_id": "EVT-0092",
+      "event_date": "2024-04-28",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1769764832",
+      "event_id": "EVT-0049",
+      "event_date": "2023-11-27",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1774691384",
+      "event_id": "EVT-0119",
+      "event_date": "2024-06-21",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1776723276",
+      "event_id": "EVT-0013",
+      "event_date": "2023-08-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1779411515",
+      "event_id": "EVT-0022",
+      "event_date": "2023-09-19",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1782077311",
+      "event_id": "EVT-0003",
+      "event_date": "2023-07-10",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1785764022",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1787619711",
+      "event_id": "EVT-0014",
+      "event_date": "2023-09-01",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1788421810",
+      "event_id": "EVT-0008",
+      "event_date": "2023-07-30",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1793579560",
+      "event_id": "EVT-0100",
+      "event_date": "2024-05-11",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1793685516",
+      "event_id": "EVT-0113",
+      "event_date": "2024-06-12",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1803233885",
+      "event_id": "EVT-0013",
+      "event_date": "2023-08-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1803502636",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1806103952",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1806479196",
+      "event_id": "EVT-0035",
+      "event_date": "2023-10-26",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1806707737",
+      "event_id": "EVT-0034",
+      "event_date": "2023-10-23",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1808310134",
+      "event_id": "EVT-0031",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1808826295",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1809220084",
+      "event_id": "EVT-0146",
+      "event_date": "2024-10-22",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1811081532",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1812815243",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1814938340",
+      "event_id": "EVT-0007",
+      "event_date": "2023-07-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1815807585",
+      "event_id": "EVT-0016",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1824149854",
+      "event_id": "EVT-0028",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1824172013",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1827318308",
+      "event_id": "EVT-0023",
+      "event_date": "2023-09-20",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1828766265",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1828803407",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1832506087",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1836314447",
+      "event_id": "EVT-0023",
+      "event_date": "2023-09-20",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1836894604",
+      "event_id": "EVT-0012",
+      "event_date": "2023-08-10",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1836939912",
+      "event_id": "EVT-0022",
+      "event_date": "2023-09-19",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1838439200",
+      "event_id": "EVT-0095",
+      "event_date": "2024-04-30",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1838576308",
+      "event_id": "EVT-0189",
+      "event_date": "2025-02-27",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1840863041",
+      "event_id": "EVT-0042",
+      "event_date": "2023-11-12",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1841542198",
+      "event_id": "EVT-0187",
+      "event_date": "2025-02-24",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1841791217",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1844747141",
+      "event_id": "EVT-0016",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1847082322",
+      "event_id": "EVT-0066",
+      "event_date": "2024-01-11",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1847562299",
+      "event_id": "EVT-0056",
+      "event_date": "2023-12-26",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1848624494",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1849328657",
+      "event_id": "EVT-0020",
+      "event_date": "2023-09-12",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1854852153",
+      "event_id": "EVT-0032",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1856406925",
+      "event_id": "EVT-0011",
+      "event_date": "2023-08-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1856601467",
+      "event_id": "EVT-0065",
+      "event_date": "2024-01-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1857629178",
+      "event_id": "EVT-0080",
+      "event_date": "2024-03-11",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1862986803",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1867204764",
+      "event_id": "EVT-0003",
+      "event_date": "2023-07-10",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1877046932",
+      "event_id": "EVT-0053",
+      "event_date": "2023-12-06",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1880265578",
+      "event_id": "EVT-0042",
+      "event_date": "2023-11-12",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1880426881",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1880717263",
+      "event_id": "EVT-0003",
+      "event_date": "2023-07-10",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1885189138",
+      "event_id": "EVT-0031",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1885387740",
+      "event_id": "EVT-0024",
+      "event_date": "2023-09-27",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1889776344",
+      "event_id": "EVT-0032",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1892307210",
+      "event_id": "EVT-0135",
+      "event_date": "2024-09-24",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1893020424",
+      "event_id": "EVT-0046",
+      "event_date": "2023-11-15",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1893606271",
+      "event_id": "EVT-0038",
+      "event_date": "2023-11-02",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1895078685",
+      "event_id": "EVT-0092",
+      "event_date": "2024-04-28",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1896554999",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1897395806",
+      "event_id": "EVT-0031",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1897723296",
+      "event_id": "EVT-0014",
+      "event_date": "2023-09-01",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1898803444",
+      "event_id": "EVT-0017",
+      "event_date": "2023-09-09",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1901019392",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1903121188",
+      "event_id": "EVT-0111",
+      "event_date": "2024-06-10",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1903798589",
+      "event_id": "EVT-0019",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1908127628",
+      "event_id": "EVT-0051",
+      "event_date": "2023-11-28",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1908168895",
+      "event_id": "EVT-0029",
+      "event_date": "2023-10-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1910188758",
+      "event_id": "EVT-0024",
+      "event_date": "2023-09-27",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1921646299",
+      "event_id": "EVT-0027",
+      "event_date": "2023-10-08",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1922670785",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1923786978",
+      "event_id": "EVT-0050",
+      "event_date": "2023-11-27",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1924355757",
+      "event_id": "EVT-0009",
+      "event_date": "2023-08-01",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1927430854",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1933607412",
+      "event_id": "EVT-0077",
+      "event_date": "2024-02-26",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1934277181",
+      "event_id": "EVT-0119",
+      "event_date": "2024-06-21",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1934613260",
+      "event_id": "EVT-0098",
+      "event_date": "2024-05-07",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1934763735",
+      "event_id": "EVT-0048",
+      "event_date": "2023-11-23",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1934829601",
+      "event_id": "EVT-0014",
+      "event_date": "2023-09-01",
+      "target_ndc_category": "CARD_HF_ARNI",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1937514325",
+      "event_id": "EVT-0034",
+      "event_date": "2023-10-23",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1939785840",
+      "event_id": "EVT-0011",
+      "event_date": "2023-08-08",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1944079924",
+      "event_id": "EVT-0001",
+      "event_date": "2023-07-06",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1949335115",
+      "event_id": "EVT-0030",
+      "event_date": "2023-10-10",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1955222058",
+      "event_id": "EVT-0039",
+      "event_date": "2023-11-03",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1955620046",
+      "event_id": "EVT-0015",
+      "event_date": "2023-09-02",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1961509027",
+      "event_id": "EVT-0053",
+      "event_date": "2023-12-06",
+      "target_ndc_category": "PC_ANTIHYPERTENSIVE",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1964572899",
+      "event_id": "EVT-0003",
+      "event_date": "2023-07-10",
+      "target_ndc_category": "PULM_ICS_LABA_INH",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1964945871",
+      "event_id": "EVT-0004",
+      "event_date": "2023-07-14",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1965727443",
+      "event_id": "EVT-0029",
+      "event_date": "2023-10-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1967802350",
+      "event_id": "EVT-0029",
+      "event_date": "2023-10-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1968209027",
+      "event_id": "EVT-0068",
+      "event_date": "2024-01-26",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southeast"
+    },
+    {
+      "hcp_id": "1969108517",
+      "event_id": "EVT-0010",
+      "event_date": "2023-08-06",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "cardiology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1969914385",
+      "event_id": "EVT-0006",
+      "event_date": "2023-07-18",
+      "target_ndc_category": "ONC_TARGETED_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "oncology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1980975555",
+      "event_id": "EVT-0045",
+      "event_date": "2023-11-14",
+      "target_ndc_category": "NEURO_MIGRAINE_CGRP",
+      "true_effect_pct": 15.0,
+      "specialty": "neurology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1989798412",
+      "event_id": "EVT-0005",
+      "event_date": "2023-07-17",
+      "target_ndc_category": "METABOLIC_GLP1_INJ",
+      "true_effect_pct": 15.0,
+      "specialty": "primary care",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1991291398",
+      "event_id": "EVT-0031",
+      "event_date": "2023-10-16",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Southwest"
+    },
+    {
+      "hcp_id": "1993367014",
+      "event_id": "EVT-0002",
+      "event_date": "2023-07-09",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "pulmonology",
+      "region": "Midwest"
+    },
+    {
+      "hcp_id": "1993463169",
+      "event_id": "EVT-0018",
+      "event_date": "2023-09-11",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "West"
+    },
+    {
+      "hcp_id": "1993874985",
+      "event_id": "EVT-0001",
+      "event_date": "2023-07-06",
+      "target_ndc_category": "RHEUM_JAK_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "rheumatology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1995404856",
+      "event_id": "EVT-0023",
+      "event_date": "2023-09-20",
+      "target_ndc_category": "ENDO_BASAL_INSULIN",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Northeast"
+    },
+    {
+      "hcp_id": "1999506508",
+      "event_id": "EVT-0074",
+      "event_date": "2024-02-13",
+      "target_ndc_category": "CV_ANTICOAG_ORAL",
+      "true_effect_pct": 15.0,
+      "specialty": "endocrinology",
+      "region": "Southwest"
+    }
+  ]
+}

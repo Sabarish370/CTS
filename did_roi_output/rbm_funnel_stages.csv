@@ -1,0 +1,5 @@
+stage_order,stage,n_cases,detail,pct_of_total,geo_rule_column,max_experience_diff_years,max_rx_pct_diff
+1,Total treatment cases,4320,"one row per (treatment HCP, event) in the matched-pairs file",100.0,region,3,10.0
+2,Has >=1 same-specialty + same-region peer,4320,"after speaker exclusion, self-exclusion and same-event exclusion",100.0,region,3,10.0
+3,Peer satisfied ALL 4 rules,1495,"specialty AND region AND |exp diff|<=3y AND |Rx diff|<=10%, plus temporal-contamination and computable-baseline filters",34.60648148148148,region,3,10.0
+4,Actually matched,1400,after within-event without-replacement contention,32.407407407407405,region,3,10.0
