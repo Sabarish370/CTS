@@ -338,12 +338,12 @@ if page == "Nearest Neighbor Matching":
         if pd.isna(roi_mult):
             return "Insufficient data"
         
-        if roi_mult >= 2.0:
-            return "Increase investment"
-        elif roi_mult >= 1.0:
-            return "Continue same investment"
+        if roi_mult >= 50.0:
+            return "Increase Investment ✅"
+        elif roi_mult < 0:
+            return "Reduce Investment ❌"
         else:
-            return "Reduce investment"
+            return "No changes ⏳"
     
     per_event["note"] = per_event.apply(generate_note, axis=1)
 
