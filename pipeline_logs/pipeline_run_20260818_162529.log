@@ -1,0 +1,1090 @@
+2026-08-18 16:25:29  INFO     ==========================================================================
+2026-08-18 16:25:29  INFO     SPEAKER PROGRAM ROI -- PIPELINE
+2026-08-18 16:25:29  INFO     ==========================================================================
+2026-08-18 16:25:29  INFO       project root : D:\CTS\CTS_Hackathon_git
+2026-08-18 16:25:29  INFO       interpreter  : C:\Users\Sabarish\AppData\Local\Programs\Python\Python311\python.exe
+2026-08-18 16:25:29  INFO       stage        : all
+2026-08-18 16:25:29  INFO       methods      : nnm, rule_based, psm, random
+2026-08-18 16:25:29  INFO       force        : False
+2026-08-18 16:25:29  INFO       log file     : D:\CTS\CTS_Hackathon_git\pipeline_logs\pipeline_run_20260818_162529.log
+2026-08-18 16:25:29  INFO       timeout      : 1200s per subprocess (must exceed random_matching's ~390s)
+2026-08-18 16:25:29  INFO     ==========================================================================
+2026-08-18 16:25:29  INFO     STAGE 1/3 -- PREPROCESSING
+2026-08-18 16:25:29  INFO     ==========================================================================
+2026-08-18 16:25:29  INFO       -> C:\Users\Sabarish\AppData\Local\Programs\Python\Python311\python.exe Preprocessing_tasks\preprocess_all.py
+2026-08-18 16:25:29  INFO          expected runtime ~45s  (exit policy: crash_only)
+2026-08-18 16:25:45  DEBUG    ----- stdout/stderr for preprocess_all.py -----
+
+======================================================================
+PREPROCESSING -- ALL FOUR RAW FILES
+======================================================================
+  project root : D:\CTS\CTS_Hackathon_git
+  raw dir      : D:\CTS\CTS_Hackathon_git\generated_data
+  out dir      : D:\CTS\CTS_Hackathon_git\preprocessed_data
+
+======================================================================
+HCP PREPROCESSING
+======================================================================
+Shape: (1212, 14)
+
+Columns:
+['hcp_id', 'first_name', 'last_name', 'specialty', 'sub_specialty', 'region', 'state', 'city', 'years_in_practice', 'practice_setting', 'patient_volume_monthly', 'baseline_rx_volume_monthly', 'speaker_eligible_flag', 'npi_taxonomy_code']
+Text cleaning completed.
+Name column created.
+Specialty cleaning completed.
+
+Specialty values:
+specialty
+primary care     261
+cardiology       193
+oncology         177
+endocrinology    166
+neurology        152
+pulmonology      142
+rheumatology     121
+Name: count, dtype: Int64
+
+Missing sub-specialty: 37
+Region cleaning completed.
+
+Region values:
+region
+West         276
+Northeast    276
+Southeast    260
+Midwest      235
+Southwest    165
+Name: count, dtype: int64
+Missing sub-specialty values: 37
+Missing sub-specialty after filling: 0
+Duplicate HCP IDs: 12
+Shape after removing duplicates: (1200, 15)
+Numeric columns cleaned.
+Speaker eligibility cleaned.
+
+Speaker eligible values:
+speaker_eligible_flag
+False    960
+True     240
+Name: count, dtype: int64
+
+--- FINAL HCP VALIDATION ---
+Shape: (1200, 13)
+Unique HCP IDs: 1200
+Duplicate HCP IDs: 0
+Missing values:
+ hcp_id                        0
+name                          0
+specialty                     0
+sub_specialty                 0
+region                        0
+state                         0
+city                          0
+years_in_practice             0
+practice_setting              0
+patient_volume_monthly        0
+baseline_rx_volume_monthly    0
+speaker_eligible_flag         0
+npi_taxonomy_code             0
+dtype: int64
+File saved successfully: D:\CTS\CTS_Hackathon_git\preprocessed_data\hcp-final.csv
+
+======================================================================
+EVENTS PREPROCESSING
+======================================================================
+First 20 bytes: b'event_id,event_name,'
+
+Events loaded successfully!
+Shape: (200, 11)
+
+Columns:
+['event_id', 'event_name', 'event_date', 'speaker_hcp_id', 'specialty_focus', 'region', 'program_spend', 'target_ndc_category', 'venue_type', 'max_capacity', 'attendee_count']
+
+Quality log loaded successfully!
+Shape: (3775, 8)
+Target files in quality log:
+target_file
+rx_claims_monthly.csv    3359
+attendance.csv            316
+hcp.csv                    96
+events.csv                  4
+Name: count, dtype: int64
+Number of Events quality issues: 4
+
+Issue types:
+issue_type
+program_spend_zero       2
+program_spend_missing    2
+Name: count, dtype: int64
+Original values restored successfully.
+
+Data types before cleaning:
+ event_id                       object
+event_name                     object
+event_date             datetime64[ns]
+speaker_hcp_id                  int64
+specialty_focus                object
+region                         object
+program_spend                 float64
+target_ndc_category            object
+venue_type                     object
+max_capacity                    int64
+attendee_count                  int64
+dtype: object
+
+Missing values in Events dataset:
+ event_id               0
+event_name             0
+event_date             0
+speaker_hcp_id         0
+specialty_focus        0
+region                 0
+program_spend          0
+target_ndc_category    0
+venue_type             0
+max_capacity           0
+attendee_count         0
+dtype: int64
+Duplicate event IDs: 0
+Missing/invalid event dates: 0
+Negative program spend: 0
+Negative capacity: 0
+Negative attendee count: 0
+Attendees greater than capacity: 0
+Date features created successfully.
+Attendance rate created successfully.
+
+--- FINAL EVENTS VALIDATION ---
+1. Number of rows: 200
+2. Duplicate event IDs: 0
+3. Missing event dates: 0
+4. Missing program spend: 0
+5. Negative program spend: 0
+
+9. Corrected event values:
+     event_id  program_spend
+33   EVT-0034        18330.0
+52   EVT-0053        14060.0
+173  EVT-0174        11830.0
+193  EVT-0194         5040.0
+File saved successfully! D:\CTS\CTS_Hackathon_git\preprocessed_data\events_preprocessed_final.csv
+Rows: 200 Columns: 14
+
+======================================================================
+ATTENDANCE PREPROCESSING
+======================================================================
+Number of rows    : 4701
+Number of columns : 6
+
+Columns:
+['attendance_id', 'hcp_id', 'event_id', 'attendance_date', 'role', 'engagement_score']
+
+DATA TYPES
+ attendance_id        object
+hcp_id                int64
+event_id             object
+attendance_date      object
+role                 object
+engagement_score    float64
+dtype: object
+
+MISSING VALUES BEFORE PREPROCESSING
+ attendance_id        0
+hcp_id               0
+event_id             0
+attendance_date      0
+role                 0
+engagement_score    90
+dtype: int64
+
+Completely duplicated rows: 0
+Duplicate attendance IDs: 0
+
+Number of ATT-DUP records: 181
+Rows before: 4701
+Rows after : 4520
+Rows removed: 181
+Rows before duplicate removal: 4520
+Rows after duplicate removal : 4520
+Duplicates removed            : 0
+Invalid dates: 0
+
+ENGAGEMENT SCORE
+ count    4432.000000
+mean        6.679016
+std         1.788850
+min         1.000000
+25%         5.475000
+50%         6.700000
+75%         8.000000
+max        10.000000
+Name: engagement_score, dtype: float64
+
+Missing engagement scores: 88
+Invalid engagement scores: 0
+
+Unique HCPs: 713
+Missing HCP IDs: 0
+Unique Events: 200
+Missing Event IDs: 0
+
+ROLE DISTRIBUTION
+ role
+attendee    4320
+speaker      200
+Name: count, dtype: int64
+
+FINAL MISSING VALUE CHECK
+ attendance_id        0
+hcp_id               0
+event_id             0
+attendance_date      0
+role                 0
+engagement_score    88
+dtype: int64
+
+PREPROCESSING COMPLETED
+Output file: D:\CTS\CTS_Hackathon_git\preprocessed_data\attendance-final.csv
+Final rows: 4520
+Final columns: 6
+
+======================================================================
+RX CLAIMS MONTHLY PREPROCESSING
+======================================================================
+Ground Truth Configuration
+--------------------------------------------------
+True effect: 15.0 %
+Analysis window: 6 months
+Rx panel: ['2022-12', '2025-10']
+Event window: ['2023-07-01', '2025-03-31']
+Treatment units: 540
+Washout rule:
+The event month itself is partially exposed (lift ramps from event_date) and should be excluded from both pre and post windows. Pre = months [-6,-1], post = months [+1,+6] relative to the event month.
+
+Shape: (126000, 5)
+Columns: ['hcp_id', 'month', 'ndc_category', 'rx_volume', 'rx_trend_baseline']
+DQ log shape: (3775, 8)
+RX quality-log records: 3359
+
+Issue types:
+issue_type
+missing_rx_volume         2520
+rx_volume_comma_string     826
+outlier_rx_volume           13
+Name: count, dtype: int64
+
+Initial RX shape: (126000, 5)
+Missing values:
+ hcp_id                  0
+month                   0
+ndc_category            0
+rx_volume            2520
+rx_trend_baseline       0
+dtype: int64
+Duplicate complete rows: 0
+Duplicate HCP-Month-NDC rows: 0
+Month range: 2022-12 to 2025-10
+Unique HCPs: 1200
+NDC categories: ['CV_ANTICOAG_ORAL' 'METABOLIC_GLP1_INJ' 'PC_ANTIHYPERTENSIVE'
+ 'ONC_TARGETED_ORAL' 'NEURO_MIGRAINE_CGRP' 'RHEUM_JAK_ORAL'
+ 'ENDO_BASAL_INSULIN' 'CARD_HF_ARNI' 'PULM_ICS_LABA_INH']
+Invalid month values: 0
+Missing values in quality log: 2520
+Rows restored: 2520
+Remaining missing rx_volume: 0
+rx_volume dtype: int64
+Non-numeric / remaining missing: 0
+Negative RX rows: 0
+Duplicate HCP-month-NDC rows: 0
+Injected outliers flagged: 13
+
+NDC category counts:
+ndc_category
+CARD_HF_ARNI            6650
+CV_ANTICOAG_ORAL       42000
+ENDO_BASAL_INSULIN      5775
+METABOLIC_GLP1_INJ     42000
+NEURO_MIGRAINE_CGRP     5250
+ONC_TARGETED_ORAL       6125
+PC_ANTIHYPERTENSIVE     9100
+PULM_ICS_LABA_INH       4900
+RHEUM_JAK_ORAL          4200
+Name: count, dtype: int64
+Rows outside configured RX panel: 0 (reported only -- no rows removed)
+
+--- FINAL RX VALIDATION ---
+Rows: 126000
+Columns: 12
+Unique HCPs: 1200
+Unique months: 35
+NDC categories: 9
+Month range: 2022-12-01 00:00:00 to 2025-10-01 00:00:00
+Negative RX volume: 0
+Values restored from DQ log: 2520
+['hcp_id', 'month', 'month_date', 'year', 'month_number', 'time_index', 'ndc_category', 'rx_volume', 'rx_trend_baseline', 'is_injected_outlier', 'rx_volume_restored_from_log']
+Saved: D:\CTS\CTS_Hackathon_git\preprocessed_data\rx_claims_monthly_preprocessed (1).csv
+Shape: (126000, 11)
+
+======================================================================
+SUMMARY -- canonical outputs
+======================================================================
+  hcp-final.csv                              rows=  1,200  cols=13  exists=True
+  events_preprocessed_final.csv              rows=    200  cols=14  exists=True
+  attendance-final.csv                       rows=  4,520  cols= 6  exists=True
+  rx_claims_monthly_preprocessed (1).csv     rows=126,000  cols=11  exists=True
+
+D:\CTS\CTS_Hackathon_git\Preprocessing_tasks\preprocess_all.py:168: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  .apply(fill_sub_specialty)
+D:\CTS\CTS_Hackathon_git\Preprocessing_tasks\preprocess_all.py:249: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '18330' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  events.loc[mask, column] = original_value
+
+2026-08-18 16:25:45  INFO          finished in 16.6s  (returncode=0)
+2026-08-18 16:25:45  INFO       verifying the 4 expected output files exist...
+2026-08-18 16:25:45  INFO          found hcp-final.csv (131,495 B)
+2026-08-18 16:25:45  INFO          found attendance-final.csv (252,849 B)
+2026-08-18 16:25:45  INFO          found events_preprocessed_final.csv (39,592 B)
+2026-08-18 16:25:45  INFO          rx output located via glob: rx_claims_monthly_preprocessed (1).csv (10,264,485 B)
+2026-08-18 16:25:45  INFO       PASS -- all 4 preprocessing outputs present
+2026-08-18 16:25:45  INFO     ==========================================================================
+2026-08-18 16:25:45  INFO     STAGE 2/3 -- MATCHING (sequential, 4 methods)
+2026-08-18 16:25:45  INFO     ==========================================================================
+2026-08-18 16:25:45  INFO          found hcp-final.csv (131,495 B)
+2026-08-18 16:25:45  INFO          found attendance-final.csv (252,849 B)
+2026-08-18 16:25:45  INFO          found events_preprocessed_final.csv (39,592 B)
+2026-08-18 16:25:45  INFO          rx output located via glob: rx_claims_monthly_preprocessed (1).csv (10,264,485 B)
+2026-08-18 16:25:45  INFO       precondition OK -- all 4 preprocessing outputs present
+2026-08-18 16:25:45  INFO     
+2026-08-18 16:25:45  INFO     --- Nearest Neighbor (nnm) ---
+2026-08-18 16:25:45  INFO         policy: raises on hard failures; prints PASS/FAIL for protected-field checks without affecting exit code
+2026-08-18 16:25:45  INFO       -> C:\Users\Sabarish\AppData\Local\Programs\Python\Python311\python.exe matching_techinques\nnm_matching.py
+2026-08-18 16:25:45  INFO          expected runtime ~75s  (exit policy: crash_only)
+2026-08-18 16:26:20  DEBUG    ----- stdout/stderr for nnm_matching.py -----
+
+==============================================================================
+NEAREST NEIGHBOR MATCHING -- Speaker Program ROI Analysis
+==============================================================================
+
+------------------------------------------------------------------------------
+LOAD  --  reading the 4 preprocessed CSVs
+------------------------------------------------------------------------------
+    CRLF check: clean (pandas default parser handled it)
+    hcp-final.csv                 :   1,200 rows
+    attendance-final.csv          :   4,520 rows
+    events_preprocessed_final.csv :     200 rows
+    rx_claims_monthly.csv         : 126,000 rows
+
+------------------------------------------------------------------------------
+Loading previous-run snapshot for the before/after comparison (must happen before Step 9 overwrites the output file)
+------------------------------------------------------------------------------
+    no previous-run snapshot found at either candidate path -- before/after comparison will be skipped
+
+------------------------------------------------------------------------------
+Building dense rx lookup matrix (hcp_id x ndc_category x month)
+------------------------------------------------------------------------------
+    months in panel   : 35  (2022-12 .. 2025-10)
+    (hcp_id, category) series: 3,600
+    matrix shape      : (3600, 35)   nulls inside existing series: 0
+
+------------------------------------------------------------------------------
+STEP 1  --  Building treatment cohort
+------------------------------------------------------------------------------
+    attendee rows (raw)         : 4,320
+    unique treatment HCPs       : 540
+    treatment cases (rows)      : 4,320
+    rows with a failed hcp/event join: 0
+
+------------------------------------------------------------------------------
+STEP 2  --  Building control exclusion set (speaker-status union)
+------------------------------------------------------------------------------
+    speaker_eligible_flag=True HCPs   : 240
+    role='speaker' HCPs (attendance)  : 173
+    union (never-eligible as control)  : 240
+    flag-only (missed by role check)   : 67
+    role-only (missed by flag check)   : 0
+    eligible control universe          : 960 of 1,200 total HCPs
+    HCPs with >=1 own attendee-role event: 540
+    own-events-attended per HCP: min=1  mean=8.00  max=35
+
+------------------------------------------------------------------------------
+STEP 3  --  Computing pre-period Rx baselines (batched by event)
+------------------------------------------------------------------------------
+    (hcp, event) pairs evaluated : 240,000
+    pairs with a computable baseline: 104,395  (43.5%)
+    pairs with zero rx rows in window (dropped): 135,605
+    baseline distribution (all valid pairs): min=14.7  max=1,858.8  mean=202.1  median=152.8
+
+------------------------------------------------------------------------------
+Building GLOBAL standardized feature table (static covariates)
+------------------------------------------------------------------------------
+    continuous (z-scored): ['patient_volume_monthly', 'baseline_rx_volume_monthly', 'years_in_practice']
+    categorical (one-hot): ['sub_specialty', 'practice_setting'] -> 40 dummy columns
+    feature table shape  : (1200, 43)  (fit on all 1,200 HCPs)
+    global pre_period_rx_baseline scaler: mean=202.07  std=171.01
+
+------------------------------------------------------------------------------
+STEP 4/5  --  Candidate pools + nearest-neighbor ranking per treatment case
+------------------------------------------------------------------------------
+    treatment cases with no computable own baseline (auto-unmatched): 0
+    treatment cases with an empty candidate pool (even after relax): 0
+    treatment cases with >=1 candidate            : 4,320
+
+------------------------------------------------------------------------------
+STEP 6  --  Greedy one-to-one assignment (no replacement PER EVENT)
+------------------------------------------------------------------------------
+    treatment cases processed        : 4,320
+    matched                          : 4,274
+    unmatched                        : 46
+    distinct controls used (any event): 535
+    (control, event) claims made      : 4,274  (this is what 'used without replacement' now counts against, not the 535 distinct-control figure above)
+
+------------------------------------------------------------------------------
+STEP 7  --  Assembling final output (exact shared schema)
+------------------------------------------------------------------------------
+    output rows              : 4,320
+    duplicate treatment cases: 0  (must be 0)
+
+[Specialty match-rate check] 100.00% of matched pairs have control.specialty == treatment.specialty
+    [PASS] specialty hard-filter integrity confirmed
+
+==============================================================================
+STEP 8  --  VALIDATION / QA REPORT
+==============================================================================
+
+(1) Match rate
+    total treatment cases : 4,320
+    matched                : 4,274  (98.9352%)
+    unmatched               : 46  (1.0648%)
+
+(2) Before/after comparison (temporal-contamination fix)
+    no previous-run snapshot available -- before/after diff skipped
+
+(3) Temporal contamination check (independent re-audit, hard assertion)
+    matched rows re-checked : 4,274
+    contaminated (control's own attendance falls inside the assigned pre-period window): 0
+    [PASS] zero matched controls have contaminating attendance inside their assigned pre-period window
+
+(4) Speaker-leakage check (hard assertion)
+    distinct controls used : 535
+    of which speaker-flagged or speaker-role: 0
+    [PASS] zero speakers found among assigned controls
+
+(5) Specialty match rate -- see hard-assertion check printed above run_qa_report (hierarchical specialty filter integrity)
+
+(6) pool_relaxed breakdown (thin-pool cells needing region relax)
+    rows with pool_relaxed=True : 0  (0.0%)
+    no specialty x region cell required relaxing
+
+(7) distance_score distribution (matched pairs only)
+    min=0.1235  mean=1.8867  median=1.6865  max=10.9153
+    weak-match threshold (>= p95) = 3.7356
+    flagged weak matches: 214  (5.0% of matched)
+ treatment_hcp_id  control_hcp_id    specialty    region  distance_score
+       1315385710      1947954388 primary care Northeast       10.915276
+       1742579091      1060922949 primary care Northeast        9.289850
+       1213511599      1947954388 primary care Northeast        9.076854
+       1280087226      1473494189 primary care Northeast        8.503482
+       1341556789      1069143851   cardiology      West        8.462074
+       1742579091      1134089733 primary care Northeast        8.251027
+       1341556789      1950588461   cardiology      West        8.065989
+       1725724532      1742974847 primary care Northeast        7.828574
+       1280087226      1102089657 primary care Northeast        7.605299
+       1213511599      1261377760 primary care Northeast        7.460960
+
+(8) Unmatched treatment cases by reason
+    no_rx_history    :     0  (0.0% of all treatment cases)
+    pool_exhausted   :    46  (1.1% of all treatment cases)
+
+(9) Cross-event control reuse (controls CAN legitimately serve multiple events; this quantifies how much)
+    distinct controls used         : 535
+    events reused across -- min=1  mean=7.99  median=5.0  max=82
+    controls used for exactly 1 event: 102  (19.1% of controls used)
+    heaviest-reused controls (>= p95 = 25 events):
+    control_hcp_id
+    1209566128    82
+    1364720148    57
+    1873780039    49
+    1714021262    49
+    1251202242    46
+    1058325303    45
+    1804484495    42
+    1135650855    41
+    1412773438    40
+    1181360912    40
+
+==============================================================================
+STEP 9  --  EXPORT
+==============================================================================
+    written to: D:\CTS\CTS_Hackathon_git\matched_pairs\nearest_neigbour_matching\NNM_matched_pairs.csv
+    rows written: 4,320
+    expected (= treatment/attendee rows from Step 1): 4,320
+    [PASS] output row count matches treatment cohort size exactly
+
+    control_hcp_id raw-text spot check (first 5 data rows, read as bytes -- not through pandas):
+      row 1: control_hcp_id = '1199976907'     [OK]
+      row 2: control_hcp_id = '1075683551'     [OK]
+      row 3: control_hcp_id = '1279507085'     [OK]
+      row 4: control_hcp_id = '1109634414'     [OK]
+      row 5: control_hcp_id = '1337606333'     [OK]
+    [PASS] control_hcp_id is clean integer text (or a truly empty cell) on disk -- no '.0' suffixes, no scientific notation
+
+==============================================================================
+SUMMARY
+==============================================================================
+    treatment cases   : 4,320
+    matched           : 4,274
+    output file       : D:\CTS\CTS_Hackathon_git\matched_pairs\nearest_neigbour_matching\NNM_matched_pairs.csv
+
+
+2026-08-18 16:26:20  INFO          finished in 34.9s  (returncode=0)
+2026-08-18 16:26:20  INFO          parsed match rate: 98.94%
+2026-08-18 16:26:20  INFO         PASS -- NNM_matched_pairs.csv written
+2026-08-18 16:26:20  INFO     
+2026-08-18 16:26:20  INFO     --- Rule-Based (rule_based) ---
+2026-08-18 16:26:20  INFO         policy: run_self_validation() feeds directly into return 1 / return 0
+2026-08-18 16:26:20  INFO       -> C:\Users\Sabarish\AppData\Local\Programs\Python\Python311\python.exe matching_techinques\rbm_matching.py
+2026-08-18 16:26:20  INFO          expected runtime ~75s  (exit policy: reliable)
+2026-08-18 16:26:23  DEBUG    ----- stdout/stderr for rbm_matching.py -----
+
+==============================================================================
+RULE-BASED MATCHING -- Speaker Program ROI Analysis
+==============================================================================
+  rules: same specialty AND same region AND |exp diff| <= 3y AND |rx diff| <= 10%
+  rule 2 geography field: 'region'  (approved widening from 'city'; true city retained in *_city_actual)
+  tie-break: rx_pct_diff ASC, then control_hcp_id ASC; match_rank = position in that order
+  no-fallback policy: unmatched rows stay unmatched, never substituted
+  output directory: D:\CTS\CTS_Hackathon_git\matched_pairs\rule_based_matching
+
+------------------------------------------------------------------------------
+LOAD  --  reading the 4 preprocessed CSVs
+------------------------------------------------------------------------------
+    CRLF check: clean (pandas default parser handled it)
+    hcp-final.csv                 :   1,200 rows
+    attendance-final.csv          :   4,520 rows
+    events_preprocessed_final.csv :     200 rows
+    rx_claims_monthly.csv         : 126,000 rows
+
+------------------------------------------------------------------------------
+Building dense rx lookup matrix (hcp_id x ndc_category x month)
+------------------------------------------------------------------------------
+    months in panel   : 35  (2022-12 .. 2025-10)
+    (hcp_id, category) series: 3,600
+    matrix shape      : (3600, 35)   nulls inside existing series: 0
+
+------------------------------------------------------------------------------
+STEP 1  --  Building treatment cohort
+------------------------------------------------------------------------------
+    attendee rows (raw)         : 4,320
+    unique treatment HCPs       : 540
+    treatment cases (rows)      : 4,320
+    rows with a failed hcp/event join: 0
+
+------------------------------------------------------------------------------
+STEP 2  --  Building control exclusion set (speaker-status union)
+------------------------------------------------------------------------------
+    speaker_eligible_flag=True HCPs   : 240
+    role='speaker' HCPs (attendance)  : 173
+    union (never-eligible as control)  : 240
+    flag-only (missed by role check)   : 67
+    role-only (missed by flag check)   : 0
+    eligible control universe          : 960 of 1,200 total HCPs
+    HCPs with >=1 own attendee-role event: 540
+    own-events-attended per HCP: min=1  mean=8.00  max=35
+
+------------------------------------------------------------------------------
+STEP 3  --  Computing pre-period Rx baselines (batched by event)
+------------------------------------------------------------------------------
+    (hcp, event) pairs evaluated : 240,000
+    pairs with a computable baseline: 104,395  (43.5%)
+    pairs with zero rx rows in window (dropped): 135,605
+    baseline distribution (all valid pairs): min=14.7  max=1,858.8  mean=202.1  median=152.8
+
+------------------------------------------------------------------------------
+Building (specialty, city) candidate index -- enforces rules 1 & 2 by construction
+------------------------------------------------------------------------------
+    geography field used by rule 2    : 'region'
+    distinct (specialty, region) cells : 35
+    HCPs per cell -- min=12  mean=34.29  median=36.0  max=58
+    cells containing only 1 HCP      : 0 (0.0%)  <- these can never yield a control
+
+------------------------------------------------------------------------------
+RULES  --  evaluating all four conditions per treatment case
+------------------------------------------------------------------------------
+    cases with >=1 fully rule-satisfying candidate : 1,495  (34.61%)
+    cases with NO same-specialty+same-city peer at all: 0  (0.00%)
+    eligible pool size -- mean=0.48  max=6  (0 for 2,825 cases)
+
+------------------------------------------------------------------------------
+ASSIGNMENT  --  per-event without replacement / across-event with replacement
+------------------------------------------------------------------------------
+    treatment cases processed : 4,320
+    matched                   : 1,400  (32.4074%)
+    unmatched                 : 2,920  (67.5926%)
+    distinct controls used    : 446
+
+------------------------------------------------------------------------------
+OUTPUT  --  assembling 12 standard + 6 audit columns
+------------------------------------------------------------------------------
+    output rows               : 4,320
+    columns                   : 20 (12 standard + 8 audit)
+    duplicate treatment cases : 0  (must be 0)
+
+==============================================================================
+SELF-VALIDATION  --  all four rule checks must be 0
+==============================================================================
+
+(1) The four business rules  [matched rows re-audited: 1,400]
+    Specialty violations            : PASS
+    Geography violations (region)   : PASS
+    Experience violations           : PASS
+    Rx diff violations (>10%)       : PASS
+    rx_pct_diff column accuracy     : PASS
+
+(2) Match rate
+    total treatment cases : 4,320
+    matched                : 1,400  (32.4074%)
+    unmatched               : 2,920  (67.5926%)
+
+(2b) Tie-break in effect: rx_pct_diff ASC, then control_hcp_id ASC
+    match_rank distribution: rank 1=1,387, rank 2=13
+    rank 1 (closest eligible control was free): 1,387 (99.1%) -- higher ranks mean same-event contention, never a relaxed rule
+
+(3) Same-event control reuse (must be 0)
+    events with a control assigned twice: 0  PASS
+
+(4) Speaker exclusion (hard assertion)
+    distinct controls used : 446
+    speakers among them     : 0  PASS
+
+(5) Temporal contamination (independent re-audit, hard assertion)
+    contaminated controls   : 0  PASS
+
+(6) Cross-event control reuse (expected -- quantified, not hidden)
+    distinct controls used  : 446
+    events per control -- min=1  mean=3.14  median=2.0  max=33
+    used for exactly 1 event: 162 (36.3%)
+
+(7) Why cases went unmatched (funnel -- where the rules bite)
+    no same-specialty+same-city peer exists       :      0  ( 0.00%)
+    has a peer, but none satisfied all 4 rules    :  2,825  (65.39%)
+    at least one candidate satisfied all 4 rules  :  1,495  (34.61%)
+
+(8) Unmatched by reason
+    no_eligible_candidate                         :  2,825  (65.39%)
+    pool_claimed_within_event                     :     95  ( 2.20%)
+
+==============================================================================
+  OVERALL: ALL CHECKS PASS -- file is ready
+==============================================================================
+
+==============================================================================
+EXPORT
+==============================================================================
+    written to : D:\CTS\CTS_Hackathon_git\matched_pairs\rule_based_matching\rule_based_matching_output.csv
+    rows       : 4,320  (expected 4,320)
+    control_hcp_id raw-text spot check (bytes on disk, not pandas):
+      row 1: ''             [OK]
+      row 2: ''             [OK]
+      row 3: ''             [OK]
+      row 4: ''             [OK]
+      row 5: ''             [OK]
+
+
+2026-08-18 16:26:23  INFO          finished in 2.8s  (returncode=0)
+2026-08-18 16:26:23  INFO          parsed match rate: 32.41%
+2026-08-18 16:26:23  INFO         PASS -- rule_based_matching_output.csv written
+2026-08-18 16:26:23  INFO     
+2026-08-18 16:26:23  INFO     --- Propensity Score (psm) ---
+2026-08-18 16:26:23  INFO         policy: 7 asserts in validate(); .xlsx sibling is optional -- its write is wrapped in try/except and prints SKIPPED without failing
+2026-08-18 16:26:23  INFO       -> C:\Users\Sabarish\AppData\Local\Programs\Python\Python311\python.exe matching_techinques\psm_matching.py
+2026-08-18 16:26:23  INFO          expected runtime ~25s  (exit policy: assert_based)
+2026-08-18 16:26:47  DEBUG    ----- stdout/stderr for psm_matching.py -----
+
+==============================================================================
+PROPENSITY SCORE MATCHING -- Speaker Program ROI Analysis
+==============================================================================
+  caliper            : 0.05
+  pre-period window  : 6 months (imported from NNM)
+  baseline source    : NNM compute_all_baselines() -- the static baseline_rx_volume_monthly field is never read
+
+------------------------------------------------------------------------------
+LOAD  --  reading the 4 preprocessed CSVs
+------------------------------------------------------------------------------
+    CRLF check: clean (pandas default parser handled it)
+    hcp-final.csv                 :   1,200 rows
+    attendance-final.csv          :   4,520 rows
+    events_preprocessed_final.csv :     200 rows
+    rx_claims_monthly.csv         : 126,000 rows
+
+------------------------------------------------------------------------------
+Building dense rx lookup matrix (hcp_id x ndc_category x month)
+------------------------------------------------------------------------------
+    months in panel   : 35  (2022-12 .. 2025-10)
+    (hcp_id, category) series: 3,600
+    matrix shape      : (3600, 35)   nulls inside existing series: 0
+
+------------------------------------------------------------------------------
+STEP 1  --  Building treatment cohort
+------------------------------------------------------------------------------
+    attendee rows (raw)         : 4,320
+    unique treatment HCPs       : 540
+    treatment cases (rows)      : 4,320
+    rows with a failed hcp/event join: 0
+
+------------------------------------------------------------------------------
+STEP 2  --  Building control exclusion set (speaker-status union)
+------------------------------------------------------------------------------
+    speaker_eligible_flag=True HCPs   : 240
+    role='speaker' HCPs (attendance)  : 173
+    union (never-eligible as control)  : 240
+    flag-only (missed by role check)   : 67
+    role-only (missed by flag check)   : 0
+    eligible control universe          : 960 of 1,200 total HCPs
+    HCPs with >=1 own attendee-role event: 540
+    own-events-attended per HCP: min=1  mean=8.00  max=35
+
+------------------------------------------------------------------------------
+STEP 3  --  Computing pre-period Rx baselines (batched by event)
+------------------------------------------------------------------------------
+    (hcp, event) pairs evaluated : 240,000
+    pairs with a computable baseline: 104,395  (43.5%)
+    pairs with zero rx rows in window (dropped): 135,605
+    baseline distribution (all valid pairs): min=14.7  max=1,858.8  mean=202.1  median=152.8
+
+------------------------------------------------------------------------------
+Matching, one (event_id, specialty, region) group at a time
+------------------------------------------------------------------------------
+    groups processed                : 1,637
+    groups with an empty control pool: 0
+    rows produced                   : 4,320 (treatment cases: 4,320)
+
+==============================================================================
+SELF-VALIDATION  (asserts -- failures raise, they do not warn)
+==============================================================================
+    [PASS] first 12 columns are the standard schema, in order
+    [PASS] control_hcp_id present iff matched (2,698 matched / 1,622 unmatched)
+    [PASS] zero speakers among 604 distinct controls used
+    [PASS] every matched propensity_distance <= 0.05 (max=0.049810)
+    [PASS] pre_period_rx_baseline matches NNM's computation exactly (4,320 rows, max abs diff = 0.00e+00)
+
+==============================================================================
+EXPORT
+==============================================================================
+    csv          : D:\CTS\CTS_Hackathon_git\matched_pairs\propensity_score_matching\PSM_matched_pairs.csv
+    xlsx         : D:\CTS\CTS_Hackathon_git\matched_pairs\propensity_score_matching\PSM_matched_pairs.xlsx
+    rows         : 4,320
+    matched      : 2,698
+    unmatched    : 1,622
+    match rate   : 62.45%
+
+
+2026-08-18 16:26:47  INFO          finished in 23.7s  (returncode=0)
+2026-08-18 16:26:47  INFO          parsed match rate: 62.45%
+2026-08-18 16:26:47  INFO         optional .xlsx sibling: present
+2026-08-18 16:26:47  INFO         PASS -- PSM_matched_pairs.csv written
+2026-08-18 16:26:47  INFO     
+2026-08-18 16:26:47  INFO     --- Random (placebo) (random) ---
+2026-08-18 16:26:47  INFO         policy: bare script, no __main__ guard, zero raises/asserts -- validation only PRINTS. returncode is meaningless; post_validate_random() is the real gate
+2026-08-18 16:26:47  INFO       -> C:\Users\Sabarish\AppData\Local\Programs\Python\Python311\python.exe matching_techinques\random_matching.py
+2026-08-18 16:26:47  INFO          expected runtime ~390s  (exit policy: unreliable)
+2026-08-18 16:26:47  INFO          NOTE: this is the longest stage (~6m30s). It is NOT hung -- please wait.
+2026-08-18 16:33:14  DEBUG    ----- stdout/stderr for random_matching.py -----
+
+Loading datasets...
+Datasets loaded successfully.
+
+Unique treatment cases: 4320
+Speaker HCPs excluded: 240
+Initial eligible control HCPs: 960
+
+Preparing Rx lookup...
+Rx lookup prepared for 3600 HCP/category combinations.
+
+Starting random matching...
+Processed 100 of 4,320 treatment cases...
+Processed 200 of 4,320 treatment cases...
+Processed 300 of 4,320 treatment cases...
+Processed 400 of 4,320 treatment cases...
+Processed 500 of 4,320 treatment cases...
+Processed 600 of 4,320 treatment cases...
+Processed 700 of 4,320 treatment cases...
+Processed 800 of 4,320 treatment cases...
+Processed 900 of 4,320 treatment cases...
+Processed 1,000 of 4,320 treatment cases...
+Processed 1,100 of 4,320 treatment cases...
+Processed 1,200 of 4,320 treatment cases...
+Processed 1,300 of 4,320 treatment cases...
+Processed 1,400 of 4,320 treatment cases...
+Processed 1,500 of 4,320 treatment cases...
+Processed 1,600 of 4,320 treatment cases...
+Processed 1,700 of 4,320 treatment cases...
+Processed 1,800 of 4,320 treatment cases...
+Processed 1,900 of 4,320 treatment cases...
+Processed 2,000 of 4,320 treatment cases...
+Processed 2,100 of 4,320 treatment cases...
+Processed 2,200 of 4,320 treatment cases...
+Processed 2,300 of 4,320 treatment cases...
+Processed 2,400 of 4,320 treatment cases...
+Processed 2,500 of 4,320 treatment cases...
+Processed 2,600 of 4,320 treatment cases...
+Processed 2,700 of 4,320 treatment cases...
+Processed 2,800 of 4,320 treatment cases...
+Processed 2,900 of 4,320 treatment cases...
+Processed 3,000 of 4,320 treatment cases...
+Processed 3,100 of 4,320 treatment cases...
+Processed 3,200 of 4,320 treatment cases...
+Processed 3,300 of 4,320 treatment cases...
+Processed 3,400 of 4,320 treatment cases...
+Processed 3,500 of 4,320 treatment cases...
+Processed 3,600 of 4,320 treatment cases...
+Processed 3,700 of 4,320 treatment cases...
+Processed 3,800 of 4,320 treatment cases...
+Processed 3,900 of 4,320 treatment cases...
+Processed 4,000 of 4,320 treatment cases...
+Processed 4,100 of 4,320 treatment cases...
+Processed 4,200 of 4,320 treatment cases...
+Processed 4,300 of 4,320 treatment cases...
+
+Creating final output...
+
+Saving CSV...
+
+============================================
+       RANDOM MATCHING COMPLETED
+============================================
+Treatment cases: 4320
+Matched: 4320
+Unmatched: 0
+Match rate: 100.0 %
+
+============================================
+              VALIDATION
+============================================
+Matched rows with missing control ID: 0
+Matched rows with empty control ID: 0
+Matched rows with missing control baseline: 0
+Self matches: 0
+Duplicate treatment cases: 0
+Duplicate controls within same event: 0
+
+============================================
+             FILE SAVED SUCCESSFULLY
+============================================
+CSV file name: matching_output_random.csv
+Full file location:
+D:\CTS\CTS_Hackathon_git\matched_pairs\randam_matching\matching_output_random.csv
+
+Number of rows in CSV: 4320
+Number of columns: 12
+
+Done!
+
+
+2026-08-18 16:33:14  INFO          finished in 386.8s  (returncode=0)
+2026-08-18 16:33:14  INFO          parsed match rate: 100.00%
+2026-08-18 16:33:14  INFO         returncode is NOT a reliability signal for this script; running post_validate_random()
+2026-08-18 16:33:14  INFO          rows=4,320  matched=4,320  self_matches=0  distinct_controls=783
+2026-08-18 16:33:14  INFO          max control reuse: 21 rows (control_hcp_id=1289174306)
+2026-08-18 16:33:14  INFO         post_validate_random() PASSED
+2026-08-18 16:33:14  INFO         PASS -- matching_output_random.csv written
+2026-08-18 16:33:14  INFO     ==========================================================================
+2026-08-18 16:33:14  INFO     STAGE 2.5/3 -- SCHEMA VALIDATION (12-column contract)
+2026-08-18 16:33:14  INFO     ==========================================================================
+2026-08-18 16:33:14  INFO       [PASS] NNM_matched_pairs.csv: first 12 columns match contract (14 total, 2 extra)
+2026-08-18 16:33:14  INFO       [PASS] rule_based_matching_output.csv: first 12 columns match contract (20 total, 8 extra)
+2026-08-18 16:33:14  INFO       [PASS] PSM_matched_pairs.csv: first 12 columns match contract (15 total, 3 extra)
+2026-08-18 16:33:14  INFO       [PASS] matching_output_random.csv: first 12 columns match contract (12 total, 0 extra)
+2026-08-18 16:33:14  INFO       re-running post_validate_random() on the existing artifact...
+2026-08-18 16:33:14  INFO          rows=4,320  matched=4,320  self_matches=0  distinct_controls=783
+2026-08-18 16:33:14  INFO          max control reuse: 21 rows (control_hcp_id=1289174306)
+2026-08-18 16:33:14  INFO       [PASS] random output content checks
+2026-08-18 16:33:14  INFO     ==========================================================================
+2026-08-18 16:33:14  INFO     STAGE 3/3 -- DiD / ROI
+2026-08-18 16:33:14  INFO     ==========================================================================
+2026-08-18 16:33:14  INFO       dependency present: generated_data\ground_truth_config.json (135,603 B, read-only check)
+2026-08-18 16:33:14  INFO       invoking did_roi_engine.py ONCE -- it loops all 4 methods internally (hardcoded METHODS dict, no per-method CLI)
+2026-08-18 16:33:14  INFO       -> C:\Users\Sabarish\AppData\Local\Programs\Python\Python311\python.exe did_roi_engine.py
+2026-08-18 16:33:14  INFO          expected runtime ~50s  (exit policy: crash_only)
+2026-08-18 16:33:16  DEBUG    ----- stdout/stderr for did_roi_engine.py -----
+
+==============================================================================
+DiD + ROI ENGINE  --  4 methods, 8 output files
+==============================================================================
+  output folder      : D:\CTS\CTS_Hackathon_git\did_roi_output
+  VALUE_PER_RX_CLAIM : $150  (placeholder assumption, not derived from data)
+  windows            : pre (-6, -1), post (1, 6), event month excluded
+  outlier NPIs       : [1533568948, 1072969494, 1857093070]
+
+------------------------------------------------------------------------------
+Loading Rx panel
+------------------------------------------------------------------------------
+    rows                     : 126,000
+    panel                    : 1,200 HCPs x 9 categories x 35 months (2022-12 .. 2025-10)
+    (hcp, category) series   : 3,600
+    missing months INSIDE an existing series: 0  -> panel is COMPLETE (no gap-filling needed)
+
+------------------------------------------------------------------------------
+Loading program_spend
+------------------------------------------------------------------------------
+    source                   : events_preprocessed_final.csv
+    events                   : 200
+    program_spend null or <=0: 0  (these events cannot carry an ROI denominator)
+    total spend              : $3,762,590
+    attendee_count present   : yes -> per-attendee spend allocation available
+
+    ground truth true_effect_pct = 15.0  (comparison only, never an input)
+    anchor (hcp,event) cases carrying the baked-in effect: 540
+
+==============================================================================
+METHOD: nnm
+==============================================================================
+  file      : matched_pairs\nearest_neigbour_matching\NNM_matched_pairs.csv
+  rows      : 4,320   columns: 14 (reading only the 12 standard ones)
+  matched   : 4,274  (98.94% of rows)
+  usable    : 4,274
+    dropped, no rx series for target category : 0
+    dropped, window falls outside panel       : 0
+  outlier rows removed for the 'excl_outliers' view: 0
+
+  RESULT (all pairs)
+    total incremental lift :    1,003,974 Rx
+    incremental_lift_pct   :        12.51%   [95% CI 10.96% .. 14.05%, clustered on 535 controls]
+    vs true 15.0%          :        -2.49 pp
+    estimated value        : $150,596,100  (@ $150/Rx)
+    allocated spend        : $  3,748,557  -> ROI 3917.4%  (40.17x)
+    diagnostics            : ratio-DiD 8.63%, control baseline -25.9% vs treatment
+    anchor decomposition   : anchor 21.43% (538 cases)  |  non-anchor 11.64% = residual bias (3,736 cases)
+    implied true effect    :         9.79%   (-5.21 pp vs 15.0%)
+    written                : did_roi_results_nnm.csv, did_roi_summary_nnm.csv
+
+==============================================================================
+METHOD: rule_based
+==============================================================================
+  file      : matched_pairs\rule_based_matching\rule_based_matching_output.csv
+  rows      : 4,320   columns: 20 (reading only the 12 standard ones)
+  matched   : 1,400  (32.41% of rows)
+  usable    : 1,400
+    dropped, no rx series for target category : 0
+    dropped, window falls outside panel       : 0
+  outlier rows removed for the 'excl_outliers' view: 0
+
+  RESULT (all pairs)
+    total incremental lift :      148,489 Rx
+    incremental_lift_pct   :         7.50%   [95% CI 5.80% .. 9.21%, clustered on 446 controls]
+    vs true 15.0%          :        -7.50 pp
+    estimated value        : $ 22,273,350  (@ $150/Rx)
+    allocated spend        : $  1,353,297  -> ROI 1545.9%  (16.46x)
+    diagnostics            : ratio-DiD 6.65%, control baseline -0.7% vs treatment
+    anchor decomposition   : anchor 18.02% (255 cases)  |  non-anchor 5.62% = residual bias (1,145 cases)
+    implied true effect    :        12.40%   (-2.60 pp vs 15.0%)
+    written                : did_roi_results_rule_based.csv, did_roi_summary_rule_based.csv
+
+==============================================================================
+METHOD: random
+==============================================================================
+  file      : matched_pairs\randam_matching\matching_output_random.csv
+  rows      : 4,320   columns: 12 (reading only the 12 standard ones)
+  matched   : 4,320  (100.00% of rows)
+  usable    : 4,320
+    dropped, no rx series for target category : 0
+    dropped, window falls outside panel       : 0
+  outlier rows removed for the 'excl_outliers' view: 0
+
+  RESULT (all pairs)
+    total incremental lift :    1,418,498 Rx
+    incremental_lift_pct   :        17.23%   [95% CI 15.98% .. 18.48%, clustered on 783 controls]
+    vs true 15.0%          :        +2.23 pp
+    estimated value        : $212,774,700  (@ $150/Rx)
+    allocated spend        : $  3,762,590  -> ROI 5555.0%  (56.55x)
+    diagnostics            : ratio-DiD 13.00%, control baseline -47.4% vs treatment
+    anchor decomposition   : anchor 23.08% (540 cases)  |  non-anchor 16.67% = residual bias (3,780 cases)
+    implied true effect    :         6.40%   (-8.60 pp vs 15.0%)
+    written                : did_roi_results_random.csv, did_roi_summary_random.csv
+
+==============================================================================
+METHOD: psm
+==============================================================================
+  file      : matched_pairs\propensity_score_matching\PSM_matched_pairs.csv
+  rows      : 4,320   columns: 15 (reading only the 12 standard ones)
+  matched   : 2,698  (62.45% of rows)
+  usable    : 2,698
+    dropped, no rx series for target category : 0
+    dropped, window falls outside panel       : 0
+  outlier rows removed for the 'excl_outliers' view: 0
+
+  RESULT (all pairs)
+    total incremental lift :      288,343 Rx
+    incremental_lift_pct   :         7.85%   [95% CI 6.48% .. 9.21%, clustered on 604 controls]
+    vs true 15.0%          :        -7.15 pp
+    estimated value        : $ 43,251,450  (@ $150/Rx)
+    allocated spend        : $  2,422,219  -> ROI 1685.6%  (17.86x)
+    diagnostics            : ratio-DiD 7.01%, control baseline -1.0% vs treatment
+    anchor decomposition   : anchor 16.63% (443 cases)  |  non-anchor 6.45% = residual bias (2,255 cases)
+    implied true effect    :        10.18%   (-4.82 pp vs 15.0%)
+    written                : did_roi_results_psm.csv, did_roi_summary_psm.csv
+
+==============================================================================
+SANITY CHECKS  (Section 12)
+==============================================================================
+
+  lift plausible vs pre-period volume? (|lift| > total pre-period baseline would signal a bug)
+    nnm         lift=  1,003,974  pre=   8,026,627  ratio= 0.125  [OK]
+    rule_based  lift=    148,489  pre=   1,978,688  ratio= 0.075  [OK]
+    random      lift=  1,418,498  pre=   8,233,427  ratio= 0.172  [OK]
+    psm         lift=    288,343  pre=   3,675,141  ratio= 0.078  [OK]
+
+  row-count reconciliation (no pair silently vanished)
+    nnm         matched=4,274  in detail file=4,274  accounted-for gap=  0
+    rule_based  matched=1,400  in detail file=1,400  accounted-for gap=  0
+    random      matched=4,320  in detail file=4,320  accounted-for gap=  0
+    psm         matched=2,698  in detail file=2,698  accounted-for gap=  0
+
+  HEADLINE (all matched rows) vs ground truth 15.0%   [* = placebo]
+    method          lift %                 95% CI       gap      ROI %
+    nnm             12.51   [  10.96,  14.05]    -2.49    3917.4
+    rule_based       7.50   [   5.80,   9.21]    -7.50    1545.9
+    random       *  17.23   [  15.98,  18.48]    +2.23    5555.0
+    psm              7.85   [   6.48,   9.21]    -7.15    1685.6
+
+  !! The headline above is NOT directly comparable to 15%. Only 540 of the ~4,320
+     (hcp,event) rows are anchor cases carrying the baked-in effect; the rest dilute it.
+     The decomposition below is the like-for-like comparison.
+
+    method         anchor%     bias%   implied       gap   verdict
+    nnm             21.43     11.64      9.79     -5.21   #3 closest to truth
+    rule_based      18.02      5.62     12.40     -2.60   #1 closest to truth
+    random          23.08     16.67      6.40     -8.60   #4 closest to truth
+    psm             16.63      6.45     10.18     -4.82   #2 closest to truth
+
+    anchor%  = lift on cases that really do carry the +15%
+    bias%    = lift on cases with NO true effect -> pure residual confounding
+    implied  = anchor - bias, i.e. signal with that method's own bias netted out
+
+==============================================================================
+OUTPUT FILES
+==============================================================================
+  did_roi_results_nnm.csv                  356,531 B
+  did_roi_results_psm.csv                  224,432 B
+  did_roi_results_random.csv               358,039 B
+  did_roi_results_rule_based.csv           116,794 B
+  did_roi_summary_nnm.csv                    2,341 B
+  did_roi_summary_psm.csv                    2,567 B
+  did_roi_summary_random.csv                 2,325 B
+  did_roi_summary_rule_based.csv             2,343 B
+
+
+2026-08-18 16:33:16  INFO          finished in 2.2s  (returncode=0)
+2026-08-18 16:33:16  INFO       PASS -- 8 output files written
+2026-08-18 16:33:16  INFO     ==========================================================================
+2026-08-18 16:33:16  INFO     PIPELINE SUMMARY
+2026-08-18 16:33:16  INFO     ==========================================================================
+2026-08-18 16:33:16  INFO       PASS     preprocess                16.6s  all 4 preprocessing outputs present
+2026-08-18 16:33:16  INFO       PASS     match:nnm                 34.9s  ok
+2026-08-18 16:33:16  INFO       PASS     match:rule_based           2.8s  ok
+2026-08-18 16:33:16  INFO       PASS     match:psm                 23.7s  ok
+2026-08-18 16:33:16  INFO       PASS     match:random             386.8s  ok
+2026-08-18 16:33:16  INFO       PASS     validate                   0.0s  all schemas match the 12-column contract
+2026-08-18 16:33:16  INFO       PASS     did_roi                    2.2s  8 files written
+2026-08-18 16:33:16  INFO       total runtime: 467.1s   warnings: 0
+2026-08-18 16:33:16  INFO       OVERALL: PASS
+2026-08-18 16:33:16  INFO       log    : D:\CTS\CTS_Hackathon_git\pipeline_logs\pipeline_run_20260818_162529.log
+2026-08-18 16:33:16  INFO       report : D:\CTS\CTS_Hackathon_git\pipeline_logs\pipeline_report_20260818_162529.md

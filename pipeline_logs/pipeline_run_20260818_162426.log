@@ -1,0 +1,72 @@
+2026-08-18 16:24:26  INFO     ==========================================================================
+2026-08-18 16:24:26  INFO     SPEAKER PROGRAM ROI -- PIPELINE
+2026-08-18 16:24:26  INFO     ==========================================================================
+2026-08-18 16:24:26  INFO       project root : D:\CTS\CTS_Hackathon_git
+2026-08-18 16:24:26  INFO       interpreter  : C:\Users\Sabarish\AppData\Local\Programs\Python\Python311\python.exe
+2026-08-18 16:24:26  INFO       stage        : all
+2026-08-18 16:24:26  INFO       methods      : nnm, rule_based, psm, random
+2026-08-18 16:24:26  INFO       force        : False
+2026-08-18 16:24:26  INFO       log file     : D:\CTS\CTS_Hackathon_git\pipeline_logs\pipeline_run_20260818_162426.log
+2026-08-18 16:24:26  INFO       timeout      : 1200s per subprocess (must exceed random_matching's ~390s)
+2026-08-18 16:24:26  INFO     ==========================================================================
+2026-08-18 16:24:26  INFO     STAGE 1/3 -- PREPROCESSING
+2026-08-18 16:24:26  INFO     ==========================================================================
+2026-08-18 16:24:26  INFO       all 4 outputs already present; skipping (use --force to rerun)
+2026-08-18 16:24:26  INFO          found hcp-final.csv (131,495 B)
+2026-08-18 16:24:26  INFO          found attendance-final.csv (252,849 B)
+2026-08-18 16:24:26  INFO          found events_preprocessed_final.csv (39,592 B)
+2026-08-18 16:24:26  INFO          rx output located via glob: rx_claims_monthly_preprocessed (1).csv (10,264,485 B)
+2026-08-18 16:24:26  INFO     ==========================================================================
+2026-08-18 16:24:26  INFO     STAGE 2/3 -- MATCHING (sequential, 4 methods)
+2026-08-18 16:24:26  INFO     ==========================================================================
+2026-08-18 16:24:26  INFO          found hcp-final.csv (131,495 B)
+2026-08-18 16:24:26  INFO          found attendance-final.csv (252,849 B)
+2026-08-18 16:24:26  INFO          found events_preprocessed_final.csv (39,592 B)
+2026-08-18 16:24:26  INFO          rx output located via glob: rx_claims_monthly_preprocessed (1).csv (10,264,485 B)
+2026-08-18 16:24:26  INFO       precondition OK -- all 4 preprocessing outputs present
+2026-08-18 16:24:26  INFO     
+2026-08-18 16:24:26  INFO     --- Nearest Neighbor (nnm) ---
+2026-08-18 16:24:26  INFO         policy: raises on hard failures; prints PASS/FAIL for protected-field checks without affecting exit code
+2026-08-18 16:24:26  INFO         output already present; skipping (use --force to rerun)
+2026-08-18 16:24:26  INFO     
+2026-08-18 16:24:26  INFO     --- Rule-Based (rule_based) ---
+2026-08-18 16:24:26  INFO         policy: run_self_validation() feeds directly into return 1 / return 0
+2026-08-18 16:24:26  INFO         output already present; skipping (use --force to rerun)
+2026-08-18 16:24:26  INFO     
+2026-08-18 16:24:26  INFO     --- Propensity Score (psm) ---
+2026-08-18 16:24:26  INFO         policy: 7 asserts in validate(); .xlsx sibling is optional -- its write is wrapped in try/except and prints SKIPPED without failing
+2026-08-18 16:24:26  INFO         output already present; skipping (use --force to rerun)
+2026-08-18 16:24:26  INFO     
+2026-08-18 16:24:26  INFO     --- Random (placebo) (random) ---
+2026-08-18 16:24:26  INFO         policy: bare script, no __main__ guard, zero raises/asserts -- validation only PRINTS. returncode is meaningless; post_validate_random() is the real gate
+2026-08-18 16:24:26  INFO         output already present; skipping (use --force to rerun)
+2026-08-18 16:24:26  INFO     ==========================================================================
+2026-08-18 16:24:26  INFO     STAGE 2.5/3 -- SCHEMA VALIDATION (12-column contract)
+2026-08-18 16:24:26  INFO     ==========================================================================
+2026-08-18 16:24:26  INFO       [PASS] NNM_matched_pairs.csv: first 12 columns match contract (14 total, 2 extra)
+2026-08-18 16:24:26  INFO       [PASS] rule_based_matching_output.csv: first 12 columns match contract (20 total, 8 extra)
+2026-08-18 16:24:26  INFO       [PASS] PSM_matched_pairs.csv: first 12 columns match contract (15 total, 3 extra)
+2026-08-18 16:24:26  INFO       [PASS] matching_output_random.csv: first 12 columns match contract (12 total, 0 extra)
+2026-08-18 16:24:26  INFO       re-running post_validate_random() on the existing artifact...
+2026-08-18 16:24:26  INFO          rows=4,320  matched=4,320  self_matches=0  distinct_controls=776
+2026-08-18 16:24:26  INFO          max control reuse: 22 rows (control_hcp_id=1849988823)
+2026-08-18 16:24:26  INFO       [PASS] random output content checks
+2026-08-18 16:24:26  INFO     ==========================================================================
+2026-08-18 16:24:26  INFO     STAGE 3/3 -- DiD / ROI
+2026-08-18 16:24:26  INFO     ==========================================================================
+2026-08-18 16:24:26  INFO       dependency present: generated_data\ground_truth_config.json (135,603 B, read-only check)
+2026-08-18 16:24:26  INFO       did_roi outputs already present; skipping (use --force)
+2026-08-18 16:24:26  INFO     ==========================================================================
+2026-08-18 16:24:26  INFO     PIPELINE SUMMARY
+2026-08-18 16:24:26  INFO     ==========================================================================
+2026-08-18 16:24:26  INFO       SKIPPED  preprocess              all 4 preprocessing outputs present
+2026-08-18 16:24:26  INFO       SKIPPED  match:nnm               skipped
+2026-08-18 16:24:26  INFO       SKIPPED  match:rule_based        skipped
+2026-08-18 16:24:26  INFO       SKIPPED  match:psm               skipped
+2026-08-18 16:24:26  INFO       SKIPPED  match:random            skipped
+2026-08-18 16:24:26  INFO       PASS     validate                   0.0s  all schemas match the 12-column contract
+2026-08-18 16:24:26  INFO       SKIPPED  did_roi                 skipped
+2026-08-18 16:24:26  INFO       total runtime: 0.0s   warnings: 0
+2026-08-18 16:24:26  INFO       OVERALL: PASS
+2026-08-18 16:24:26  INFO       log    : D:\CTS\CTS_Hackathon_git\pipeline_logs\pipeline_run_20260818_162426.log
+2026-08-18 16:24:26  INFO       report : D:\CTS\CTS_Hackathon_git\pipeline_logs\pipeline_report_20260818_162426.md
