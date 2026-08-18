@@ -301,9 +301,11 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("Illustrative value assumption")
 value_per_rx = st.sidebar.slider(
     "$ per incremental Rx claim",
-    min_value=float(round(default_value_per_rx * 0.5)),
-    max_value=float(round(default_value_per_rx * 3.0)),
-    value=default_value_per_rx, step=5.0)
+    min_value=10.0,
+    max_value=300.0,
+    value=default_value_per_rx if 10.0 <= default_value_per_rx <= 300.0 else 150.0,
+    step=0.01,
+    format="$%.2f")
 st.sidebar.caption(
     "Adjust to see how ROI scales — actual per-claim value varies by drug and "
     "payer mix. This is the only assumption in the ROI layer; the underlying "
